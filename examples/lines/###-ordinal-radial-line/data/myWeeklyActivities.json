@@ -1,0 +1,9 @@
+[
+  {"activity":"skateboarding","value":0.1},
+  {"activity":"climbing","value":0.28},
+  {"activity":"work","value":1},
+  {"activity":"reading","value":0.71},
+  {"activity":"cooking","value":1},
+  {"activity":"socializing","value":0.4},
+  {"activity":"teaching","value":0.28}
+]
