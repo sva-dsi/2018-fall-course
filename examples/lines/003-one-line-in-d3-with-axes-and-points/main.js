@@ -14,50 +14,54 @@ let myPoints;
 let xAxis, yAxis, xScale, yScale;
 
 async function setup(){
-  // create your drawing area and add it to the page
-  // NOTE: we have a <div id="drawing"></div> on index.html
-  drawing = d3.select("#drawing").append("svg");
-  // set the size of your drawing area
-  drawing
-    .attr("width", width + margin.left + margin.right)
-    .attr("height", height + margin.top + margin.bottom)
-    .style("background", "#D8D8D8")
+  try{
+    // create your drawing area and add it to the page
+    // NOTE: we have a <div id="drawing"></div> on index.html
+    drawing = d3.select("#drawing").append("svg");
+    // set the size of your drawing area
+    drawing
+      .attr("width", width + margin.left + margin.right)
+      .attr("height", height + margin.top + margin.bottom)
+      .style("background", "#D8D8D8")
 
 
-  // add a group to your drawing
-  drawingArea = drawing.append("g")
-  // move your drawing area to have padding
-  // don't add .style here unless you want
-  // those styles to propogate down
-  drawingArea
-    .attr("transform", `translate(${margin.left}, ${margin.top})`)
+    // add a group to your drawing
+    drawingArea = drawing.append("g")
+    // move your drawing area to have padding
+    // don't add .style here unless you want
+    // those styles to propogate down
+    drawingArea
+      .attr("transform", `translate(${margin.left}, ${margin.top})`)
 
-  // send some data to lineData
-  lineData = await d3.csv("data/temperature.csv")
-  lineData = lineData.map((d) => {
-      let parsedDate = d.date.split("/")
-      let year = parsedDate[2]
-      let month = parsedDate[1]
-      let day = parsedDate[0]
-      d.dateTime = new Date(`${year}-${month}-${day} ${d.time}`)
-      return d;
-  })
+    // send some data to lineData
+    lineData = await d3.csv("data/temperature.csv")
+    lineData = lineData.map((d) => {
+        let parsedDate = d.date.split("/")
+        let year = parsedDate[2]
+        let month = parsedDate[1]
+        let day = parsedDate[0]
+        d.dateTime = new Date(`${year}-${month}-${day} ${d.time}`)
+        return d;
+    })
 
-  // NOTE: THIS IS NEW
-  // we append our path in setup since
-  // we are just adding data to it later
-  myPath = drawingArea.append("path")
+    // NOTE: THIS IS NEW
+    // we append our path in setup since
+    // we are just adding data to it later
+    myPath = drawingArea.append("path")
 
-  xAxis = drawingArea.append("g")
-    .attr("transform", `translate(0, ${height})`)
-    .attr("class", "xAxis")
-
-
-  yAxis = drawingArea.append("g")
-    .attr("class", "yAxis")
+    xAxis = drawingArea.append("g")
+      .attr("transform", `translate(0, ${height})`)
+      .attr("class", "xAxis")
 
 
-  return lineData
+    yAxis = drawingArea.append("g")
+      .attr("class", "yAxis")
+
+
+    return lineData
+  } catch(err){
+    return err
+  }
 
 }
 

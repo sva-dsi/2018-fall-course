@@ -11,6 +11,8 @@ Along with getting set up with the logistics and tools for this course, this wee
 
 **DISCUSSION:**
 
+👉 [Link to slides]()
+
 * Introductions
   - Who am I?
   - Who are you?
@@ -29,28 +31,22 @@ Along with getting set up with the logistics and tools for this course, this wee
   - Objectives
   - Goals
   - Course logistics, setup, & materials
-* Quick Intro to the internet & HTML5 - HTML/CSS/javascript
+
 
 **Project Highlight - Critique & Feedback**
 ![project highlight image]()
 
 **STUDIO:**
-* Overview of materials needed for course
-  - Text editor
-  - Writing in markdown (very soon we'll be writing code!)
-  - Git/Github
-    + posting to github gist
-    + making a github repository
-    + (optional) "forking" your blog / Setting up your blog
-    + Post to github issues and say 👋
-  - Moodboard
-    + Pinterest, dribbble, others?
-* Begin working on Viz Critique Assignment
+* Quick Intro to the internet & HTML5 - HTML/CSS/javascript
+* Start working on [Assignment 1](ASSIGNMENT01.md)
 
 
 ## PRACTICE
 
-
+* ...
+* ...
+* ...
+* ...
 
 ## READINGS
 * Politics of Design, p.1-63 (lots of pictures + short text!)

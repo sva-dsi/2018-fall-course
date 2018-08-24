@@ -14,30 +14,38 @@ let yScale;
 // now this will be coming from our /data/circleData.json
 let circleData;
 
-function setup(){
-  // create your drawing area and add it to the page
-  drawing = d3.select("#drawing").append("svg");
-  // set the size of your drawing area
-  drawing
-    .attr("width", width + margin.left + margin.right)
-    .attr("height", height + margin.top + margin.bottom)
-    .style("background", "#D8D8D8")
+async function setup(){
+  try{
+    // create your drawing area and add it to the page
+    drawing = d3.select("#drawing").append("svg");
+    // set the size of your drawing area
+    drawing
+      .attr("width", width + margin.left + margin.right)
+      .attr("height", height + margin.top + margin.bottom)
+      .style("background", "#D8D8D8")
 
-  // add a group to your drawing
-  drawingArea = drawing.append("g")
-  // move your drawing area to have padding
-  // don't add .style here unless you want
-  // those styles to propogate down
-  drawingArea
-    .attr("transform", `translate(${margin.left}, ${margin.top})`)
+    // add a group to your drawing
+    drawingArea = drawing.append("g")
+    // move your drawing area to have padding
+    // don't add .style here unless you want
+    // those styles to propogate down
+    drawingArea
+      .attr("transform", `translate(${margin.left}, ${margin.top})`)
+
+    circleData = await d3.json("data/circleData.json")
+
+    return circleData
+    
+  } catch(err){
+    return err;
+  }
 
 }
 
 /**
  * NOTE: we use an async/await here so we can read in our data
 */
-async function make(){
-  circleData = await d3.json("data/circleData.json")
+function make(circleData){
 
   console.log(circleData)
   // get the max of the x and y values
@@ -92,7 +100,5 @@ async function make(){
 
 
 // set things up
-setup();
-// make your chart
 // NOTE: notice how we use an async/await functionality
-make();
+setup().then(make);

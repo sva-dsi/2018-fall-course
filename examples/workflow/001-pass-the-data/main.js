@@ -21,65 +21,72 @@ let yAxis;
  * NOTE: we use an async/await here so we can read in our data
 */
 async function setup(){
-  // create your drawing area and add it to the page
-  drawing = d3.select("#drawing").append("svg");
-  // set the size of your drawing area
-  drawing
-    .attr("width", width + margin.left + margin.right)
-    .attr("height", height + margin.top + margin.bottom)
-    .style("background", "#D8D8D8")
+  try{
+    // create your drawing area and add it to the page
+    drawing = d3.select("#drawing").append("svg");
+    // set the size of your drawing area
+    drawing
+      .attr("width", width + margin.left + margin.right)
+      .attr("height", height + margin.top + margin.bottom)
+      .style("background", "#D8D8D8")
 
-  // add a group to your drawing
-  drawingArea = drawing.append("g")
-  // move your drawing area to have padding
-  // don't add .style here unless you want
-  // those styles to propogate down
-  drawingArea
-    .attr("transform", `translate(${margin.left}, ${margin.top})`)
+    // add a group to your drawing
+    drawingArea = drawing.append("g")
+    // move your drawing area to have padding
+    // don't add .style here unless you want
+    // those styles to propogate down
+    drawingArea
+      .attr("transform", `translate(${margin.left}, ${margin.top})`)
 
-  xAxis = drawingArea
-              .append("g")
-              .attr("class", "xAxis bottom")
-              .attr("transform", `translate(0,${height})`)
-  yAxis = drawingArea
-              .append("g")
-              .attr("class", "yAxis left")
-              .attr("transform", `translate(0,0)`)
+    xAxis = drawingArea
+                .append("g")
+                .attr("class", "xAxis bottom")
+                .attr("transform", `translate(0,${height})`)
+    yAxis = drawingArea
+                .append("g")
+                .attr("class", "yAxis left")
+                .attr("transform", `translate(0,0)`)
 
-  // add a button to update the viz
-  updateBtn = d3.select("body").append("button")
-  updateBtn
-    .html("update!")
-    .on("click", function(){
-      console.log("clicked!")
-      let newRandomCircles = [];
-      for(let i = 0; i < 50; i++){
-          let randomX = d3.randomUniform(500, 2000)()
-          let randomY = d3.randomUniform(500, 2000)()
-          let randomRadius = d3.randomUniform(6, 30)()
-          let randomColor = "#E8FDF5"
+    // add a button to update the viz
+    updateBtn = d3.select("body").append("button")
+    updateBtn
+      .html("update!")
+      .on("click", function(){
+        console.log("clicked!")
+        let newRandomCircles = [];
+        for(let i = 0; i < 50; i++){
+            let randomX = d3.randomUniform(500, 2000)()
+            let randomY = d3.randomUniform(500, 2000)()
+            let randomRadius = d3.randomUniform(6, 30)()
+            let randomColor = "#E8FDF5"
 
-          if(randomRadius < 10){
-            randomColor = "#E8FDF5"
-          } else if( randomRadius >= 10 && randomRadius <=20 ){
-            randomColor = "#FFDFDF"
-          }else{
-            randomColor = "#FFFCEB"
+            if(randomRadius < 10){
+              randomColor = "#E8FDF5"
+            } else if( randomRadius >= 10 && randomRadius <=20 ){
+              randomColor = "#FFDFDF"
+            }else{
+              randomColor = "#FFFCEB"
+            }
+            // append to circleData
+            newRandomCircles.push({x:randomX, y:randomY, radius:randomRadius, color:randomColor})
           }
-          // append to circleData
-          newRandomCircles.push({x:randomX, y:randomY, radius:randomRadius, color:randomColor})
-        }
 
-      make(newRandomCircles);
-    })
+        make(newRandomCircles);
+      })
 
 
-  circleData = await d3.json("data/circleData.json")
+    circleData = await d3.json("data/circleData.json")
 
-  return circleData
+    return circleData
+  } catch (err){
+    console.log(err);
+    return err
+  }
+  
 }
 
 function make(circleData){
+  try{
   console.log(circleData)
   // get the max of the x and y values
   let xMax = d3.max(circleData.map( (d) => d.x ))
@@ -146,6 +153,10 @@ function make(circleData){
   d3.select(".yAxis")
     .transition()
     .call(d3.axisLeft(yScale))
+  } catch(err){
+    console.log(err)
+    return err
+  }
 }
 
 
