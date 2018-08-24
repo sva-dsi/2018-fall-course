@@ -43,23 +43,23 @@ Here you will find the links to the week-by-week materials and an overview of th
 NOTE: We might decide together to move some things around this semester. I may also consider to do a few workshops outside the dedicated class time for those who want a little bit more on one topic or another.
 
 
-| Materials   | Date       | Topic                       | Assignment (DUE)                   | Note               |
-| ----------- | ---------- | --------------------------- | ---------------------------------- | ------------------ |
-| [Week 1]()  | 2018/09/06 | Introduction                | N/A                                | Joey in 🇩🇪         |
-| [Week 2]()  | 2018/09/13 | To be Data Driven           | [A1 - Viz critique & setup]()      | Joey in 🇦🇹         |
-| [Week 3]()  | 2018/09/20 | Visual Encoding I           | [A2 - Dear Data Exercise]()        | Joey back in 🗽    |
-| [Week 4]()  | 2018/09/27 | Visual Encoding II          | [A3 - ]()                             | ...                |
-| [Week 5]()  | 2018/10/04 | Stats/Data Explorations     | [A4 - ]()                             | ...                |
-| [Week 6]()  | 2018/10/11 | Cartographics I             | [A5 - ]()                             | ...                |
-| [Week 7]()  | 2018/10/18 | Cartographics II & Networks | [A6 - ]()                             | ...                |
-| [Week 8]()  | 2018/10/25 | Everything but the chart    | [A7 - ]()                             | ...                |
-| [Week 9]()  | 2018/11/01 | Viz Narrative               | [A8 - ]()                             | 🎃                 |
-| [Week 10]() | 2018/11/08 | Disinformation Viz          | [A9 - ]()                             | ...                |
-| [Week 11]() | 2018/11/15 | Data Platforums             | [**Proposal** for Final Project]() | ...                |
-| [Week 12]() | 2018/11/22 | Holiday Observed            | Final Proj. Dev.                   | NO CLASS           |
-| [Week 13]() | 2018/11/29 | Special Topics              | Final Proj. Dev.                   | Special guest: TBD |
-| [Week 14]() | 2018/12/06 | Final Presentations         | Final Presentations                | 🎉                 |
-| [Week 15]() | 2018/12/13 | Final Projects Due          | Final Projects Due                 | NO CLASS           |
+| Materials         | Date       | Topic                       | Assignment (DUE)                                    | Note               |
+| ----------------- | ---------- | --------------------------- | --------------------------------------------------- | ------------------ |
+| [Week 1](week01)  | 2018/09/06 | Introduction                | N/A                                                 | Joey in 🇩🇪         |
+| [Week 2](week02)  | 2018/09/13 | "The" Data Viz Pipeline     | [A1 - Viz critique & setup](week01/ASSIGNMENT01.md) | Joey in 🇦🇹         |
+| [Week 3](week03)  | 2018/09/20 | Visual Encoding I           | [A2 - Dear Data Exercise]()                         | Joey back in 🗽    |
+| [Week 4](week04)  | 2018/09/27 | Visual Encoding II          | [A3 - ]()                                           | ...                |
+| [Week 5](week05)  | 2018/10/04 | Stats/Data Explorations     | [A4 - ]()                                           | ...                |
+| [Week 6](week06)  | 2018/10/11 | Cartographics I             | [A5 - ]()                                           | ...                |
+| [Week 7](week07)  | 2018/10/18 | Cartographics II & Networks | [A6 - ]()                                           | ...                |
+| [Week 8](week08)  | 2018/10/25 | Everything but the chart    | [A7 - ]()                                           | ...                |
+| [Week 9](week09)  | 2018/11/01 | Viz Narrative               | [A8 - ]()                                           | 🎃                 |
+| [Week 10](week10) | 2018/11/08 | Disinformation Viz          | [A9 - ]()                                           | ...                |
+| [Week 11](week11) | 2018/11/15 | Data Platforums             | [**Proposal** for Final Project]()                  | ...                |
+| [Week 12](week12) | 2018/11/22 | Holiday Observed            | Final Proj. Dev.                                    | NO CLASS           |
+| [Week 13](week13) | 2018/11/29 | Special Topics              | Final Proj. Dev.                                    | Special guest: TBD |
+| [Week 14](week14) | 2018/12/06 | Final Presentations         | Final Presentations                                 | 🎉                 |
+| [Week 15](week15) | 2018/12/13 | Final Projects Due          | Final Projects Due                                  | NO CLASS           |
 
 <!-- Final Project Development -->
 <!-- ************ -->
@@ -147,9 +147,9 @@ If and when possible, I will point you to web resources. However there are a few
 
 **Required**:
 * Politics of design
+* Truthful Art, Alberto Cairo
 
 **Optional but highly recommended**:
-* Functional Art, Alberto Cairo
 * Data Points, Nathan Yau
 * Interactive data visualization for the web 2nd edition, Scott Murray
 
