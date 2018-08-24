@@ -37,7 +37,7 @@ async function setup(){
   lineData.push({x: 350 ,y: 250 })
 
   // click to add some data!
-  drawing.on("click", ()=>{
+  drawing.on("click", () => {
     lineData.push({x:d3.randomUniform(margin.left, width - margin.left)(),y: d3.randomUniform(margin.top, height - margin.top)() })
     make(lineData)
   })
