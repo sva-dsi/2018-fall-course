@@ -1,0 +1,30 @@
+---
+title: "Exploratory Data Analysis"
+output: github_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+Basicaly following along from chapter 6 of the Truthful Art, Alberto Cairo
+
+## The norm and the exceptions 
+
+### the mode
+
+
+### the median
+
+
+### mean 
+
+
+### Weighted means
+
+
+### Range - examine distribution shape & frequency / range chart 
+
+
+
+

@@ -1,0 +1,47 @@
+---
+title: "Random Data plots and R Markdown"
+output: github_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+```
+
+## Load up your packages!
+
+```{r}
+
+require(ggplot2)
+require(ggmap)
+```
+
+## Make some dummy data!
+
+```{r}
+
+x <- runif(100, -179, 179)
+y <- runif(100, -60, 60)
+r <- runif(100, 10, 100)
+
+myData <- data.frame(dummyLon=x, dummyLat=y, dummyR= r)
+```
+
+## plot the initial data
+
+```{r}
+ggplot(myData) + 
+  geom_point(aes(x=myData$dummyLon, y=myData$dummyLat, size=myData$dummyR))
+```
+
+
+## Plot the random data on a map
+
+```{r}
+
+world <- get_map(location = c(lon = 0, lat = 0), zoom = 2)
+worldMap <- ggmap(world)
+
+worldMap +
+  geom_point(data=myData, aes(x=dummyLon, y=dummyLat, size=dummyR))
+```

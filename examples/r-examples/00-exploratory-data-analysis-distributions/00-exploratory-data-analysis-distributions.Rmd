@@ -1,0 +1,34 @@
+---
+title: "Visualizing Distributions"
+output: github_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## visualizing distributions
+
+
+## Variance
+
+
+
+## Standard Deviation
+
+
+
+## Z-Score & Standard Scores
+
+
+
+## deriving Raw Scores
+
+
+## examining a funnel plot
+
+
+## peculiarities of a normal distribution
+
+
+## Percentiles, Quartiles, and box plot, interquartile range

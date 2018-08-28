@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Vega barchart</title>
+    <script src="libraries/d3.min.js"></script>
+    <script src="libraries/vega.min.js"></script>
+  </head>
+  <body>
+    <div id="view"></div>
+    <script type="text/javascript">
+    // var view;
+
+    // vega.loader()
+    //   .load('vega-barchart-spec.json')
+    //   .then( function(spec){
+    //     view = new vega.View(vega.parse( JSON.parse(spec) ))
+    //
+    //     view
+    //       .renderer('svg')  // set renderer (canvas or svg)
+    //       .initialize('#view') // initialize view within parent DOM container
+    //       .hover()
+    //       .run();
+    //
+    //   }).catch(err => {
+    //     console.log(err)
+    //     return err
+    //   })
+
+    var view;
+    async function setup(){
+
+
+      try{
+        let loader = vega.loader();
+        let jsonSpec =  await loader.load('vega-barchart-spec.json');
+        jsonSpec = JSON.parse(jsonSpec);
+
+        view = new vega.View( vega.parse(jsonSpec))
+
+        return view
+      } catch(err) {
+        console.log(err)
+        return err
+      }
+
+
+
+
+    }
+
+    function make(myView){
+      try{
+        console.log("hello from make()!")
+        // console.log(myView.data("dummyData"))
+
+        view.renderer('svg')
+            .initialize('#view')
+            .hover()
+            .run();
+
+      } catch(err){
+        console.log(err)
+        return err
+      }
+
+    }
+
+    setup().then(make)
+
+    // view = new vega.View(vega.parse(chartSpec1))
+    //     .renderer('svg')  // set renderer (canvas or svg)
+    //     .initialize('#view') // initialize view within parent DOM container
+    //     .run();
+
+    // vega.loader()
+    //   .load('vega-barchart-spec.json')
+    //   .then(function(data) {
+    //     console.log(data)
+    //     render(JSON.parse(data));
+    //   })
+    //   .catch(err => {
+    //     console.log(err)
+    //     return err
+    //   });
+    //
+    //
+    // function render(spec) {
+    //   view = new vega.View(vega.parse(spec))
+    //
+    //   view.renderer('svg')  // set renderer (canvas or svg)
+    //     .initialize('#view') // initialize view within parent DOM container
+    //     .hover()             // enable hover encode set processing
+    //     .run();
+    // }
+    </script>
+  </body>
+</html>

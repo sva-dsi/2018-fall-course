@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Vega barchart</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.7.0/d3.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega@4.2.0"></script>
+  </head>
+  <body>
+    <div id="view"></div>
+    <script type="text/javascript">
+    var view;
+
+    vega.loader()
+      .load('vega-barchart-spec.json')
+      .then(function(data) { render(JSON.parse(data)); });
+
+    function render(spec) {
+      view = new vega.View(vega.parse(spec))
+        .renderer('svg')  // set renderer (canvas or svg)
+        .initialize('#view') // initialize view within parent DOM container
+        .hover()             // enable hover encode set processing
+        .run();
+    }
+    </script>
+  </body>
+</html>
