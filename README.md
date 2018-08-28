@@ -52,13 +52,13 @@ NOTE: We might decide together to move some things around this semester. I may a
 | [Week 1](week01)  | 09/06 | Visual Encoding          | N/A                                                 | Joey in 🇩🇪         |
 | [Week 2](week02)  | 09/13 | Sketching with Data      | [A1 - Viz critique & setup](week01/ASSIGNMENT01.md) | Joey in 🇦🇹         |
 | [Week 3](week03)  | 09/20 | Data Compositions        | [A2 - Dear Data](week02/ASSIGNMENT02.md)            | Joey back in 🗽    |
-| [Week 4](week04)  | 09/27 | Data-ing                 | [A3 - ]()                                           | ...                |
-| [Week 5](week05)  | 10/04 | Data is Plural           | [A4 - ]()                                           | ...                |
-| [Week 6](week06)  | 10/11 | Synthesis I              | [A5 - ]()                                           | ...                |
-| [Week 7](week07)  | 10/18 | The Web as your Canvas   | [A6 - ]()                                           | ...                |
-| [Week 8](week08)  | 10/25 | Form + Interaction       | [A7 - ]()                                           | ...                |
-| [Week 9](week09)  | 11/01 | Network + Interface      | [A8 - ]()                                           | 🎃                 |
-| [Week 10](week10) | 11/08 | Narrative & Storytelling | [A9 - ]()                                           | ...                |
+| [Week 4](week04)  | 09/27 | Data-ing                 | [A3 - TBA]()                                        |                    |
+| [Week 5](week05)  | 10/04 | Data is Plural           | [A4 - TBA]()                                        |                    |
+| [Week 6](week06)  | 10/11 | Synthesis I              | [A5 - TBA]()                                        |                    |
+| [Week 7](week07)  | 10/18 | The Web as your Canvas   | [A6 - TBA]()                                        |                    |
+| [Week 8](week08)  | 10/25 | Form + Interaction       | [A7 - TBA]()                                        |                    |
+| [Week 9](week09)  | 11/01 | Network + Interface      | [A8 - TBA]()                                        | 🎃                 |
+| [Week 10](week10) | 11/08 | Narrative & Storytelling | [A9 - TBA]()                                        |                    |
 | [Week 11](week11) | 11/15 | Synthesis II             | [**Proposal** for Final Project]()                  | ...                |
 | [Week 12](week12) | 11/22 | Holiday Observed         | Final Proj. Dev.                                    | NO CLASS           |
 | [Week 13](week13) | 11/29 | Special Topics           | Final Proj. Dev.                                    | Special guest: TBD |
