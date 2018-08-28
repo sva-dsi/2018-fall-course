@@ -2,28 +2,32 @@
 
 Hello and welcome to the School for Visual Arts  Metrics + Data Visualization I. This is Part I of a two-part course on data visualization for the Design for Social Innovation MFA program.
 
-<!-- TOC depthFrom:1 depthTo:6 withLinks:1 updateOnSave:1 orderedList:0 -->
-
-- [SVA DSI: Metrics + Data Visualization I (Fall 2018)](#sva-dsi-metrics-data-visualization-i-fall-2018)
+<!-- TOC START min:1 max:3 link:true update:true -->
+- [SVA DSI: Metrics + Data Visualization I (Fall 2018)](#sva-dsi-metrics--data-visualization-i-fall-2018)
 - [Overview](#overview)
-	- [Instructor](#instructor)
-	- [Calendar](#calendar)
-	- [Course Description](#course-description)
-	- [Learning Objectives & Outcomes](#learning-objectives-outcomes)
+  - [Instructor](#instructor)
+  - [Calendar](#calendar)
+  - [Course Description](#course-description)
+  - [Learning Objectives & Outcomes](#learning-objectives--outcomes)
 - [Course Information](#course-information)
-	- [Meeting time](#meeting-time)
-	- [Office Hours](#office-hours)
-	- [Communication](#communication)
-	- [Assignments](#assignments)
-	- [Grading](#grading)
-	- [Readings](#readings)
-	- [Support & Teamwork](#support-teamwork)
-	- [Code of Conduct](#code-of-conduct)
-	- [MATERIALS](#materials)
+  - [Meeting time](#meeting-time)
+  - [Office Hours](#office-hours)
+  - [Communication](#communication)
+  - [Assignments](#assignments)
+  - [Grading](#grading)
+  - [Readings](#readings)
+  - [Support & Teamwork](#support--teamwork)
+  - [Code of Conduct](#code-of-conduct)
+  - [Materials](#materials)
 
-<!-- /TOC -->
+<!-- TOC END -->
+
+
 
 # Overview
+
+![Taeyoon Choi / SFPC / illustration](assets/images/sfpc-info-instead-of-data-poster.jpg)
+<small>illustration: Taeyoon Choi for the School for Poetic Computation</small>
 
 ## Instructor
 
@@ -43,26 +47,68 @@ Here you will find the links to the week-by-week materials and an overview of th
 NOTE: We might decide together to move some things around this semester. I may also consider to do a few workshops outside the dedicated class time for those who want a little bit more on one topic or another.
 
 
-| Materials         | Date       | Topic                       | Assignment (DUE)                                    | Note               |
-| ----------------- | ---------- | --------------------------- | --------------------------------------------------- | ------------------ |
-| [Week 1](week01)  | 2018/09/06 | Introduction                | N/A                                                 | Joey in 🇩🇪         |
-| [Week 2](week02)  | 2018/09/13 | "The" Data Viz Pipeline     | [A1 - Viz critique & setup](week01/ASSIGNMENT01.md) | Joey in 🇦🇹         |
-| [Week 3](week03)  | 2018/09/20 | Visual Encoding I           | [A2 - Dear Data Exercise]()                         | Joey back in 🗽    |
-| [Week 4](week04)  | 2018/09/27 | Visual Encoding II          | [A3 - ]()                                           | ...                |
-| [Week 5](week05)  | 2018/10/04 | Stats/Data Explorations     | [A4 - ]()                                           | ...                |
-| [Week 6](week06)  | 2018/10/11 | Cartographics I             | [A5 - ]()                                           | ...                |
-| [Week 7](week07)  | 2018/10/18 | Cartographics II & Networks | [A6 - ]()                                           | ...                |
-| [Week 8](week08)  | 2018/10/25 | Everything but the chart    | [A7 - ]()                                           | ...                |
-| [Week 9](week09)  | 2018/11/01 | Viz Narrative               | [A8 - ]()                                           | 🎃                 |
-| [Week 10](week10) | 2018/11/08 | Disinformation Viz          | [A9 - ]()                                           | ...                |
-| [Week 11](week11) | 2018/11/15 | Data Platforums             | [**Proposal** for Final Project]()                  | ...                |
-| [Week 12](week12) | 2018/11/22 | Holiday Observed            | Final Proj. Dev.                                    | NO CLASS           |
-| [Week 13](week13) | 2018/11/29 | Special Topics              | Final Proj. Dev.                                    | Special guest: TBD |
-| [Week 14](week14) | 2018/12/06 | Final Presentations         | Final Presentations                                 | 🎉                 |
-| [Week 15](week15) | 2018/12/13 | Final Projects Due          | Final Projects Due                                  | NO CLASS           |
+| Materials         | Date  | Topic                    | Assignment (DUE)                                    | Note               |
+| ----------------- | ----- | ------------------------ | --------------------------------------------------- | ------------------ |
+| [Week 1](week01)  | 09/06 | Visual Encoding          | N/A                                                 | Joey in 🇩🇪         |
+| [Week 2](week02)  | 09/13 | Sketching with Data      | [A1 - Viz critique & setup](week01/ASSIGNMENT01.md) | Joey in 🇦🇹         |
+| [Week 3](week03)  | 09/20 | Data Compositions        | [A2 - Dear Data](week02/ASSIGNMENT02.md)            | Joey back in 🗽    |
+| [Week 4](week04)  | 09/27 | Data-ing                 | [A3 - ]()                                           | ...                |
+| [Week 5](week05)  | 10/04 | Data is Plural           | [A4 - ]()                                           | ...                |
+| [Week 6](week06)  | 10/11 | Synthesis I              | [A5 - ]()                                           | ...                |
+| [Week 7](week07)  | 10/18 | The Web as your Canvas   | [A6 - ]()                                           | ...                |
+| [Week 8](week08)  | 10/25 | Form + Interaction       | [A7 - ]()                                           | ...                |
+| [Week 9](week09)  | 11/01 | Network + Interface      | [A8 - ]()                                           | 🎃                 |
+| [Week 10](week10) | 11/08 | Narrative & Storytelling | [A9 - ]()                                           | ...                |
+| [Week 11](week11) | 11/15 | Synthesis II             | [**Proposal** for Final Project]()                  | ...                |
+| [Week 12](week12) | 11/22 | Holiday Observed         | Final Proj. Dev.                                    | NO CLASS           |
+| [Week 13](week13) | 11/29 | Special Topics           | Final Proj. Dev.                                    | Special guest: TBD |
+| [Week 14](week14) | 12/06 | Final Presentations      | Final Presentations                                 | 🎉                 |
+| [Week 15](week15) | 12/13 | Final Projects Due       | Final Projects Due                                  | NO CLASS           |
 
 <!-- Final Project Development -->
 <!-- ************ -->
+
+<!--
+
+Reproducible
+Transparent
+Accessible
+Interactive
+Delightful
+
+Data Platforums
+Everything but the chart
+
+
+1 - Data in visual properties out >
+2 - sketching with data / basic exploratory data analysis >
+3 - data composition and structure >
+4 - Data dialogues, Data-ing, exploring data relationships >
+5 - Data is Plural: multiple data, multiple views, data from around the web  >
+6 -
+
+- 1: Visual Encoding
+- 2: Sketching with Data
+- 3: Data Compositions / Data transforms and transforms
+  - csv, json, geographic data, timeseries, time
+- 4: Data-ing / exploring data relationships
+- 5: Data is Plural / data in multiples
+- 6: Synthesis I
+- 7: The web as a canvas
+- 8: Interactivity
+- 9: Details on Demand
+- 10:
+- 11:
+  - final projects start
+- 12: no class / holiday
+- 13:
+  - guest speaker?
+- 14: presentations and demos
+- 15: project clinic
+
+
+
+-->
 
 ## Course Description
 
@@ -74,13 +120,13 @@ This course is project based, comprised of weekly visualization exercises/projec
 
 ## Learning Objectives & Outcomes
 
-The goal of this course is to establish the technical and conceptual foundations for building thoughtful, engaging, and considerate information visualizations. By engaging with each step of the data visualization process, from data acquisition to interface design, you will learn to critically engage with data and the tools and media for communicating through/with data on the web.
+The goal of this course is to establish the technical and conceptual foundations for building thoughtful, engaging, and considerate information visualizations. By engaging with each step of the data visualization process, from data acquisition to interface design, you will learn to critically engage with data and the tools and media for communicating through/with data.
 
 Core outcomes of this course include your ability to:
 
 * assess, manipulate, and analyze data
 * engage with the culture of data and information visualization and the politics of making data driven visuals.
-* create visualizations and other tangible media from data of varying formats and sources using HTML5 (html/css/javascript)
+* create visualizations and other tangible media from data of varying formats and sources using [R]() and HTML5 (html/css/javascript)
 * effectively use version control and collaboration workflows (e.g. Github)
 * publish data and visualizations to the web
 
@@ -122,7 +168,7 @@ If you'd like to share links, ask questions, or field feedback, please feel free
 Each week you will have readings assigned, accompanied by often (but not always) an `Assignment` and a `Practice` activity. See the calendar below to confirm the expectations from week to week. I will grade your assignments and aggregate them as contributions to your final grade. Most assignments are working toward your Final Project, counting as 30% of your final grade.
 
 <!-- [XYZ](https://gist.github.com/) -->
-* All assignments will be submitted via [XYZ](https://gist.github.com/) on your [Github](https://github.com/) account.
+* All assignments will be submitted via [Github Gists](https://gist.github.com/) on your [Github](https://github.com/) account.
 * Joey will repost assignments in Canvas, where possible
 * You can view a template of what your assignment should look like here in this [gist](https://gist.github.com/auremoser/9dcfac8163e7737e7b5f).
 * Assignments are due on the course date following the class in which they are assigned unless otherwise indicated - there are short assignments every week - Week 2 for example, "Critique an interactive" is due on 9/13
@@ -146,14 +192,14 @@ Readings are assigned to correspond with that week's assignment and class lesson
 If and when possible, I will point you to web resources. However there are a few texts that I would like for you have absorbed by the end of this course.
 
 **Required**:
-* Politics of design
 * Truthful Art, Alberto Cairo
 
 **Optional but highly recommended**:
+* Politics of design,
 * Data Points, Nathan Yau
 * Interactive data visualization for the web 2nd edition, Scott Murray
 
-You can find the [FULL BIBLIOGRAPHY]() in the repository for this course.
+You can find the [FULL BIBLIOGRAPHY](BIBLIOGRAPHY.md) in the repository for this course.
 
 ## Support & Teamwork
 
@@ -166,7 +212,7 @@ This is also a good opportunity to maybe work with some people you don't know we
 See [Code of Conduct]()
 
 
-## MATERIALS
+## Materials
 Coding is an art; you will have a series of art supplies for this course that will all be free unless otherwise noted, but will require some non-trivial investment on your part to set-up. I'm available to help if/when you need it.
 
 **SET-UP ACCOUNT**
@@ -185,6 +231,9 @@ Coding is an art; you will have a series of art supplies for this course that wi
 
 * Text Editor - [Atom.io](https://atom.io/) - I will be using Atom this course - or [Sublime Text](http://www.sublimetext.com/)
 * A Markdown Editor - [Mou](http://25.io/mou/) or [Macdown](https://macdown.uranusjr.com/) or atom's markdown editor view
+* R & RStudio:
+  * First download and install [R](https://cran.rstudio.com/)
+  * Then download and install [R Studio](https://www.rstudio.com/products/rstudio/download/#download)
 
 **LEARN**
 * Simple HTTP Server, a few options:
