@@ -1,11 +1,15 @@
 # WEEK `01`
-## Introduction and Overview
+## Visual Encoding
 
 ## ASSIGNMENT
 
 * [Link to ASSIGNMENT 1](ASSIGNMENT01.md)
 
 Along with getting set up with the logistics and tools for this course, this week you will be writing a short (2-3 paragraphs) critique on a visualization that resonates with you. See the assignment briefing for details.
+
+* Beginning of the [Daily Charting Challenge](../daily-sketch-challenge.md)
+
+I would like nothing more than for you all to walk out of this class as total data viz ninjas, but the only way to get there is with practice and a portfolio of work. I would like to propose "thinking through making" with an (optional) Daily Charting Challenge. Go to the link for details.
 
 ## AGENDA
 
@@ -37,34 +41,29 @@ Along with getting set up with the logistics and tools for this course, this wee
 ![project highlight image]()
 
 **STUDIO:**
-<!-- * Quick Intro to the internet & HTML5 - HTML/CSS/javascript -->
+* Intro to R and our first plots with ggplot2
 * Start working on [Assignment 1](ASSIGNMENT01.md)
 
 
 ## PRACTICE
 
+### Markdown
 * [The Basics of Markdown Syntax, Daring Fireball](http://daringfireball.net/projects/markdown/basics)
 * [Interactive Markdown Tutorial](https://www.markdowntutorial.com/)
-<!-- * [CLI Handbook](http://cli.learncodethehardway.org/book/) -->
-<!-- * [Terminal for Windows](https://conemu.github.io/) -->
-<!-- * [Terminal for Mac](http://www.macworld.co.uk/feature/mac-software/get-more-out-of-os-x-terminal-3608274/) -->
-<!-- * [Command Line Bootcamp](http://rik.smith-unna.com/command_line_bootcamp/) -->
-* [On Demand Github Tutorials](https://guides.github.com/activities/hello-world/)
 * [Learn Markdown in Y Minutes](https://learnxinyminutes.com/docs/markdown/)
 * [HTML/CSS Practice site](http://webdive.ktam.org/web/basics)
 
-We will go over this process, but you should practice some of the terminal commands and markdown syntax so that you feel comfortable on your own machines. We'll go over it next week.
+### Github
+* [On Demand Github Tutorials](https://guides.github.com/activities/hello-world/)
 
-Other things you may consider subscribing to:
+### R
+* [DataCamp R Course - free lessons](https://campus.datacamp.com/courses/free-introduction-to-r/)
+* [Joey's Aloha R Tutorial - Introduction to R](https://github.com/joeyklee/aloha-r)
 
-* [A Drip of Javascript](http://adripofjavascript.com/)
-* [Daily Javascript](http://daily-javascript.com/)
-* [Daily UI Challenge](http://www.dailyui.co/)
 
 ## READINGS
-* Truthful Art, Preface - pg 65, pgs 41 - 65 may be useful here.
-
-* [Today's Slides: Web Concepts](https://auremoser.github.io/web-concepts/#/14)
+* Alberto Cairo, Truthful Art, Preface - pg 40
 * Journalism Tools, [_How they did it_](https://medium.com/@Journalism2ls/how-they-did-it-1b2a9baf666a).
+* [Explanatory & Exploratory Data Visualization](https://www.youtube.com/watch?v=YxKr2a-Y1WE)
 
 ## ADDITIONAL RESOURCES

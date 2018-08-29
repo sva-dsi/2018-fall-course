@@ -63,7 +63,9 @@ NOTE: We might decide together to move some things around this semester. I may a
 | [Week 12](week12) | 11/22 | Holiday Observed         | Final Proj. Dev.                                    | NO CLASS           |
 | [Week 13](week13) | 11/29 | Special Topics           | Final Proj. Dev.                                    | Special guest: TBD |
 | [Week 14](week14) | 12/06 | Final Presentations      | Final Presentations                                 | 🎉                 |
-| [Week 15](week15) | 12/13 | Final Project 1-on-1s    | Final Projects Due                                  |                    | 
+| [Week 15](week15) | 12/13 | Final Project 1-on-1s    | Final Projects Due                                  |                    |
+
+NOTE: Some of you may be interested in the [daily charting challenge](daily-sketch-challenge.md)
 
 <!-- Final Project Development -->
 <!-- ************ -->
@@ -152,7 +154,7 @@ NOTE: Make sure to make an appointment otherwise I won't be around!
 
 🗓 If you'd like to meet, please sign up for an appointment via this [Link to Google Calendar Appointments Page](https://calendar.google.com/calendar/selfsched?sstoken=UUxEcXhnTHpVYXl1fGRlZmF1bHR8ZDc5ZTU3ZTA3YzM4YWE4OWUxOTZiZWJhNGIzNzhjNDU)
 
-📮 If none of those times fit, feel free to send me an email with your availability: jl358@sva.edu
+📮 If none of those times fit, feel free to send me an email with your availability: [Joey's SVA email](@mailto:jlee358@sva.edu)
 
 ## Communication
 
@@ -189,13 +191,15 @@ GRADE CALCULATION: Here is a basic breakdown of graded tasks along that trajecto
 
 Readings are assigned to correspond with that week's assignment and class lesson. I'll be lecturing outside the readings with some references to them, and your assignments will allude to them too. Feel free to read ahead to make certain weeks easier.
 
-If and when possible, I will point you to web resources. However there are a few texts that I would like for you have absorbed by the end of this course.
+As much as possible, I will point you to web resources - I know being a grad student is expensive! However there are a few texts that I would like for you have absorbed by the end of this course and one in particular that I think is excellent:
 
 **Required**:
 * Truthful Art, Alberto Cairo
 
+(If for any reason you are unable or uninterested to purchase the book, I'm happy to discuss ways to make a copy available to you / I will make sure to have 1 or 2 available to share. )
+
 **Optional but highly recommended**:
-* Politics of design,
+* Politics of design, Ruben Pater
 * Data Points, Nathan Yau
 * Interactive data visualization for the web 2nd edition, Scott Murray
 
@@ -209,7 +213,7 @@ This is also a good opportunity to maybe work with some people you don't know we
 
 ## Code of Conduct
 
-See [Code of Conduct]()
+See [Code of Conduct](CODEOFCONDUCT.md)
 
 
 ## Materials
