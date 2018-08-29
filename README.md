@@ -63,7 +63,7 @@ NOTE: We might decide together to move some things around this semester. I may a
 | [Week 12](week12) | 11/22 | Holiday Observed         | Final Proj. Dev.                                    | NO CLASS           |
 | [Week 13](week13) | 11/29 | Special Topics           | Final Proj. Dev.                                    | Special guest: TBD |
 | [Week 14](week14) | 12/06 | Final Presentations      | Final Presentations                                 | 🎉                 |
-| [Week 15](week15) | 12/13 | Final Projects Due       | Final Projects Due                                  | NO CLASS           |
+| [Week 15](week15) | 12/13 | Final Project 1-on-1s    | Final Projects Due                                  |                    | 
 
 <!-- Final Project Development -->
 <!-- ************ -->
