@@ -52,7 +52,7 @@ NOTE: We might decide together to move some things around this semester. I may a
 | [Week 1](week01)  | 09/06 | Visual Encoding          | N/A                                                 | Joey in 🇩🇪         |
 | [Week 2](week02)  | 09/13 | Sketching with Data      | [A1 - Viz critique & setup](week01/ASSIGNMENT01.md) | Joey in 🇦🇹         |
 | [Week 3](week03)  | 09/20 | Data Compositions        | [A2 - Dear Data](week02/ASSIGNMENT02.md)            | Joey back in 🗽    |
-| [Week 4](week04)  | 09/27 | Data-ing                 | [A3 - TBA]()                                        |                    |
+| [Week 4](week04)  | 09/27 | Data-ing + relationships | [A3 - TBA]()                                        |                    |
 | [Week 5](week05)  | 10/04 | Data is Plural           | [A4 - TBA]()                                        |                    |
 | [Week 6](week06)  | 10/11 | Synthesis I              | [A5 - TBA]()                                        |                    |
 | [Week 7](week07)  | 10/18 | The Web as your Canvas   | [A6 - TBA]()                                        |                    |
@@ -112,21 +112,21 @@ Everything but the chart
 
 ## Course Description
 
-Mapping data to visuals is as much an exercise in design as it is a political one. The ways in which we filter, aggregate, scale, and process data into information are an accumulation of decisions guided consciously and unconciously by our training and our biases (and perhaps even ignorances) that ultimately affect people and places from local to global scales. Now more than ever, we carry immense power and responsibility to critically engage with the tools, the people, the institutions, and the discourses surrounding data driven and generative visualizations.
+Encoding data to visuals is as much an exercise in design as it is a political one. The ways in which we filter, aggregate, scale, and process data into information are an accumulation of decisions guided consciously and unconciously by our training and our biases (and perhaps even ignorances) that ultimately affect people and places from local to global scales. Now more than ever, we carry immense power and responsibility to critically engage with the tools, the people, the institutions, and the discourses surrounding data driven and generative visualizations.
 
-This course is about data visualization and the technologies that allow for information production and propogation. By working through the data visualization pipeline, from data aquisition to designing interactions, we will develop an understanding of how to build beautiful and thoughtful visual outputs using the modern web and at the same time learn to critically engage with data driven visuals and interactives.
+This course is about data visualization and the technologies that allow for information production and propogation. By working through the data visualization pipeline, from data aquisition to designing interactions, we will develop an understanding of how to build beautiful and thoughtful visual outputs using the modern tools and at the same time learn to critically engage with data driven visuals and interactives.
 
 This course is project based, comprised of weekly visualization exercises/projects and culminating in a final project. The goal is to allow you to expand and extend your skills towards your own topic of interest and/or coursework.
 
 ## Learning Objectives & Outcomes
 
-The goal of this course is to establish the technical and conceptual foundations for building thoughtful, engaging, and considerate information visualizations. By engaging with each step of the data visualization process, from data acquisition to interface design, you will learn to critically engage with data and the tools and media for communicating through/with data.
+The goal of this course is to establish the technical and conceptual foundations for building thoughtful, engaging, and considerate data visualizations. By engaging with each step of the data visualization process, from data acquisition to interface design, you will learn to critically engage with data and the tools and media for communicating through/with data.
 
 Core outcomes of this course include your ability to:
 
 * assess, manipulate, and analyze data
 * engage with the culture of data and information visualization and the politics of making data driven visuals.
-* create visualizations and other tangible media from data of varying formats and sources using [R]() and HTML5 (html/css/javascript)
+* create visualizations and other tangible media from data of varying formats and sources using [R](https://www.r-project.org/) and [HTML5](https://en.wikipedia.org/wiki/HTML5) (html/css/javascript)
 * effectively use version control and collaboration workflows (e.g. Github)
 * publish data and visualizations to the web
 
@@ -152,7 +152,7 @@ NOTE: Make sure to make an appointment otherwise I won't be around!
 
 🗓 If you'd like to meet, please sign up for an appointment via this [Link to Google Calendar Appointments Page](https://calendar.google.com/calendar/selfsched?sstoken=UUxEcXhnTHpVYXl1fGRlZmF1bHR8ZDc5ZTU3ZTA3YzM4YWE4OWUxOTZiZWJhNGIzNzhjNDU)
 
-📮 If none of those times fit, feel free to send me an email with your availability: [Hi Joey...](@mailto:jl358@sva.edu)
+📮 If none of those times fit, feel free to send me an email with your availability: jl358@sva.edu
 
 ## Communication
 
