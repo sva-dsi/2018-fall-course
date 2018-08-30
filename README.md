@@ -90,17 +90,32 @@ Everything but the chart
 6 -
 
 - 1: Visual Encoding
-- 2: Sketching with Data
+  - Data in, visual properties out - what does this mean / what are visual properties
+- 2: Sketching with Data:
+  - basic exploratory data analysis: distributions, frequencies, etc
 - 3: Data Compositions / Data transforms and transforms
+  - have a look at different data structures
+  - restructuring data
   - csv, json, geographic data, timeseries, time
 - 4: Data-ing / exploring data relationships
+  - diving a bit deeper into examining relationships in data
 - 5: Data is Plural / data in multiples
+  - looking into multiple Datasets from various sources & around the web
+  - generating multiple/many plots
 - 6: Synthesis I
+  - from data acquisition, to communicating your analysis with beautiful (static) charts
 - 7: The web as a canvas
-- 8: Interactivity
-- 9: Details on Demand
-- 10:
-- 11:
+  - yeeessssss, intro the the web
+  - intro to svg and d3 for visualization
+- 8: Form + interaction
+  - diving deeper into form and interaction
+  - updating data (enter, update, exit) in the browser
+- 9: Network & interface
+  - working with UI elements to allow interaction and discovery
+- 10: Narrative & Storytelling
+  - designing simple interactions to tell your data story.
+- 11: Synthesis II
+  - 3-hr quick hack to go from data via api to an interactive
   - final projects start
 - 12: no class / holiday
 - 13:
@@ -148,7 +163,7 @@ Thursdays from 6:00 - 9:00 pm.
 ## Office Hours
 
 ```
-Wednesday 5PM- 6PM by appointment
+Friday 5PM- 6PM by appointment
 NOTE: Make sure to make an appointment otherwise I won't be around!
 ```
 

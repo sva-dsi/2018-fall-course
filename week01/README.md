@@ -17,6 +17,8 @@ I would like nothing more than for you all to walk out of this class as total da
 
 👉 [Link to slides]()
 
+* Initial course survey: https://goo.gl/forms/pBxyeDKmP7CsZEJQ2
+
 * Introductions
   - Who am I?
   - Who are you?
