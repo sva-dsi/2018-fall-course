@@ -97,14 +97,18 @@ Notice our markdown gets rendered! You can now copy and paste that link where yo
 
 Documentation is everything. You could make the coolest thing in the world, but if there's no documentation, it might never have happened. So as part of this course you have a few options for documenting your work and submitting assignments. In the end, you will just be submitting a link, so as long as it is accessible via URL, you can take your pick.
 
-* Option 1: Use an existing blogging platform
-  - [wordpress]()
-  - [tumblr]()
-* Option 2: Use the provided Github Jekyll Template provided
-  - [link to github viz portfolio]()
-* Option 3: Use Github Gists
+* **Option 1**: Use an existing blogging platform, some example options...
+  - [Wordpress](https://wordpress.com/)
+  - [Tumblr](https://www.tumblr.com/)
+  - [Cargo Collective](https://2.cargocollective.com/)
+* **Option 2**: Use the provided Github Jekyll Template provided
+  - [link to github viz portfolio](https://github.com/joeyklee/flexible-jekyll/tree/gh-pages)
+    - If you want help setting up a github pages site, we can do a little demo when I'm back in town, or you can try yourself after reading/watching some of these posts:
+      - https://www.hongkiat.com/blog/blog-with-jekyll/
+      - https://www.taniarascia.com/make-a-static-website-with-jekyll/ (I found this one most helpful)
+      - https://www.youtube.com/watch?v=nN6QuNqmAwk
+* **Option 3**: Use Github Gists
   - We just learned how to create github gists! You can submit and show your work using gists for the rest of the semester if you want a lightweight place to post and edit things.
-
 * Setup your blog for the course - may be your own personal site or the template provided
 * (optional) "forking" your blog / Setting up your blog
 
@@ -124,10 +128,10 @@ NOTE: you may use something like [Google Keep](https://keep.google.com/u/0/) or 
 
 Find a data visualization project that resonates with you.
 
-1. Explain why you chose the visualization:
+1. **Explain why you chose the visualization**:
   + why is it effective/affective?
   + Why is it relevant for you?
-2. Describe how the data are mapped to the visuals, here's just some questions to spark your brain:
+2. **Describe how the data are mapped to the visuals**, here's just some questions to spark your brain:
   + What are the elements of the visualization design (e.g. form, color, typography, layout)?
   + How is the narrative and story telling shaped by the creators of the visualization? How do the data inform the format of the visualization?
   + Do you trust/distrust the visuals? Why?
@@ -135,7 +139,7 @@ Find a data visualization project that resonates with you.
   + Does it serve a purpose? If so, which purpose? Is it just beautiful and less substantive, or rather the opposite or both?
   + Would you improve the visualization in any way? How would you improve the visualization? (feel free to sketch out your proposal)
 
- Recommended: Begin by creating visualization moodboards w/ some kind of social bookmarking service (e.g. pinterest, dribble, others?) - being systematic about your collection of visualization examples will help you to begin creating an library of all the things that pique your interest. You can refer to them when you need to and
+ **Recommended**: Begin by creating visualization moodboards w/ some kind of social bookmarking service (e.g. pinterest, dribble, others?) - being systematic about your collection of visualization examples will help you to begin creating an library of all the things that pique your interest. You can refer to them when you need to and
 
 
 ## Deliverables
