@@ -2,19 +2,22 @@
 **DUE:** DD MONTH YEAR, HH:MM
 
 ![image description](link/to/image)
+
 <!-- TOC START min:1 max:3 link:true update:true -->
 - [ASSIGNMENT 01: Setup & Visualization Critique](#assignment-01-setup--visualization-critique)
   - [Brief](#brief)
     - [Part 1: Setup your tools and blog](#part-1-setup-your-tools-and-blog)
     - [Part 2: Interactive Viz Critique](#part-2-interactive-viz-critique)
   - [Deliverables](#deliverables)
-    - [Part 1:](#part-1)
-    - [Part 2:](#part-2)
+    - [Part 1: Setup deliverables](#part-1-setup-deliverables)
+    - [Part 2: Visualization critique](#part-2-visualization-critique)
   - [Submission](#submission)
-    - [Part 1:](#part-1-1)
-    - [Part 2:](#part-2-1)
+    - [Part 1: Setup URLs Submission](#part-1-setup-urls-submission)
+    - [Part 2: Visualization Critique submission](#part-2-visualization-critique-submission)
 
 <!-- TOC END -->
+
+
 
 
 
@@ -95,9 +98,10 @@ Notice our markdown gets rendered! You can now copy and paste that link where yo
 Documentation is everything. You could make the coolest thing in the world, but if there's no documentation, it might never have happened. So as part of this course you have a few options for documenting your work and submitting assignments. In the end, you will just be submitting a link, so as long as it is accessible via URL, you can take your pick.
 
 * Option 1: Use an existing blogging platform
-  -
+  - [wordpress]()
+  - [tumblr]()
 * Option 2: Use the provided Github Jekyll Template provided
-  -
+  - [link to github viz portfolio]()
 * Option 3: Use Github Gists
   - We just learned how to create github gists! You can submit and show your work using gists for the rest of the semester if you want a lightweight place to post and edit things.
 
@@ -110,7 +114,7 @@ Part of documenting your work is also being able to cite your sources as well as
 
 I use a combination of the [Pocket App](https://getpocket.com/) and [Pinterest](https://www.pinterest.com/) to quickly save and keep track of things that inspire me. I've begun one here for this course [Joey's Pinterest Board](https://www.pinterest.com/josephkanglee/sva-dataviz/).
 
-→ Create an account [Pinterest](https://pinterest.com) > create a new `Board` called `sva-dataviz`
+→ Create an account [Pinterest](https://pinterest.com) > create a new `Board` called `sva-dataviz` (or come up with a name)
 
 NOTE: you may use something like [Google Keep](https://keep.google.com/u/0/) or [Evernote](https://evernote.com/) or [Dribbble](https://dribbble.com/) or any other service - even just a folder of screenshots on your computer will do. The point is to do your best to keep up with tracking your inspiration and references.
 
@@ -136,7 +140,7 @@ Find a data visualization project that resonates with you.
 
 ## Deliverables
 
-### Part 1:
+### Part 1: Setup deliverables
 
 * Logistics and setup:
   - [ ] Github Account
@@ -145,22 +149,22 @@ Find a data visualization project that resonates with you.
   - [ ] Successful post to Github gists
   - [ ] Blog Setup
 
-### Part 2:
+### Part 2: Visualization critique
 
 * blog post:
-  - [ ] A 2-3 paragraph blog post reflection/critique of a visualization of choice. The blog post must be posted to the web and successfully submitted to the class Github Repository
+  - [ ] A 2-3 paragraph (more if you'd like!) blog post reflection/critique of a visualization of choice. The blog post must be posted to the web and successfully submitted to the class Github Repository
 
 ## Submission
 
-### Part 1:
+### Part 1: Setup URLs Submission
 
-* Submit the following URL(s) to this [Github Issue for Assignment 1.1]() in the class repository:
+* Submit the following URL(s) to this [Github Issue for Assignment 1.1](https://github.com/sva-dsi/2018-fall-course/issues/2) in the class repository:
   - Your Github Repo
   - Your Gist
   - Your Moodboard for SVA DSI
 
 
-### Part 2:
+### Part 2: Visualization Critique submission
 
-* Submit the following URL(s) to this [Github Issue for Assignment 1.2]() in the class repository:
+* Submit the following URL(s) to this [Github Issue for Assignment 1.2](https://github.com/sva-dsi/2018-fall-course/issues/1) in the class repository:
   - Link to your Blog post
