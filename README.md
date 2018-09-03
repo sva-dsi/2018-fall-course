@@ -178,14 +178,19 @@ We will use this Github repository as our main organizing platform for resources
 If you'd like to share links, ask questions, or field feedback, please feel free to:
 
 * Post to our Class "[Issues](https://github.com/sva-dsi/2018-fall-course/issues)":
+
+<!--
+
 * Chat in our [Gitter Channel]() (it's like slack, but hosted by Github/linked to our class repository):
+
+-->
 
 ## Assignments
 
 Each week you will have readings assigned, accompanied by often (but not always) an `Assignment` and a `Practice` activity. See the calendar below to confirm the expectations from week to week. I will grade your assignments and aggregate them as contributions to your final grade. Most assignments are working toward your Final Project, counting as 30% of your final grade.
 
 <!-- [XYZ](https://gist.github.com/) -->
-* All assignments will be submitted via [Github Gists](https://gist.github.com/) on your [Github](https://github.com/) account.
+* All assignments will be submitted via [Github Gists](https://gist.github.com/) on your [Github](https://github.com/) account OR you may use your personal blogs, however your code files and data need to be easily accessible and usable.
 * Joey will repost assignments in Canvas, where possible
 * You can view a template of what your assignment should look like here in this [gist](https://gist.github.com/auremoser/9dcfac8163e7737e7b5f).
 * Assignments are due on the course date following the class in which they are assigned unless otherwise indicated - there are short assignments every week - Week 2 for example, "Critique an interactive" is due on 9/13
@@ -209,14 +214,14 @@ Readings are assigned to correspond with that week's assignment and class lesson
 As much as possible, I will point you to web resources - I know being a grad student is expensive! However there are a few texts that I would like for you have absorbed by the end of this course and one in particular that I think is excellent:
 
 **Required**:
-* Truthful Art, Alberto Cairo
+* The [Truthful Art](https://www.amazon.com/Truthful-Art-Data-Charts-Communication/dp/0321934075), Alberto Cairo
 
 (If for any reason you are unable or uninterested to purchase the book, I'm happy to discuss ways to make a copy available to you / I will make sure to have 1 or 2 available to share. )
 
 **Optional but highly recommended**:
-* Politics of design, Ruben Pater
-* Data Points, Nathan Yau
-* Interactive data visualization for the web 2nd edition, Scott Murray
+* [Politics of design](https://www.amazon.com/Politics-Design-Global-Manual-Communication/dp/9063694229), Ruben Pater
+* [Data Points](http://flowingdata.com/data-points/), Nathan Yau
+* [Interactive data visualization for the web 2nd edition](http://alignedleft.com/work/d3-book), Scott Murray
 
 You can find the [FULL BIBLIOGRAPHY](BIBLIOGRAPHY.md) in the repository for this course.
 
@@ -227,6 +232,8 @@ In this course, you will be asked to form dedicated support networks consisting 
 This is also a good opportunity to maybe work with some people you don't know well or to build some more projects with people you already do!
 
 ## Code of Conduct
+
+![Immaculate Heart Rules, Sister Corita Kent, 10 Rules for Students, Teachers, and Life by John Cage and Sister Corita Kent](assets/images/sistercoritarules1.jpg)
 
 See [Code of Conduct](CODEOFCONDUCT.md)
 
