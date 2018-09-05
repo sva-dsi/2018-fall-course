@@ -1,5 +1,5 @@
 # ASSIGNMENT 01: Setup & Visualization Critique
-**DUE:** DD MONTH YEAR, HH:MM
+**DUE:** 13 Sept 2018, 6:00 PM
 
 ![image description](link/to/image)
 
