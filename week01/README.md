@@ -63,7 +63,7 @@ I would like nothing more than for you all to walk out of this class as total da
   * Demo 1: Text Editors & Markdown intro
     - See: https://youtu.be/8cpwhFHE6hc
   * Demo 2: Github account, beginner repo creation and gist flow
-    - See: (make a new github repo)
+    - See: https://kirstiejane.github.io/friendly-github-intro/exercises/my-first-repo/ (make a new github repo)
     - See: https://youtu.be/MLxXAj0GGwg (make a new gist)
   * Demo 3: Pinterest board
     - See: Go to https://www.pinterest.com/josephkanglee/sva-dataviz/ and check out some of the pins and sections
