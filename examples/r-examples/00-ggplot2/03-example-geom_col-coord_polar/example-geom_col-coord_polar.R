@@ -9,11 +9,9 @@ myData <- data.frame(animals=randomAnimals,randomCount=randomCounts )
 # alternatively you can read in data like
 # myData <- read.csv("path/to/csv", header=TRUE)
 
-# a simple plot - geom_col differs from geom_bar because you can 
+# a simple plot - geom_col differs from geom_bar because you can
 # specify which x and y values you want
+# notice the addition of the coord_polar()
 ggplot(data=myData ) + geom_col( aes(x= animals,y=randomCount) ) + coord_polar()
 
 # OMG HOW COOL IS THAT ^^
-
-
-
