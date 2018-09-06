@@ -1,0 +1,77 @@
+Size is 3264, 2448
+Coordinate System is `'
+Metadata:
+  EXIF_ApertureValue=(2.27501)
+  EXIF_BrightnessValue=(11.2689)
+  EXIF_ColorSpace=1
+  EXIF_ComponentsConfiguration=0x1 0x2 0x3 00
+  EXIF_DateTime=2018:08:25 15:47:58
+  EXIF_DateTimeDigitized=2018:08:25 15:47:58
+  EXIF_DateTimeOriginal=2018:08:25 15:47:58
+  EXIF_ExifVersion=0221
+  EXIF_ExposureBiasValue=(0)
+  EXIF_ExposureMode=0
+  EXIF_ExposureProgram=2
+  EXIF_ExposureTime=(0.000315956)
+  EXIF_Flash=16
+  EXIF_FlashpixVersion=0100
+  EXIF_FNumber=(2.2)
+  EXIF_FocalLength=(4.15)
+  EXIF_FocalLengthIn35mmFilm=29
+  EXIF_GPSAltitude=(51.8309)
+  EXIF_GPSAltitudeRef=00
+  EXIF_GPSDateStamp=2018:08:25
+  EXIF_GPSDestBearing=(150.48)
+  EXIF_GPSDestBearingRef=T
+  EXIF_GPSImgDirection=(150.48)
+  EXIF_GPSImgDirectionRef=T
+  EXIF_GPSLatitude=(40) (45) (16.04)
+  EXIF_GPSLatitudeRef=N
+  EXIF_GPSLongitude=(74) (0) (21.18)
+  EXIF_GPSLongitudeRef=W
+  EXIF_GPSSpeed=(0.24)
+  EXIF_GPSSpeedRef=K
+  EXIF_GPSTimeStamp=(19) (47) (58.55)
+  EXIF_ISOSpeedRatings=32
+  EXIF_Make=Apple
+  EXIF_MakerNote=Apple iOS
+  EXIF_MeteringMode=5
+  EXIF_Model=iPhone 5s
+  EXIF_Orientation=6
+  EXIF_PixelXDimension=3264
+  EXIF_PixelYDimension=2448
+  EXIF_ResolutionUnit=2
+  EXIF_SceneCaptureType=0
+  EXIF_SceneType=0x1
+  EXIF_SensingMethod=2
+  EXIF_ShutterSpeedValue=(11.6278)
+  EXIF_Software=11.3.1
+  EXIF_SubjectArea=1631 1223 1795 1077
+  EXIF_SubSecTime_Digitized=706
+  EXIF_SubSecTime_Original=706
+  EXIF_WhiteBalance=0
+  EXIF_XResolution=(72)
+  EXIF_YCbCrPositioning=1
+  EXIF_YResolution=(72)
+Image Structure Metadata:
+  COMPRESSION=JPEG
+  INTERLEAVE=PIXEL
+  SOURCE_COLOR_SPACE=YCbCr
+Corner Coordinates:
+Upper Left  (    0.0,    0.0)
+Lower Left  (    0.0, 2448.0)
+Upper Right ( 3264.0,    0.0)
+Lower Right ( 3264.0, 2448.0)
+Center      ( 1632.0, 1224.0)
+Band 1 Block=3264x1 Type=Byte, ColorInterp=Red
+  Overviews: 1632x1224, 816x612, 408x306
+  Image Structure Metadata:
+    COMPRESSION=JPEG
+Band 2 Block=3264x1 Type=Byte, ColorInterp=Green
+  Overviews: 1632x1224, 816x612, 408x306
+  Image Structure Metadata:
+    COMPRESSION=JPEG
+Band 3 Block=3264x1 Type=Byte, ColorInterp=Blue
+  Overviews: 1632x1224, 816x612, 408x306
+  Image Structure Metadata:
+    COMPRESSION=JPEG

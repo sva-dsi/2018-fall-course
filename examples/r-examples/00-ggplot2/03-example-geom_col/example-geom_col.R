@@ -9,7 +9,8 @@ myData <- data.frame(animals=randomAnimals,randomCount=randomCounts )
 # alternatively you can read in data like
 # myData <- read.csv("path/to/csv", header=TRUE)
 
-# a simple plot
+# a simple plot - geom_col differs from geom_bar because you can 
+# specify which x and y values you want
 ggplot(data=myData ) + geom_col( aes(x= animals,y=randomCount) )
 
 # OMG HOW COOL IS THAT ^^

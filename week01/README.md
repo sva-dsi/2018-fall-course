@@ -68,13 +68,13 @@ I would like nothing more than for you all to walk out of this class as total da
   * Demo 3: Pinterest board
     - See: Go to https://www.pinterest.com/josephkanglee/sva-dataviz/ and check out some of the pins and sections
   * Demo 4: R studio demo
-    - See:
+    - See: 
     - See: https://github.com/joeyklee/aloha-r
 
 
 
 **Project Highlight - Critique & Feedback**
-![project highlight image]()
+![project highlight image](https://news.psu.edu/sites/default/files/styles/threshold-992/public/hockeystick.gif?itok=d3wvICuj)
 
 **STUDIO:**
 * Intro to R and our first plots with ggplot2
@@ -91,6 +91,7 @@ I would like nothing more than for you all to walk out of this class as total da
 
 ### Github
 * [On Demand Github Tutorials](https://guides.github.com/activities/hello-world/)
+* [Mozilla Friendly Github Introduction](https://kirstiejane.github.io/friendly-github-intro/exercises/my-first-repo/)
 
 ### R
 * [DataCamp R Course - free lessons](https://campus.datacamp.com/courses/free-introduction-to-r/)
