@@ -16,6 +16,8 @@
 <!-- TOC END -->
 
 
+**Please make sure to log in your Attendance - thank you!**:
+👉 https://goo.gl/forms/rgWeBORbtuWaBlCh2
 
 ## ASSIGNMENT
 
