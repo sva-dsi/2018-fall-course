@@ -1,6 +1,6 @@
 
 # Get the filepath of the data
-dataPath <- "/Users/joeyklee/Code/src/github/sva-dsi/2018-fall-course/examples/r-examples/00-hello-world/temperature.csv"
+dataPath <- "/Users/joeyklee/Code/src/github/sva-dsi/2018-fall-course/examples/r-examples/01-hello-world/temperature.csv"
 
 myData <- read.csv(dataPath, header=TRUE)
 
