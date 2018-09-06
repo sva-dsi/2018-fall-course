@@ -70,7 +70,7 @@ I would like nothing more than for you all to walk out of this class as total da
   * Demo 3: Pinterest board
     - See: Go to https://www.pinterest.com/josephkanglee/sva-dataviz/ and check out some of the pins and sections
   * Demo 4: R studio demo
-    - See: go through the .R files and run the code in each folder of  [examples/r-examples/00_ggplot2](examples/r-examples/00_ggplot2)
+    - See: go through the .R files and run the code in each folder of  [examples/r-examples/00_ggplot2](https://github.com/sva-dsi/2018-fall-course/tree/master/examples/r-examples)
 
 
 
