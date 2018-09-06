@@ -79,6 +79,16 @@ I would like nothing more than for you all to walk out of this class as total da
 * Intro to R and our first plots with ggplot2
 * Start working on [Assignment 1](ASSIGNMENT01.md)
 
+**Additional Notes**
+* Oh so many things, but you might consider subscribing to:
+  * Andy Kirk's blog: http://www.visualisingdata.com/blog/
+  * Enrico and Moritz's data stories podcast: http://datastori.es/
+  * Jeremy Singer Vine's: https://tinyletter.com/data-is-plural
+  * The Pudding: https://pudding.cool/
+  * Information is Beautiful: https://informationisbeautiful.net/
+  * Jon Schwabisch's blog: https://policyviz.com/
+  * Lisa Rost's Blog: https://lisacharlotterost.github.io/ | https://blog.datawrapper.de/
+
 
 ## PRACTICE
 
