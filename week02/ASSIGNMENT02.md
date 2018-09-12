@@ -1,5 +1,5 @@
-# ASSIGNMENT 02: Dear Data
-**DUE:** DD MONTH YEAR, HH:MM
+# ASSIGNMENT 02: Dear Data - What do our mobility patterns tell us?
+**DUE:** 20 September 2018, 6:00 PM
 
 ![image description](link/to/image)
 
@@ -16,6 +16,7 @@
 
 <!-- TOC END -->
 
+![image of entire form](assets/images/dd-002.jpg)
 
 ## Brief
 
@@ -27,20 +28,25 @@ This week we will begin dipping our toes into the data visualization workflow. T
   - filtering, grouping, and processing your data to make sense of it
   - analyzing your data to pull out key insights and information worth communicating
   - experimenting with representation
-  - defining the visual form which best speaks to the data/information you're interested in communicating
+  - defining the visual form which best speaks to the data/information we're interested in communicating
   - creating the visual for all the see
-  - documenting your work to explain your visual
-  - "defending" / explaining your process and visualization to your peers.
+  - documenting our work to explain our visual
+  - "defending" / explaining our process and visualization to our peers.
 
 **Are you ready!? So exciting! Let's go!**
 
-* a week of emails *
+With the above process in mind, we will be following in the methodologies of the great [Stephanie Posavek](http://www.stefanieposavec.com/) and [Georgia Lupi](http://giorgialupi.com/) and building our own "Dear Data" hand drawn data visualizations. By this time next week, we will have 25 super curious and procedurely hand-generated visualizations of 1 week of our [mobility behavior](https://en.wikipedia.org/wiki/Travel_behavior) - when and by which transporation mode - do we take to get from A to B.
 
-With the above process in mind, we will be following in the methodologies of the great [Stephanie Posavek](http://www.stefanieposavec.com/) and [Georgia Lupi](http://giorgialupi.com/) and building our own "Dear Data" hand drawn data visualizations. By this time next week, we will have 25 super curious and procedurely hand-generated visualizations of 1 week of our [mobility behavior]() - when and by which transporation mode - do we take to get from A to B.
+Knowing about your transportation behavior is handy for a number of reasons. Transportation and government agencies might use these data to increase the efficiency of their service and identify where they might better serve their audience. Know about your own travel behavior might show you how exciting (or regular) your life is, give you insights into your environmental impacts of your transport mode choices, and more.
 
-We will define the process below:
+To build our own travel/mobility survey, we will outline a process below: `Collect > Parse > Filter & Mine > Represent & Interact > Refine`
 
 ### Collect
+
+
+![screenshot of form](assets/images/form-001.png)
+
+📼 **Follow along here**: https://youtu.be/BOn7t_7csYE
 
 Here's a video showing how you can:
 1. create google form
@@ -49,7 +55,8 @@ Here's a video showing how you can:
 4. look at your data in google spreadsheets
 5. export that spreadsheet to a csv file.
 
-**Follow along here**: https://youtu.be/BOn7t_7csYE
+
+![image of entire form](assets/images/form-002.png)
 
 **Form questions**
 
@@ -99,59 +106,94 @@ Create a google form. In this google form you will create 2 sections. `Section 1
     - e.g. `106`
     - units: minutes
 
-<!-- * tracking using Nomie2 App
-* create 8 trackers:
-  - Bike
-  - Bus
-  - Train
-  - Plane
-  - Foot
-  - On Demand Service
-  - Private vehicle
-  - Other
-* Tap the tracker at the **beginning** of each trip
-* Each time a tap occurs (see example export below):
-  - the location is stored
-  - the timestamp is stored
-  - the count is stored
-
-NOTE: Take notes about where you might have gone each day
--->
-
 
 ### Parse
 
-<!--
-* at the end of each day, export the data to **.csv**
-* at the end of the week, compile all those data together.
-* Copy and paste all the data into a Google Spreadsheet, Numbers, or Excel
-* Sort by `excel_date` to see your data in order by date/time
--->
+![Alice Sun's note cards of her commute](assets/images/dotted_commute3.jpg)
 
+You can choose to work with your data by hand, in your favorite spreadsheet program (e.g. in Google Spreadsheets, Excel, Numbers, etc), or in R.
 
+![three dots to export](assets/images/export-csv-001.png)
+![export to csv](assets/images/export-csv-002.png)
 
-NOTE: Take notes about any problems you encounter in this step and how you've overcome them
+If you choose to export your data externally, you can export your data from your form responses by:
+
+1. click your `responses` tab in your form
+2. click on the 3 dots in the top right corner of your form
+3. export to csv
+
+#### Calculating Trip_Time
+
+If you'd like to calculate the trip time in Google Spreadsheets, you can do so like so: https://youtu.be/kGkNxy86dw0
+
+> view of opening up a csv in Numbers for Mac
+
+![csv in Numbers for Mac](assets/images/csv-in-numbers-001.png)
+
+> view of opening up a csv in R
+
+![csv in R with variables showing](assets/images/csv-in-r-001.png)
+![csv in R in data table view](assets/images/csv-in-r-002.png)
+
+you can find the script for this little example here: [/examples/r-examples/basics/parsing-time.R](../examples/r-examples/basics/parsing-time.R)
+
+```r
+
+########################################
+# Example script to open up a csv file exported
+# from google forms
+########################################
+
+### get the file path of your file ###
+# TIP: http://osxdaily.com/2013/06/19/copy-file-folder-path-mac-os-x/
+myDataPath = "/Users/joeyklee/Downloads/Dear Data Mobility Diary.csv"
+
+### read your data into R ###
+# here we explictly say we have a Header row and that our
+# data are separated by a comma
+myData = read.csv(myDataPath, header=TRUE, sep = ",")
+
+# and so on...
+```
+
+NOTE: Take notes about any issues you encounter in this step and how you've overcome them
 
 ### Filter and Mine
 
-* From here, it is up to you to decide what features you'd like to highlight, filter, and group. By looking around your data, you might also start to find out certain insights that are unique to you and your knowledge of your behaviors. Note those down - do your data indicate you have a pretty regular transport behaviors? or do you mix it up this week? You should be able to start identifying some trends or a lackthereof.
+From here, it is up to you to decide what features you'd like to highlight, filter, and group. By looking around in your data, you might also start to find out certain insights that are unique to you and your knowledge of your behaviors. Note those down.
+
+Do your data indicate you have a pretty regular transport behaviors? or do you mix it up this week? You should be able to start identifying some trends or a lackthereof.
 
 NOTE: Take notes about the methods you are employing onto your data.
 
 ### Represent & Interact
 
-* With your notes in hand, begin playing with various visual forms - is it necessary to draw a map or is a bar chart ok? Do you go for something more expressive or literal?
-* Sketch out a few different visual expressions of your data to refine your understanding of what your data might be saying.
-* You may consider moodboarding based on what kinds of things you've found in your data.
+![Krizia Fernando - prototpying visualization](assets/images/krizia-002.png)
+<small>via: https://kernfern.wordpress.com/2018/02/12/analog-tracking-my-daily-commute/</small>
+
+With your notes in hand, begin playing with various visual forms - is it necessary to draw a map or is a bar chart ok? Do you go for something more expressive or literal?
+
+Sketch out a few different visual expressions of your data to refine your understanding of what your data might be saying.
+
+You may consider moodboarding based on what kinds of things you've found in your data.
 
 NOTE: Take notes and photos of your sketches and visual experiments. Don't get caught up with perfection here, while you are perfect, your sketches do not need to be ;) !
 
 ### Refine
-* You've sketched out a number of options, what has emerged? Is the aggregate of the week more interesting or do your day-to-days reveal something special?
-* Define the rules for your visualization - how are your data visually encoded by parameters such as length, area, direction, hue, saturation, etc?
-* Finally, draw your data illustration using your defined rules on your postcard!
-* Remember to include a legend on how to read your illustration.
-* If you wish to include an address, please put the SVA DSI address:
+
+![Krizia Fernando - 1 week of commuting](assets/images/krizia-001.png)
+<small>via: https://kernfern.wordpress.com/2018/02/12/reflection-on-analog-tracking/</small>
+
+You've sketched out a number of options, what has emerged? Is the aggregate of the week more interesting or do your day-to-days reveal something special?
+
+Define the rules for your visualization - how are your data visually encoded by parameters such as length, area, direction, hue, saturation, etc?
+
+Finally, draw your data illustration using your defined rules on your postcard!
+
+Remember to include a legend on how to read your illustration.
+
+
+If you wish to include an address, please put the SVA DSI address 😉
 
 ```
 SVA DSI
@@ -167,9 +209,9 @@ NOTE: Document your final outcome with photos.
 ## Deliverables
 
 * [ ] Documentation of your process and notes submitted as a `gist` or on your blogs
-* [ ] Documentation of your final outcome
+* [ ] Documentation of your final outcome which includes the visualization and legend on how to read your visualization
 * [ ] Bring your card to class next week to share and give feedback to your peers
-* [ ] Bring your data so we can compile, anonymize and generalize sensitive location data
+* [ ] Bring your data so we can compile, anonymize and generalize sensitive location data if necessary
 
 ## Submission
 
