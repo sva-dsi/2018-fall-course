@@ -109,7 +109,9 @@ This week we will begin dipping our toes into the data visualization workflow cu
 
 
 ## PRACTICE
-
+* ...
+* ...
+* ...
 
 
 ## READINGS
