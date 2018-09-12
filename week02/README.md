@@ -1,6 +1,19 @@
 # WEEK `02`
 ## Sketching With Data
 
+<!-- TOC START min:1 max:3 link:true update:true -->
+- [WEEK `02`](#week-02)
+  - [Sketching With Data](#sketching-with-data)
+  - [ASSIGNMENT](#assignment)
+  - [AGENDA](#agenda)
+  - [PRACTICE](#practice)
+  - [READINGS](#readings)
+  - [ADDITIONAL RESOURCES](#additional-resources)
+
+<!-- TOC END -->
+
+
+
 **Please make sure to log in your Attendance - thank you!**:
 👉 https://goo.gl/forms/L76gDcljvuDc4aOJ3
 
@@ -28,7 +41,11 @@ This week we will begin dipping our toes into the data visualization workflow cu
   * 5 qualities of good data viz: truthful, functional, beautiful, insightful, enlightening
   * 4 types of classifying data: norminal, ordinal, interval, ratio
   * Data viz as art, journalism, and science
-*
+* Github Tutorial:
+  * Review: https://www.youtube.com/watch?v=BCQHnlnPusY
+  * Branching + Pull Requests:
+  * Forking + Syncing Forks: https://github.com/KirstieJane/STEMMRoleModels/wiki/Syncing-your-fork-to-the-original-repository-via-the-browser
+  *
 * Sketching with Data:
   * sketching with data <==> exploratory data analysis
     * general principles: https://www.itl.nist.gov/div898/handbook/eda/section1/eda11.htm
