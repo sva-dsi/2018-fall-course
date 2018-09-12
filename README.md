@@ -266,5 +266,3 @@ Coding is an art; you will have a series of art supplies for this course that wi
   - [Node.js http-server](https://www.npmjs.com/package/http-server) (recommended)
   - [Python Simple Server](http://www.pythonforbeginners.com/modules-in-python/how-to-use-simplehttpserver/)
   
-  
-<!--  just a little additiona -->
