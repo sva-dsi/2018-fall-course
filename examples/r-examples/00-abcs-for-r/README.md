@@ -1099,10 +1099,25 @@ summary(rain_csv)
 Distributions
 =============
 
+Variance
+--------
+
+via: <http://www.statisticshowto.com/sample-variance/> Variance measures how far a data set is spread out. The technical definition is "The average of the squared differences from the mean," but all it really does is to give you a very general idea of the spread of your data. A value of zero means that there is no variability; All the numbers in the data set are the same. While the variance is useful in a mathematical sense, it won’t actually give you any information that you can use. For example, if you take a sample population of weights, you might end up with a variance of 9801. That might leave you scratching your head about why you’re calculating it in the first place! The answer is, you can use the variance to figure out the standard deviation
+
+Sample variance is defined as:
+
+``` r
+var(rain_csv$precipitation)
+```
+
+    ## [1] 3182.811
+
+notice in this case that the variance is `3182.811`. That's massive! But what does it all mean?? Not much actually, except that it is used to calculate standard deviation which is actually important.
+
 Standard Deviation
 ------------------
 
-You can use `sd()` to calculate the standard deviation. Why is standard deviation interesting? It gives us a picture of the range of of variability there is for each value away from the mean.
+You can use `sd()` to calculate the standard deviation. Why is standard deviation interesting? It gives us a picture of the range of of variability there is for each value away from the mean. NOTE: since standard deviation is linked to the mean, it is highly influenced by the distribution of
 
 ``` r
 sd(rain_csv$precipitation)
@@ -1164,6 +1179,24 @@ Handling Time
 
 data joins
 ----------
+
+------------------------------------------------------------------------
+
+------------------------------------------------------------------------
+
+------------------------------------------------------------------------
+
+Writing better/more readable scripts
+====================================
+
+Your own Functions
+------------------
+
+R Markdown
+----------
+
+Exporting Data
+--------------
 
 ------------------------------------------------------------------------
 

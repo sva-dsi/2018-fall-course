@@ -28,7 +28,7 @@ This week we will begin dipping our toes into the data visualization workflow cu
 
 **DISCUSSION:**
 
-👉 [Link to slides]()
+👉 [Link to slides](https://docs.google.com/presentation/d/1HGUFFn5y6_UesbRWl-pUtCPzKwJ9ToM6ybV-dXXPZSU/edit?usp=sharing)
 
 * Selected assignment highlights (if you don't go today, you will at some point in the semester):
   * Name 1
@@ -37,6 +37,10 @@ This week we will begin dipping our toes into the data visualization workflow cu
   * Name 4
   * Name 5
   * volunteers welcome!
+* Project Highlight: Dear Data
+* Assignment Overview: Dear Data + Mobility Behavior
+  * data collection using google forms
+  * brainstorming visual encodings
 * Recap from Week 1:
   * 5 qualities of good data viz: truthful, functional, beautiful, insightful, enlightening
   * 4 types of classifying data: norminal, ordinal, interval, ratio
@@ -44,30 +48,7 @@ This week we will begin dipping our toes into the data visualization workflow cu
 * Github Tutorial:
   * Github Workflow - the super short version:
     * https://youtu.be/ZFQHzSHGrRE
-  * Github For Poets via Coding Train(the whole series: https://www.youtube.com/watch?v=BCQHnlnPusY&list=PLRqwX-V7Uu6ZF9C0YMKuns9sLDzK6zoiV&index=1)
-    * Review: https://www.youtube.com/watch?v=BCQHnlnPusY
-    * Branching + Pull Requests:
-      * https://www.youtube.com/watch?v=oPpnCh7InLY
-    * Forking + Syncing Forks:
-      * forking: https://www.youtube.com/watch?v=_NrSWLQsDL4
-      * syncing a fork using github:
-        * from KirstieJane https://github.com/KirstieJane/STEMMRoleModels/wiki/Syncing-your-fork-to-the-original-repository-via-the-browser
-        * from JoeyKLee: https://youtu.be/Up5woiH3Ljs
-    * Github Issues:
-      * https://www.youtube.com/watch?v=WMykv2ZMyEQ
-    * Intro to the commandline and Git:
-      * https://www.youtube.com/watch?v=oK8EvVeVltE
-    * Cloning a repo + pushing/pulling changes:
-      * https://www.youtube.com/watch?v=yXT1ElMEkW8
-    * Git init & git add:
-      * https://www.youtube.com/watch?v=9p2d-CuVlgc
-    * Github Pages and hosting static websites:
-      * https://www.youtube.com/watch?v=bFVtrlyH-kc&t=118s
-    * Supplementary:
-      * Resolving merge conflicts:
-        * https://www.youtube.com/watch?v=JtIX3HJKwfo
-      * Git Remotes:
-        * https://www.youtube.com/watch?v=lR_hYwCAaH4
+  * See Github for Poets from the Coding Train in Additional Resources
 * Sketching with Data + R: basic exploratory data analysis and introduction to R
   * introduction to computational principles
   * general principles of exploratory data analysis: https://www.itl.nist.gov/div898/handbook/eda/section1/eda11.htm
@@ -81,9 +62,7 @@ This week we will begin dipping our toes into the data visualization workflow cu
     * calculating mean
     * calculating median
     * calculating
-* Assignment Overview: Dear Data + Mobility Behavior
-  * data collection using google forms
-  * brainstorming visual encodings
+
 
 <!--
   * Asking critical data questions ==> pathways towards addressing them
