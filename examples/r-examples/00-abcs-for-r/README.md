@@ -974,29 +974,136 @@ We covered:
 Statistical Functions
 =====================
 
+The power of programming in R really starts to shine when you combine it's handy functions for tidying data and exploring data with plots with it's statistical origins. In this course we will take a look at some of these handy statistical functions that will allow us to start looking deeper into data.
+
+Measures of Central Tendency
+============================
+
 mean
 ----
+
+Calculating the mean is as simple as inputing your list and using the `mean()` function.
+
+``` r
+mean(rain_csv$precipitation)
+```
+
+    ## [1] 101.0833
 
 median
 ------
 
+Calculating the median is as simple as inputing your list and using the `median()` function.
+
+``` r
+median(rain_csv$precipitation)
+```
+
+    ## [1] 89.5
+
 mode
 ----
+
+Calculating the `mode()` or most common number or feature in a list requires a little bit extra effort on our side. It also introduces an important but thus far not discussed topic of *defining our own functions*. Here, we define our own custom function called `calculateMode()` and use it to calculate the mode of this list of features.
+
+NOTE: if there are only unique numbers, then the FIRST value will be returned!
+
+``` r
+calculateMode = function( arr ){
+  # via https://gist.github.com/jmarhee/8530768
+  uniqueValues = unique(arr)
+  # get the count of the values that are unqiue
+  countValues = tabulate(match(arr, uniqueValues))
+  # get the value which is most common
+  mostCommonValue = uniqueValues[which.max(countValues)]
+  return(mostCommonValue)
+}
+
+randomThings = c("badger", "badger", "badger", "snake", "snake", "badger", "mushroom", "mushroom")
+
+calculateMode(randomThings)
+```
+
+    ## [1] "badger"
 
 range
 -----
 
+get the min and max values of the precipitation in the rain\_csv
+
+``` r
+range(rain_csv$precipitation)
+```
+
+    ## [1]  38 186
+
 summary
 -------
 
-------------------------------------------------------------------------
+The `summary()` function gives us the: \* min \* 1st quartile \* median \* mean \* 3rd quartile \* max
+
+``` r
+summary(rain_csv)
+```
+
+    ##      months      precipitation   
+    ##  Min.   : 1.00   Min.   : 38.00  
+    ##  1st Qu.: 3.75   1st Qu.: 56.25  
+    ##  Median : 6.50   Median : 89.50  
+    ##  Mean   : 6.50   Mean   :101.08  
+    ##  3rd Qu.: 9.25   3rd Qu.:138.75  
+    ##  Max.   :12.00   Max.   :186.00
+
+Standard Deviation
+------------------
+
+You can use `sd()` to calculate the standard deviation. Why is standard deviation interesting? It gives us a picture of the range of of variability there is for each value away from the mean.
+
+``` r
+sd(rain_csv$precipitation)
+```
+
+    ## [1] 56.4164
+
+Z-score or Standard Score
+-------------------------
+
+A standard score or z-score is an indication of how far a raw score deviates from the mean, measured in the number of standard deviations. To calculate the z-score, we can do the following.
+
+``` r
+meanPrecipitation = mean(rain_csv$precipitation)
+sdPrecipitation = sd(rain_csv$precipitation)
+# a z score for a given value is equal to the input value minus the mean divided by the standard deviation
+zScoreForGivenValue = (72 - meanPrecipitation) / sdPrecipitation
+
+print(zScoreForGivenValue)
+```
+
+    ## [1] -0.515512
+
+So let's say that instead of get the standard score, we wanted to get the raw score from the z-score, we could alternative do:
+
+``` r
+meanPrecipitation = mean(rain_csv$precipitation)
+sdPrecipitation = sd(rain_csv$precipitation)
+rawScore = (5 * sdPrecipitation ) + meanPrecipitation
+print (rawScore)
+```
+
+    ## [1] 383.1654
+
+this would tell us that if we were to be +5 deviations above the mean, we would have 383.1654 mm of precipitation relative to Vancovuer's average rain for 2014.
+
+What's cool about this is that let's say we have a phenomenon that follows a normal distribution, then we could begin to calculate the relative incomes across countries for 0.5, 1, 2, and 3 standard deviations.
 
 ------------------------------------------------------------------------
 
 ------------------------------------------------------------------------
 
-A Bit of Data Wrangling and Parsing
-===================================
+------------------------------------------------------------------------
+
+A Bit of Data Wrangling and Parsing (week 3)
+============================================
 
 Subset
 ------
@@ -1026,7 +1133,8 @@ Additional Resources:
 -   <https://www.tidyverse.org/learn/>
 -   R mapping: ggmap
 -   <http://eriqande.github.io/rep-res-web/lectures/making-maps-with-R.html>
--   geojsonio package: <https://github.com/ropensci/geojsonio>
+-   lots of geodata here: <https://github.com/dwillis/nyc-maps>
+-   mapping tutorial: <https://www.r-graph-gallery.com/327-chloropleth-map-from-geojson-with-ggplot2/>
 
 <!-- ```{r pressure, echo=FALSE} -->
 <!-- plot(pressure) -->

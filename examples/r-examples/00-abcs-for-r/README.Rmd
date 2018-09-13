@@ -754,12 +754,46 @@ The `summary()` function gives us the:
 summary(rain_csv)
 ```
 
+## Standard Deviation
+
+You can use `sd()` to calculate the standard deviation. Why is standard deviation interesting? It gives us a picture of the range of of variability there is for each value away from the mean.
+
+```{r}
+sd(rain_csv$precipitation)
+```
+
+## Z-score or Standard Score
+
+A standard score or z-score is an indication of how far a raw score deviates from the mean, measured in the number of standard deviations. To calculate the z-score, we can do the following.
+
+```{r}
+
+meanPrecipitation = mean(rain_csv$precipitation)
+sdPrecipitation = sd(rain_csv$precipitation)
+# a z score for a given value is equal to the input value minus the mean divided by the standard deviation
+zScoreForGivenValue = (72 - meanPrecipitation) / sdPrecipitation
+
+print(zScoreForGivenValue)
+```
+
+So let's say that instead of get the standard score, we wanted to get the raw score from the z-score, we could alternative do:
+
+```{r}
+meanPrecipitation = mean(rain_csv$precipitation)
+sdPrecipitation = sd(rain_csv$precipitation)
+rawScore = (5 * sdPrecipitation ) + meanPrecipitation
+print (rawScore)
+```
+this would tell us that if we were to be +5 deviations above the mean, we would have 383.1654 mm of precipitation relative to Vancovuer's average rain for 2014.
+
+What's cool about this is that let's say we have a phenomenon that follows a normal distribution, then we could begin to calculate the relative incomes across countries for 0.5, 1, 2, and 3 standard deviations.
+
 
 ***
 ***
 ***
 
-# A Bit of Data Wrangling and Parsing
+# A Bit of Data Wrangling and Parsing (week 3)
 
 ## Subset
 
@@ -782,7 +816,8 @@ summary(rain_csv)
 * https://www.tidyverse.org/learn/
 * R mapping: ggmap
   - http://eriqande.github.io/rep-res-web/lectures/making-maps-with-R.html
-* geojsonio package: https://github.com/ropensci/geojsonio
+* lots of geodata here: https://github.com/dwillis/nyc-maps
+* mapping tutorial: https://www.r-graph-gallery.com/327-chloropleth-map-from-geojson-with-ggplot2/
 
 <!-- ```{r pressure, echo=FALSE} -->
 <!-- plot(pressure) -->

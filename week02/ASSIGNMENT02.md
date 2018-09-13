@@ -215,5 +215,5 @@ NOTE: Document your final outcome with photos.
 
 ## Submission
 
-* Submit the documentation outlined in the Deliverables section above to: LINK/TO/GITHUB/ISSUES
+* Submit the documentation outlined in the Deliverables section above to: https://github.com/sva-dsi/2018-fall-course/issues/6
 * Bring your card to class
