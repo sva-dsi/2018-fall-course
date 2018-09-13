@@ -606,8 +606,8 @@ require(ggmap)
 # get_map() takes a location, zoom, maptype, and source, and others as arguements
 map_area = get_map(location = c(lon = -95.3632715, lat = 29.7632836), 
                    zoom = 10,
-                   maptype="satellite",
-                   source="google")
+                   maptype="toner-lite",
+                   source="stamen")
 
 # we call ggmap() as our plotting area
 # and add in our point lying at those coordinates
@@ -644,13 +644,13 @@ ggplot(data=nycBoroughs) +
     geom_sf(aes(fill= BoroName)) 
 ```
 
-Now imagine being able to combine our polygons (above) over a satellite image. Do you think you can handle it? I can hardly contain myself! 
+Now imagine being able to combine our polygons (above) over a stamen's toner-lite tiles. Do you think you can handle it? I can hardly contain myself! 
 
 ```{r}
 ny_map_area = get_map(location = c(lon=-73.979452, lat= 40.755870), 
-                   zoom = "auto",
-                   maptype="satellite",
-                   source="google")
+                   zoom = 10,
+                   maptype="toner-lite",
+                   source="stamen")
 
 # we call ggmap() as our plotting area
 # and add in our geometries lying at those coordinates
@@ -753,6 +753,8 @@ The `summary()` function gives us the:
 ```{r}
 summary(rain_csv)
 ```
+
+# Distributions
 
 ## Standard Deviation
 

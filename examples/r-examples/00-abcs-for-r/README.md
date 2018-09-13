@@ -838,11 +838,29 @@ require(ggmap)
 # get_map() takes a location, zoom, maptype, and source, and others as arguements
 map_area = get_map(location = c(lon = -95.3632715, lat = 29.7632836), 
                    zoom = 10,
-                   maptype="satellite",
-                   source="google")
+                   maptype="toner-lite",
+                   source="stamen")
 ```
 
-    ## Map from URL : http://maps.googleapis.com/maps/api/staticmap?center=29.763284,-95.363271&zoom=10&size=640x640&scale=2&maptype=satellite&language=en-EN&sensor=false
+    ## Map from URL : http://maps.googleapis.com/maps/api/staticmap?center=29.763284,-95.363271&zoom=10&size=640x640&scale=2&maptype=terrain&sensor=false
+
+    ## Map from URL : http://tile.stamen.com/toner-lite/10/239/422.png
+
+    ## Map from URL : http://tile.stamen.com/toner-lite/10/240/422.png
+
+    ## Map from URL : http://tile.stamen.com/toner-lite/10/241/422.png
+
+    ## Map from URL : http://tile.stamen.com/toner-lite/10/239/423.png
+
+    ## Map from URL : http://tile.stamen.com/toner-lite/10/240/423.png
+
+    ## Map from URL : http://tile.stamen.com/toner-lite/10/241/423.png
+
+    ## Map from URL : http://tile.stamen.com/toner-lite/10/239/424.png
+
+    ## Map from URL : http://tile.stamen.com/toner-lite/10/240/424.png
+
+    ## Map from URL : http://tile.stamen.com/toner-lite/10/241/424.png
 
 ``` r
 # we call ggmap() as our plotting area
@@ -918,16 +936,40 @@ ggplot(data=nycBoroughs) +
 
 ![](README_files/figure-markdown_github/unnamed-chunk-40-1.png)
 
-Now imagine being able to combine our polygons (above) over a satellite image. Do you think you can handle it? I can hardly contain myself!
+Now imagine being able to combine our polygons (above) over a stamen's toner-lite tiles. Do you think you can handle it? I can hardly contain myself!
 
 ``` r
 ny_map_area = get_map(location = c(lon=-73.979452, lat= 40.755870), 
-                   zoom = "auto",
-                   maptype="satellite",
-                   source="google")
+                   zoom = 10,
+                   maptype="toner-lite",
+                   source="stamen")
 ```
 
-    ## Map from URL : http://maps.googleapis.com/maps/api/staticmap?center=40.75587,-73.979452&zoom=10&size=640x640&scale=2&maptype=satellite&language=en-EN&sensor=false
+    ## Map from URL : http://maps.googleapis.com/maps/api/staticmap?center=40.75587,-73.979452&zoom=10&size=640x640&scale=2&maptype=terrain&sensor=false
+
+    ## Map from URL : http://tile.stamen.com/toner-lite/10/300/383.png
+
+    ## Map from URL : http://tile.stamen.com/toner-lite/10/301/383.png
+
+    ## Map from URL : http://tile.stamen.com/toner-lite/10/302/383.png
+
+    ## Map from URL : http://tile.stamen.com/toner-lite/10/300/384.png
+
+    ## Map from URL : http://tile.stamen.com/toner-lite/10/301/384.png
+
+    ## Map from URL : http://tile.stamen.com/toner-lite/10/302/384.png
+
+    ## Map from URL : http://tile.stamen.com/toner-lite/10/300/385.png
+
+    ## Map from URL : http://tile.stamen.com/toner-lite/10/301/385.png
+
+    ## Map from URL : http://tile.stamen.com/toner-lite/10/302/385.png
+
+    ## Map from URL : http://tile.stamen.com/toner-lite/10/300/386.png
+
+    ## Map from URL : http://tile.stamen.com/toner-lite/10/301/386.png
+
+    ## Map from URL : http://tile.stamen.com/toner-lite/10/302/386.png
 
 ``` r
 # we call ggmap() as our plotting area
@@ -1053,6 +1095,9 @@ summary(rain_csv)
     ##  Mean   : 6.50   Mean   :101.08  
     ##  3rd Qu.: 9.25   3rd Qu.:138.75  
     ##  Max.   :12.00   Max.   :186.00
+
+Distributions
+=============
 
 Standard Deviation
 ------------------
