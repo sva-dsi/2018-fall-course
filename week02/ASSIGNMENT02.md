@@ -48,6 +48,10 @@ To build our own travel/mobility survey, we will outline a process below: `Colle
 
 📼 **Follow along here**: https://youtu.be/BOn7t_7csYE
 
+NOTE: for Transport_Mode (check boxes) - NOTE: not radio buttons, but checkboxes - allows you to select multiple modes of transport!
+
+✅ **make a copy of the form for yourself here**:
+
 Here's a video showing how you can:
 1. create google form
 2. add the relevant questions regarding our mobility behavior
@@ -59,6 +63,8 @@ Here's a video showing how you can:
 ![image of entire form](assets/images/form-002.png)
 
 **Form questions**
+
+
 
 Create a google form. In this google form you will create 2 sections. `Section 1: Primary Data` will include the data directly about your trip. `Section 2: Supplementary Data` will include the data that we will derive later on during our extended analysis.
 
