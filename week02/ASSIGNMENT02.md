@@ -4,7 +4,7 @@
 ![image description](link/to/image)
 
 <!-- TOC START min:1 max:3 link:true update:true -->
-- [ASSIGNMENT 02: Dear Data](#assignment-02-dear-data)
+- [ASSIGNMENT 02: Dear Data - What do our mobility patterns tell us?](#assignment-02-dear-data---what-do-our-mobility-patterns-tell-us)
   - [Brief](#brief)
     - [Collect](#collect)
     - [Parse](#parse)
@@ -63,7 +63,7 @@ Here's a video showing how you can:
 Create a google form. In this google form you will create 2 sections. `Section 1: Primary Data` will include the data directly about your trip. `Section 2: Supplementary Data` will include the data that we will derive later on during our extended analysis.
 
 * Section 1:
-  - question: Transport_Mode (multiple choice)
+  - question: Transport_Mode (check box multiple choice) - NOTE: not radio buttons, but checkboxes - allows you to select multiple modes of transport!
     - Bike
     - Bus
     - Train/Subway
@@ -72,6 +72,7 @@ Create a google form. In this google form you will create 2 sections. `Section 1
     - Private Automobile
     - Ferry/Boat
     - Plane
+    - Other (e.g. skateboard, roller skates, scooter, other non-motorized transport)
   - question: Starting_From (short answer)
     - e.g. "home"
   - question: Ending_At (short answer)
