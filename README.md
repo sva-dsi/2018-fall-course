@@ -207,6 +207,8 @@ GRADE CALCULATION: Here is a basic breakdown of graded tasks along that trajecto
 * 30% Final Project, completed on conclusion of the course
 * TOTAL: 100%
 
+Late assignments will be docked 1 letter grade per day until it reaches a "C". If the assignment is not submitted it will be given a "0". 
+
 ## Readings
 
 Readings are assigned to correspond with that week's assignment and class lesson. I'll be lecturing outside the readings with some references to them, and your assignments will allude to them too. Feel free to read ahead to make certain weeks easier.
@@ -265,4 +267,3 @@ Coding is an art; you will have a series of art supplies for this course that wi
 * Simple HTTP Server, a few options:
   - [Node.js http-server](https://www.npmjs.com/package/http-server) (recommended)
   - [Python Simple Server](http://www.pythonforbeginners.com/modules-in-python/how-to-use-simplehttpserver/)
-  
