@@ -1,0 +1,24 @@
+id,occupancy
+1,Walker only - no passenger!
+2,Cyclist only - no passenger!
+3,Driver only
+4,Driver plus pillion
+5,100% occupancy (all seats full)
+6,75% occupancy
+7,50% occupancy
+8,25% occupancy
+9,1 passenger
+10,2 passenger
+11,3 passenger
+12,4 passenger
+13,5 passenger
+14,200% occupancy (passengers standing)
+15,70% occupancy
+16,Average occupancy (40%)
+17,Average occupancy (65%)
+18,Average occupancy (80%)
+19,Average occupancy (1.6 passengers)
+20,Driver plus 1 passenger
+21,Driver plus 2 passengers
+22,Driver plus 3 passengers
+23,Driver plus 4 passengers

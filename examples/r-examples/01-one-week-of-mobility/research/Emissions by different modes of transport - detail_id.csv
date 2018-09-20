@@ -1,0 +1,68 @@
+id,detail
+1,Average diet including imported food
+2,UK grown low-processed food
+3,Local organically produced food only
+4,2-Stroke <50cc
+5,2-Stroke 50-125cc
+6,4-Stroke <250cc
+7,4-Stroke 250-750cc
+8,4-Stroke >750cc
+9,Electric scooter (std tariff)
+10,Electric scooter (green tariff)
+11,Diesel (from 2006): Urban use
+12,Diesel (from 2006): Rural use
+13,Diesel (from 2006): Motorway use
+14,Diesel (2001-2006): Urban use
+15,Diesel (2001-2006): Rural use
+16,Diesel (2001-2006): Motorway use
+17,Diesel (1996-2001): Urban use
+18,Diesel (1996-2001): Rural use
+19,Diesel (1996-2001): Motorway use
+20,Black cab TXII [until 06]: Diesel
+21,Black cab TX4 [from 06]: Diesel
+22,Minicab passenger car: Diesel
+23,Minicab passenger car: Petrol
+24,Voyager class: diesel-electric (Virgin Trains)
+25,InterCity 125: diesel-electric (national network)
+26,Sprinter: diesel (regional network)
+27,Network Turbo: diesel (regional network)
+28,InterCity 225: electric (national network)
+29,London Underground
+30,Domestic UK (B737-400)
+31,Short-haul International (B737-400)
+32,Long-haul International (B747-400)
+33,Average city-car diesel
+34,Average city-car petrol
+35,Average city-car LP gas
+36,Average city-car natural gas
+37,Average city-car petrol hybrid
+38,Average city-car electric (standard)
+39,Average city-car electric (green)
+40,Average large family diesel
+41,Average large family petrol
+42,Average large family LP gas
+43,Average large family natural gas
+44,Average large family petrol hybrid
+45,Average large family electric (standard)
+46,Average large family electric (green)
+47,Average small family diesel
+48,Average small family petrol
+49,Average small family LP gas
+50,Average small family natural gas
+51,Average small family petrol hybrid
+52,Average small family electric (standard)
+53,Average small family electric (green)
+54,Average super-mini diesel
+55,Average super-mini petrol
+56,Average super-mini LP gas
+57,Average super-mini natural gas
+58,Average super-mini petrol hybrid
+59,Average super-mini electric (standard)
+60,Average super-mini electric (green)
+61,Average SUV / 4x4 diesel
+62,Average SUV / 4x4 petrol
+63,Average SUV / 4x4 LP gas
+64,Average SUV / 4x4 natural gas
+65,Average SUV / 4x4 petrol hybrid
+66,Average SUV / 4x4 electric (standard)
+67,Average SUV / 4x4 electric (green)

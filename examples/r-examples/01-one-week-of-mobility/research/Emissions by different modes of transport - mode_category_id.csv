@@ -1,0 +1,10 @@
+id,description,comment,order_num
+9,WALK,,1
+10,CYCLE,,2
+11,M/CYCLE,,3
+12,BUS,,6
+13,CAR,,4
+14,RAIL,,8
+15,FLY,,9
+17,TUBE,,7
+18,TAXI,,5
