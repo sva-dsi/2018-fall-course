@@ -573,7 +573,7 @@ print(randomPlotter())
 
 We are going to do a rough estimate of our distances based on our
 
-```{r}
+```{r, echo=FALSE}
 
 ####################################################
 # Parse
@@ -654,7 +654,7 @@ temp = google_distance(as.character(myData[3,]$Starting_StreetCorner),
 
 Now get back the travelDistances
 
-```{r}
+```{r, echo=FALSE}
 
 # Create a list of lists which includes
 # origin, desintation, distance_meters, and distance_seconds
@@ -865,7 +865,7 @@ NOTE/TODO: this could be optimized a bit
 
 ### Use the google routing engine to get more detailed travel details
 
-```{r}
+```{r, echo=FALSE}
 # Now! get the steps for each
 # for each trip,
 # get the steps it takes
