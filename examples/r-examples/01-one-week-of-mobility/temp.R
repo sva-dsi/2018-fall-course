@@ -1,90 +1,4 @@
----
-title: "One Week of Mobility"
-output: github_document
----
-
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
-
-## About
-
-> *Excluding my plane flight, I've created (very) roughly 4kg or 9lbs of CO2 based on my transit choices this week. If a "tree can absorb as much as 48 pounds of carbon dioxide per year", then I'd have to plant at least 9 trees a year to offset the CO2 impact of my mobility. And that's a rough estimate not including my respiration from breathing/walking/existing...*
-
-In this project, we are going to start analyzing 1 week of our mobility data.
-
-The main goal of this exercise is to calculate the CO2 emissions we produced based on our travel behavior.
-
-In order to answer this question, we will have to develop our own workflow to get to generate the data that will allow us to model what our CO2 impact this week has been based on our transportation choices alone.
-
-![80/20 rule in data viz](assets/images/data-cleaning-80-20.png)
-
-> *"80% of data visualization and mapping is getting your data into the right format" - said every person who has worked with data.*
-
-The takeway from this exercise is to get into the messiness of working with data and using existing APIs - application programming interfaces - such as Google Maps directions and places to help us discover more with our data.
-
-## Data Collection
-
-You've all spent this week collecting your mobility data into a google form that structures your data into a `csv` format.
-
-![google form](assets/images/gform-001.png)
-![responses in csv](assets/images/gform-responses.png)
-
-## Research
-
-Any good project always starts out with some background research. Since our goal is to figure out how to calculate our CO2 emissions from our mobiilty choices, we'd need to comb through the literature of work that tries to model the amount of CO2 emitted per distance traveled. Usually the units are grams per kilometer.
-
-Here's a few links to get started:
-
-* [the Guardian, 2009]( https://www.theguardian.com/environment/datablog/2009/sep/02/carbon-emissions-per-transport-type)
-* [Wikipedia]( https://en.wikipedia.org/wiki/Environmental_impact_of_transport)
-* [European Environment Agency, 2014] (https://www.eea.europa.eu/highlights/more-action-needed-to-reduce)
-
-
-## Process
-
-
-## A Note on the Google API
-
-In order to use the Google's API for mapping, directions, routing, places, etc, you will need to sign up with the Google's API's and Services through their Cloud Platform  - https://console.developers.google.com/ - and create a new project that generates an API key for the specific Google services you are interested in using.
-
-For this project we will be using the following:
-
-* Geocoding API
-* Maps Javascript API
-* Directions API
-* Distance Matrix API
-
-### Generating an API Key: The short version
-
-1. login to https://console.developers.google.com/
-2. create a new project
-3. go to credentials tab
-4. create credentials > select: api key
-5. copy and paste that into your project:
-
-if you're using `googleways` R package, then:
-
-```r
-# this is not a real api key below
-key = "AbCdEfGhIjKlMnoPqRsTuVwXyZ123456789"
-# set your key
-set_key(key = key)
-```
-
-***
-***
-***
-
-
-## Setup
-
-### Required Libaries
-
-We will be using a number of libraries to do this project.
-If you haven't installed the following, please install the packages you need before continuing.
-
-```{r}
+# Setup
 
 ##########################
 # Install libraries
@@ -97,11 +11,7 @@ If you haven't installed the following, please install the packages you need bef
 # install.packages("sf")
 # install.packages("plyr")
 # install.packages("googleway")
-```
 
-You can now load up your libraries
-
-```{r}
 ##########################
 # load libraries
 ##########################
@@ -120,16 +30,8 @@ require(plyr)
 # googleway for access to the google api
 library(googleway)
 
-```
 
 
-### Setting your googleways api key
-
-Set you google api key for googleways so we can use all the handy functions for our analysis.
-
-NOTE: MAKE SURE TO UPDATE THIS TO YOUR OWN API KEY if you continue your analysis or you're random person from the internet. It's important not to publish your API keys generally.
-
-```{r}
 ###################
 # setup google api keys
 # https://console.cloud.google.com/
@@ -137,54 +39,28 @@ NOTE: MAKE SURE TO UPDATE THIS TO YOUR OWN API KEY if you continue your analysis
 # note: in order to go above the 1 request quota, you need to enter in billing info
 ###################
 
+# not specifying the api will add the key as your 'default'
+# TODO: MAKE SURE TO UPDATE THIS TO YOUR OWN API KEY OR ELSE
+# YOU WONT BE ABLE TO MAKE QUERIES TO THE GOOGLE API
 # Here's my public API KEY
 key = "AIzaSyD0Dod_SussEiR3IaA90oLiviVIgF9uMW0"
 # set your key
 set_key(key = key)
 # check your api key
 google_keys()
-```
 
-***
-***
-***
-
-## Acquire
-
-### Export your data from Google Spreadsheets
-
-You will need to export your spreadsheet data from Google Spreadsheets.
-
-You can do so by doing:
-
-1. File > download as... > comma separated values (.csv)
-
-Once your file is downloaded, move your data into your working directory
-
-### Reading in your Data to R
-
-Read in your data to RStudio. You will need to get the file path to your specific file. Here my file is living at this file path below so I assign that to the variable `myDataPath`.
-
-```r
-"/Users/joeyklee/Code/src/github/sva-dsi/2018-fall-course/examples/r-examples/01-one-week-of-mobility/Dear Data Mobility Diary - corrected (Responses) - Form Responses 1 - street_corners.csv"
-```
-
-NOTE: we also read in the NYC Boroughs data for later so we can plot our data over the map.
-
-```{r}
 
 
 ####################################################
 # Acquire
 ## read in your data
 ####################################################
-myDataPath = "/Users/joeyklee/Code/src/github/sva-dsi/2018-fall-course/examples/r-examples/01-one-week-of-mobility/Dear Data Mobility Diary - corrected (Responses) - Form Responses 1 - street_corners.csv"
+myDataPath = "/Users/joeyklee/Code/src/github/sva-dsi/2018-fall-course/examples/r-examples/01-one-week-of-mobility/temp.csv"
 myData = read.csv(myDataPath, header=TRUE)
 
 # Filter
 ## remove NA
 myData = myData[complete.cases(myData), ]
-
 # print the top 6 rows
 head(myData)
 
@@ -192,20 +68,6 @@ head(myData)
 nycBoroughs = read_sf("https://raw.githubusercontent.com/dwillis/nyc-maps/master/boroughs.geojson")
 
 
-```
-
-***
-***
-***
-
-
-## Parse
-
-### Dealing with dates and timestamps
-
-Here we use the lubridate package to intelligently handle our date/time stamps
-
-```{r}
 ####################################################
 # Parse
 ## Convert your date & time "factor" types to date/time objects
@@ -228,17 +90,8 @@ myData$Trip_Start = mdy_hms(myData$Trip_Start, tz = NYTimeZone)
 # NOTE mdy_hms == month, day, year hour, minute, seconds
 myData$Trip_End = mdy_hms(myData$Trip_End, tz = NYTimeZone)
 
-```
 
-***
-***
-***
 
-## Mine
-
-### Calculate trip duration
-
-```{r}
 ####################################################
 # Calculate trip duration
 # Since we are using datetime objects we can simply
@@ -249,17 +102,8 @@ myData$Trip_End = mdy_hms(myData$Trip_End, tz = NYTimeZone)
 # and storing it to our Trip_Duration
 myData$Trip_Duration = myData$Trip_End - myData$Trip_Start
 
-```
 
-***
-***
-***
 
-## Sort
-
-### Sort your data based on Trip_End
-
-```{r}
 ####################################################
 # Sort your data
 # Since we input our data, we might need to sort
@@ -276,30 +120,21 @@ myData$Trip_Duration = myData$Trip_End - myData$Trip_Start
 # the first 10 rows of data and all the columns
 myData = myData[order(myData$Trip_End),  ]
 
-```
 
-***
-***
-***
+####################################################
+# Represent I
+## have a look at your trip duration data
+####################################################
 
-## Represent I
-
-Have a look at your trip duration data
-
-### Plot your trip durations based on start and end times
-
-```{r}
+# Plot your trip durations based on start and end times
 ggplot(data=myData) +
   geom_segment(aes(x=Trip_Start,
                    y=0,
                    xend=Trip_End,
                    yend=0,
                    color=Transport_Mode, size=5))
-```
 
-### use the curve geometry to make arcs rather than straight lines
-
-```{r}
+# use the curve geometry to make arcs rather than straight lines
 ggplot(data=myData) +
   geom_curve(aes(x=Trip_Start,
                  y=0,
@@ -307,60 +142,41 @@ ggplot(data=myData) +
                  yend=0,
                  color=Transport_Mode),
              curvature= -1)
-```
 
-### Break down your mobility by day of the week
-```{r}
+# Break down your mobility by day of the week
 ggplot(data=myData) +
   geom_bar(aes(x=Date,
                y=Trip_Duration,
                fill=Transport_Mode),
            stat="identity")
-```
-
-
-### You can use facet_wrap to create small multiples
-```{r}
-
+# You can use facet_wrap to create small multiples
 ggplot(data=myData) +
   geom_bar(aes( x=Transport_Mode,
                 y=Trip_Duration),
            stat="identity") +
   facet_wrap(~Date)
-```
 
-### you can explore alternative representations like a polar chart
-```{r}
+# you can explore alternative representations like a polar chart
 ggplot(data=myData) +
   geom_bar(aes(x=Date,
                y=Trip_Duration,
                fill=Transport_Mode),
            stat="identity") +
   coord_polar()
-```
 
-### You can use facet_wrap to create small multiples
-```{r}
+# You can use facet_wrap to create small multiples
 ggplot(data=myData) +
   geom_bar(aes( x=Transport_Mode,
                 y=Trip_Duration),
            stat="identity") +
   coord_polar() +
   facet_wrap(~Date)
-```
 
-***
-***
-***
 
-# Quick Interlude: Fun with For Loops
+# TODO: create a summary of the time you spent for each transit mode this week
 
-Before we get started with the rest of our analysis,
-we are going to look at a key programming concept which is called "loops" or "iteration".
 
-R is vectorized - meaning that the functions and data are iterable - so we often times don't need for loops, but there are moments in which loops can be super handy such as if we need to iterate over data and incorporate conditionals and manipulating data within those loops.
 
-```{r}
 ####################################################
 # QUICK INTERLUDE: A note on for loops
 ####################################################
@@ -369,35 +185,33 @@ R is vectorized - meaning that the functions and data are iterable - so we often
 # this says:
 # Starting from 1 to the total number of values
 # 1. print out the name of the street corner as a character
-for(i in 1:length(myData$Starting_StreetCorner)){
+for(i in 1:length(myData$Latitude_Start)){
   # if we print "i", we will get 1,2,3,4,...
   print(i)
   # here we print the Starting_StreetCorner at row "i" for myData[i,]
-  print(as.character(myData[i,]$Starting_StreetCorner))
+  print(as.character(myData[i,]$Latitude_Start))
 }
 
 # notice if we now put a 3 we get the 3rd starting streetCorner:
-print(as.character(myData[3,]$Starting_StreetCorner))
+print(as.character(myData[3,]$Latitude_Start))
 # notice if we now put a 3:6 we get the 3rd through the 6th starting streetCorner:
-print(as.character(myData[3:6,]$Starting_StreetCorner))
+print(as.character(myData[3:6,]$Latitude_Start))
 
 ####################################################
 # QUICK INTERLUDE: A note on for loops ^^^^^^^^^
 ####################################################
 
-```
 
-***
-***
-***
-
-## Acquire
-
-### get the locations of starting and ending
-
-Geocode locations: Get the lat/lon coordinates if your "Starting_From" and "Ending_At" columns aren't very useful or purposefully obscure you will have to go through your data and add a new set of columns like "Starting_StreetCorner" and "Ending_StringCorner" as a way to better automate the retrieval of the lat/lon coordinates
-
-```{r}
+####################################################
+# Acquire
+# Geocode locations: Get the lat/lon coordinates
+# if your "Starting_From" and "Ending_At" columns
+# aren't very useful or purposefully obscure
+# you will have to go through your data and
+# add a new set of columns like "Starting_StreetCorner"
+# and "Ending_StringCorner" as a way to better automate
+# the retrieval of the lat/lon coordinates
+####################################################
 
 # create 2 empty lists - starting and ending - to store our coordinates
 # we will write a "for loop" and incrementally add in the coordinates
@@ -409,40 +223,22 @@ endingCoords = c()
 # For every row in myData,
 # 1. get the lat/lon coordinates from the google_geocode function
 # 2. append them to the startingCoords list we made above
-for(i in 1:length(myData$Starting_StreetCorner)){
-  # print(as.character(myData[i,]$Starting_StreetCorner))
-  coords = google_geocode(address=as.character(myData[i,]$Starting_StreetCorner),
-                 key=key,simplify = TRUE)
+for(i in 1:length(myData$Latitude_Start)){
+  coords = google_geocode(address= paste(myData[i,]$Latitude_Start, myData[i,]$Longitude_Start, sep=",") ,
+                          key=key,simplify = TRUE)
   # for each iteration of the loop
   # startingCoords equals itself plus the newest coordinates
   startingCoords = c(startingCoords, coords)
 }
 
 # do the same as above, except with the ending street corner
-for(i in 1:length(myData$Ending_StreetCorner)){
-  print(as.character(myData[i,]$Ending_StreetCorner))
-  coords = google_geocode(address=as.character(myData[i,]$Ending_StreetCorner),
+for(i in 1:length(myData$Latitude_End)){
+  coords = google_geocode(address= paste(myData[i,]$Latitude_End, myData[i,]$Longitude_End, sep=",") ,
                           key=key,simplify = TRUE)
   endingCoords = c(endingCoords, coords)
 }
 
 
-
-```
-
-
-***
-***
-***
-
-# PARSE
-
-## retrieve the centroid coordinates for starting and ending locations
-
-now that we have all this geocoded data we need to extract out the coordinates for the starting and ending locations
-
-
-```{r}
 
 ####################################################
 # Parse
@@ -465,7 +261,7 @@ for(i in 1:length(startingCoords)){
     centroidLat = startingCoords[i]$results$geometry$location$lat
     centroidLng = startingCoords[i]$results$geometry$location$lng
   }
-
+  
   # here we append the coordinates to their respective list - cntrLat or cntrLng within the
   # parent list which is the startingCoordsCentroid
   startingCoordsCentroid$cntrLat =  c(startingCoordsCentroid$cntrLat, centroidLat)
@@ -481,7 +277,7 @@ for(i in 1:length(endingCoords)){
     centroidLat = endingCoords[i]$results$geometry$location$lat
     centroidLng = endingCoords[i]$results$geometry$location$lng
   }
-
+  
   endingCoordsCentroid$cntrLat =  c(endingCoordsCentroid$cntrLat, centroidLat)
   endingCoordsCentroid$cntrLng =  c(endingCoordsCentroid$cntrLng, centroidLng)
 }
@@ -493,32 +289,12 @@ myData$Google_Longitude_Start = startingCoordsCentroid$cntrLng
 myData$Google_Latitude_End = endingCoordsCentroid$cntrLat
 myData$Google_Longitude_End = endingCoordsCentroid$cntrLng
 
-
-```
-
-And now we can plot an OD matrix of our data
-
-```{r}
 # plot an "origin-destination" matrix of your data
-ggplot(data=myData[ which(myData$Date > as.POSIXct("2018-09-15", tz="America/New_York")),]) +
+ggplot(data=myData) +
   geom_segment(aes( x=Google_Longitude_Start,
                     y=Google_Latitude_Start,
                     xend=Google_Longitude_End,
                     yend=Google_Latitude_End))
-```
-
-
-
-***
-***
-***
-
-
-## Quick Interlude: Fun with Functions
-
-### greeting function
-
-```{r}
 
 
 ####################################################
@@ -544,41 +320,25 @@ myGreetingFunction = function( anyGreeting, name ){
 myGreetingFunction("Aloha", "Joey")
 myGreetingFunction("Bonjour", "SVA")
 myGreetingFunction("Hello", "DSI")
-```
 
-see how we can also now shove in lists of data to output our greetings
-
-```{r}
+# see how we can also now shove in lists of data to output our greetings
 myGreetingFunction( c("hello", "goodbye", "adieu"), c("joey", "sva", "dsi") )
-```
 
-### Random plotting function
 
-```{r}
 # how about a function that makes random line plots?
 randomPlotter = function(){
   xs <- runif(100, 10, 100)
   ys <- runif(100, 10, 100)
-
+  
   return(
     ggplot() + geom_line( aes(x=xs, y=ys) )
   )
 }
 print(randomPlotter())
-```
-
-***
-***
-***
 
 
-## Parse
 
-### Get the distances according to google_distance
 
-We are going to do a rough estimate of our distances based on our
-
-```{r, echo=FALSE}
 
 ####################################################
 # Parse
@@ -598,7 +358,7 @@ mapTransitMode = function(transportModeVector){
     # transform our transportModeVecor into a character > split it if it has a comma >
     # use unlist() to just get back the results not as a nested thing
     tmode <- unlist(strsplit(as.character(transportModeVector[i]), split=", "))
-
+    
     # anyNA() is a function to check if any NAs exist
     # if it is false, then we apply "bicycling" (or the respective google_distance option)
     # as a the transit mode for that respective trip
@@ -617,7 +377,7 @@ mapTransitMode = function(transportModeVector){
     else{
       output <- c(output, "transit")
     }
-
+    
   }
   return(output)
 }
@@ -625,21 +385,6 @@ mapTransitMode = function(transportModeVector){
 # using our custom function store, the results into myData as "google_transit_mode"
 myData$google_transit_mode  = mapTransitMode(myData$Transport_Mode)
 
-```
-
-***
-***
-***
-
-## Parse
-
-### use google routing to get back more detailed travel trajectories
-
-use the google routing engine to calculate the approximate distance and time between locations using the travel mode derived from above
-
-the example below allows you to try out what the function returns
-
-```r
 ####################################################
 # Parse
 # use the google routing engine to calculate the
@@ -647,19 +392,13 @@ the example below allows you to try out what the function returns
 # using the travel mode derived from above
 ####################################################
 
-# try out the google_distance function on a selected row in myData
-temp = google_distance(as.character(myData[3,]$Starting_StreetCorner),
-                as.character(myData[3,]$Ending_StreetCorner),
-                simplify = T,
-                mode=myData[3,]$google_transit_mode,
-                departure_time=myData[3,]$Trip_Start,
-                key=key)
-
-```
-
-Now get back the travelDistances
-
-```{r, echo=FALSE}
+# # try out the google_distance function on a selected row in myData
+# temp = google_distance(paste(myData[i,]$Latitude_Start, myData[i,]$Longitude_Start, sep=","),
+#                        paste(myData[i,]$Latitude_End, myData[i,]$Longitude_End, sep=","),
+#                        simplify = T,
+#                        mode=myData[3,]$google_transit_mode,
+#                        departure_time=myData[3,]$Trip_Start,
+#                        key=key)
 
 # Create a list of lists which includes
 # origin, desintation, distance_meters, and distance_seconds
@@ -671,30 +410,28 @@ travelDistances = c( origin = c(),
 # starting from 1 to the total rows in myData
 # retrieve the google_distance based on
 # our Starting_StreetCorner, Ending_StreetCorner, google_transit_mode, and Trip_Start
-for(i in 1:length(myData$Starting_StreetCorner) ){
-  calculatedDistance = google_distance(as.character(myData[i,]$Starting_StreetCorner),
-                                       as.character(myData[i,]$Ending_StreetCorner),
+for(i in 1:length(myData$Latitude_Start) ){
+  calculatedDistance = google_distance(paste(myData[i,]$Latitude_Start, myData[i,]$Longitude_Start, sep=","),
+                                       paste(myData[i,]$Latitude_End, myData[i,]$Longitude_End, sep=","),
                                        simplify = TRUE,
                                        mode=myData[i,]$google_transit_mode,
-                                       departure_time="now",
                                        key=key)
-
-  print(calculatedDistance)
+  
   # store the results to the respective list in the travelDistances dataset
   travelDistances$origin = c(travelDistances$origin, calculatedDistance$origin_addresses)
   travelDistances$destination = c(travelDistances$destination, calculatedDistance$destination_addresses)
   
-
+  print(calculatedDistance)
   # if the google_distance function returns no results, store NA,
   # otherwise, add in the results
   if(calculatedDistance$rows$elements[[1]]$status != "ZERO_RESULTS"){
     travelDistances$distance_meters = c(travelDistances$distance_meters, calculatedDistance$rows$elements[[1]]$distance$value)
     travelDistances$duration_seconds = c(travelDistances$duration_seconds, calculatedDistance$rows$elements[[1]]$duration$value)
   } else{
-    travelDistances$distance_meters = c(travelDistances$distance_meters, NA)
-    travelDistances$duration_seconds = c(travelDistances$duration_seconds, NA)
+    travelDistances$distance_meters = c(travelDistances$distance_meters, 0)
+    travelDistances$duration_seconds = c(travelDistances$duration_seconds, 0)
   }
-
+  
 }
 
 # Store the data from travelDistances to to myData
@@ -703,29 +440,12 @@ myData$destination_address =  travelDistances$destination
 myData$distance_meters =  travelDistances$distance_meters
 myData$duration_seconds =  travelDistances$duration_seconds
 
-```
-
-Print out a summary of the data of our travel **distance** and **time** spent
-
-```{r}
-
 # print a summary of your travel distance
 summary(myData$distance_meters)
 
 # print a summary of your travel time
 summary(myData$duration_seconds)
 
-```
-
-***
-***
-***
-
-## mine
-
-### Roughly Approximate your CO2 emissions
-
-```{r}
 
 ####################################################
 # Mine
@@ -739,14 +459,14 @@ summary(myData$duration_seconds)
 
 calculateCo2Emissions = function(transportModeVector){
   output <- c()
-
+  
   for(i in 1:length(transportModeVector)){
     # print(as.character(transportModeVector[i]))
     tmode <- unlist(strsplit(as.character(transportModeVector[i]), split=", "))
     print(tmode)
     # get kilometers from meters
     travelDistance_km = myData[i,]$distance_meters / 1000
-
+    
     # the numbers you see are the co2 emission factor
     # walking and biking are given 0 (even thoughy you still emit by respiration)
     # Driving emissions range from 49-123g/pkm so I took the average... how might this be problematic?
@@ -771,118 +491,114 @@ calculateCo2Emissions = function(transportModeVector){
     else{
       output <- c(output, 68 * travelDistance_km)
     }
-
+    
   }
   return(output)
 }
 # store into myData
 myData$co2_emissions  = calculateCo2Emissions(myData$Transport_Mode)
 
-```
-
-
-print out the sum of your emissions
-
-```{r}
 #######
 # MY TOTAL CO2 EMISSIONS WERE
 # 3954.394 GRAMS
 #######
 # use na.rm=TRUE to remove the NAs from the sum or else it won't run
 sum(myData$co2_emissions, na.rm=TRUE)
-```
 
 
-TODO: you might also think about stratifying by day of the week - what about some kind of speculative service that offers you benefits or punishments for your behavior?
 
 
-***
-***
-***
+####################################################
+# OD Matrix
+# show co2 impact of trips
+####################################################
 
-
-## Represent
-
-### Show an OD Matrix of your travel behavior with co2 impact
-
-a custom function to map a value to a new scale
-
-```{r}
 # map values to another range
 linMap <- function(x, from, to){
   return( (x - min(x, na.rm=T)) / max(x - min(x, na.rm=T), na.rm=T) * (to - from) + from )
 }
-```
 
-#### Plot OD arcs
-
-```{r}
 # plot Origin Desination Arcs
 ggplot(data= myData[8:16,]) +
   geom_curve(aes(x=Google_Longitude_Start,
-                   y=Google_Latitude_Start,
-                   xend=Google_Longitude_End,
-                   yend=Google_Latitude_End,col=as.character(Date) ),
-               size= linMap(myData[8:16,]$co2_emissions, 1, 4) )
-
-
-```
-
-#### Plot OD arcs on a map
-
-```{r}
-# plot O-D Arcs on a map
-ggplot() +
-  geom_sf( data=nycBoroughs, inherit.aes = FALSE) +
-  geom_curve(data=myData[8:16,], aes(x=Google_Longitude_Start,
                  y=Google_Latitude_Start,
                  xend=Google_Longitude_End,
                  yend=Google_Latitude_End,col=as.character(Date) ),
-             size= linMap(myData[8:16,]$co2_emissions, 1, 4) ) +
-  coord_sf(ylim=c(40.6,40.8))
+             size= linMap(myData[8:16,]$co2_emissions, 1, 4) )
 
 
-```
+# plot O-D Arcs on a map
+ggplot() +
+  geom_sf( data=nycBoroughs, inherit.aes = FALSE) +
+  geom_curve(data=myData[8:16,], aes(x=Longitude_Start,
+                                     y=Latitude_Start,
+                                     xend=Longitude_End,
+                                     yend=Latitude_End,col=as.character(Date) ),
+             size= linMap(myData[8:16,]$co2_emissions, 1, 4) )
 
-***
-***
-***
 
-## Write your data out
 
-```{r}
 ########################
 # Write your Data out to a file to save
 ########################
-outputDataFileName = "/Users/joeyklee/Code/src/github/sva-dsi/2018-fall-course/examples/r-examples/01-one-week-of-mobility/mobility-data-processed.csv"
+outputDataFileName = "/Users/joeyklee/Code/src/github/sva-dsi/2018-fall-course/examples/r-examples/01-one-week-of-mobility/temp-processed.csv"
 write.csv(myData, file = outputDataFileName)
 
-```
 
 
-***
-***
-***
+#########################
+# CHALLENGE!
+# We used a super rough estimate above that assumed our trips were more
+# or less unimodal, or using only 1 mode of transit
+# here we can stratify our travel into steps like walking + subway + walking
+# use the google routing engine to route between
+# locations to approximate how you traveled from
+# A to B
+#########################
 
-## Acquire
+# test to google_directions function
+selectedRow = 9
+test = google_directions(paste(myData[selectedRow,]$Google_Latitude_Start, myData[selectedRow,]$Google_Longitude_Start, sep=", "),
+                         paste(myData[selectedRow,]$Google_Latitude_End,myData[selectedRow,]$Google_Longitude_End, sep=", "),
+                         mode = myData[selectedRow,]$google_transit_mode,
+                         key = key,
+                         departure_time=myData[selectedRow,]$Trip_Start,
+                         simplify = TRUE)
 
-NOTE/TODO: this could be optimized a bit
+# get the steps
+# stratify the trip based on
+test
+test$routes[3]$legs[[1]]$steps[[1]]$travel_mode
+length(test$routes[3]$legs[[1]]$steps[[1]]$polyline[[1]])
+test$routes[3]$legs[[1]]$steps[[1]]$polyline[[1]]
+test.points1 = decode_pl(test$routes[3]$legs[[1]]$steps[[1]]$polyline[[1]][1])
+test.points2 = decode_pl(test$routes[3]$legs[[1]]$steps[[1]]$polyline[[1]][2])
+test.points3 = decode_pl(test$routes[3]$legs[[1]]$steps[[1]]$polyline[[1]][3])
+test.points4 = decode_pl(test$routes[3]$legs[[1]]$steps[[1]]$polyline[[1]][4])
+test.points5 = decode_pl(test$routes[3]$legs[[1]]$steps[[1]]$polyline[[1]][5])
 
-### Use the google routing engine to get more detailed travel details
+ggplot() +
+  geom_line(data=test.points1, aes(lon, lat) ) +
+  geom_line(data=test.points2, aes(lon, lat) ) +
+  geom_line(data=test.points3, aes(lon, lat) ) +
+  geom_line(data=test.points4, aes(lon, lat) ) +
+  geom_line(data=test.points5, aes(lon, lat) )
 
-```{r, echo=FALSE}
+test.points = decode_pl(test$routes$overview_polyline$points)
+ggplot(data=test.points) + geom_line(aes(lon, lat))
+
 # Now! get the steps for each
 # for each trip,
 # get the steps it takes
 # store the coordinates for each step of the trip
 
 routeCoords = list()
-for(i in 1:length(myData$Google_Latitude_Start) ){
+for(i in 1:length(myData$Latitude_Start) ){
   # use your coordinates to make the routing
   # use paste to create a "lat, lon" character string
-  startingCoords = paste(myData[i,]$Google_Latitude_Start, myData[i,]$Google_Longitude_Start, sep=", ")
-  endingCoords = paste(myData[i,]$Google_Latitude_End, myData[i,]$Google_Longitude_End, sep=", ")
-
+  startingCoords = paste(myData[i,]$Latitude_Start, myData[i,]$Longitude_Start, sep=", ")
+  endingCoords = paste(myData[i,]$Latitude_End, myData[i,]$Longitude_End, sep=", ")
+  
   # retrieve the route
   route = google_directions(startingCoords,
                             endingCoords,
@@ -890,10 +606,10 @@ for(i in 1:length(myData$Google_Latitude_Start) ){
                             key = key,
                             departure_time="now",
                             simplify = TRUE)
-
+  
   print(route)
   numberOfSteps = length(route$routes[3]$legs[[1]]$steps[[1]]$polyline[[1]])
-
+  
   routePts = list( travel_mode = list(), coords = list() )
   if(route$status != "ZERO_RESULTS"){
     for(j in 1:numberOfSteps){
@@ -904,43 +620,89 @@ for(i in 1:length(myData$Google_Latitude_Start) ){
       print(route$routes[3]$legs[[1]]$steps[[1]]$travel_mode[j])
       print(route$routes[3]$legs[[1]]$steps[[1]]$polyline[[1]])
       routePts$coords[[j]] = decode_pl(route$routes[3]$legs[[1]]$steps[[1]]$polyline[[1]][j])
-
+      
     }
   } else{
     routePts$coords[[1]] = "NO RESULT"
     routePts$coords[[1]] = data.frame( lon= c(0), lat=c(0))
   }
-
+  
   routeCoords[[i]] = routePts
-
+  
 }
 
-```
 
-#### Plot your routes
 
-```{r}
 
 # Plot the lines
 myplot = ggplot()
-for(i in 8:length(routeCoords)){
+for(i in 1:length(routeCoords)){
   for(j in 1:length(routeCoords[[i]]$coords)){
+    if(routeCoords[[i]]$coords[[j]]$lat != 0){
     myplot <- myplot + geom_path(data=routeCoords[[i]]$coords[[j]], aes(lon,lat) )
+    }
   }
 }
 print(myplot)
-```
 
-
-#### Plot your routes on a map
-
-```{r}
 # show on map
-mymap = ggplot( ) + geom_sf( data=nycBoroughs, inherit.aes = FALSE, aes(fill=BoroName))
-for(i in 8:length(routeCoords)){
+mymap = ggplot( ) + geom_sf( data=nycBoroughs, inherit.aes = FALSE)
+for(i in 1:length(routeCoords)){
   for(j in 1:length(routeCoords[[i]]$coords)){
-    mymap <- mymap + geom_path(data=routeCoords[[i]]$coords[[j]], aes(lon,lat))
+    if(routeCoords[[i]]$coords[[j]]$lat !=0){
+      mymap <- mymap + geom_path(data=routeCoords[[i]]$coords[[j]], aes(lon,lat) )
+    }
+    
   }
 }
 print(mymap)
-```
+
+
+#################################################
+# debug this!
+#################################################
+# Now! get the steps for each
+# for each trip,
+# get the steps it takes
+# store the coordinates for each step of the trip
+
+routeCoords2 = list()
+for(i in 1:length(myData$Latitude_Start) ){
+  # use your coordinates to make the routing
+  # use paste to create a "lat, lon" character string
+  startingCoords = paste(myData[i,]$Latitude_Start, myData[i,]$Longitude_Start, sep=", ")
+  endingCoords = paste(myData[i,]$Latitude_End, myData[i,]$Longitude_End, sep=", ")
+  
+  # retrieve the route
+  route = google_directions(startingCoords,
+                            endingCoords,
+                            myData[i,]$google_transit_mode,
+                            key = key,
+                            departure_time="now",
+                            simplify = TRUE)
+  
+  if(route$status != "ZERO_RESULTS"){
+    routePts = decode_pl(route$routes$overview_polyline$points)
+  } else{
+    routePts = data.frame( lon= c(0), lat=c(0))
+  }
+  
+  routeCoords2[[i]] = routePts
+}
+
+# plot the points without a map
+myplot = ggplot()
+for(i in 8:length(routeCoords2)){
+  myplot <- myplot + geom_path(data=routeCoords2[[i]], aes(lon,lat) )
+}
+print(myplot)
+
+# show on map
+mymap = ggplot( ) + geom_sf( data=nycBoroughs, inherit.aes = FALSE) + coord_sf(ylim=c(40.6,40.8))
+for(i in 8:length(routeCoords2)){
+  mymap <- mymap + geom_path(data=routeCoords2[[i]], aes(x=lon,
+                                                         y=lat,
+                                                         col="red"))
+}
+
+print(mymap)

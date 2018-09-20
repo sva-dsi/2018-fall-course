@@ -57,6 +57,11 @@ google_keys()
 ####################################################
 myDataPath = "/Users/joeyklee/Code/src/github/sva-dsi/2018-fall-course/examples/r-examples/01-one-week-of-mobility/Dear Data Mobility Diary - corrected (Responses) - Form Responses 1 - street_corners.csv"
 myData = read.csv(myDataPath, header=TRUE)
+
+# Filter
+## remove NA
+myData = myData[complete.cases(myData), ]
+
 # print the top 6 rows
 head(myData)
 
