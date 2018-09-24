@@ -20,9 +20,30 @@
 
 ## ASSIGNMENT
 
+🌈🌈🌈🌈🌈🌈🌈🌈🌈🌈🌈🌈🌈🌈🌈🌈🌈🌈🌈🌈🌈🌈🌈🌈
+
+
+UPDATED: the assignment for week 3 has been updated to reflect our course adaptations
+
+* [Link to Assignment 3 - UPDATED](ASSIGNMENT03-UPDATED.md)
+
+This week we are going to establish the foundations for our class's computational literacy. You will be watching Dan Shiffman in the Coding Train as he introduces you coding with P5.js and establishing the basics of making visuals with code.
+
+🌈🌈🌈🌈🌈🌈🌈🌈🌈🌈🌈🌈🌈🌈🌈🌈🌈🌈🌈🌈🌈🌈🌈🌈
+
+
+
+PLEASE IGNORE EVERYTHING BETWEEN THE ⛈ - we will come back to this later on.
+
+⛈⛈⛈⛈⛈⛈⛈⛈⛈⛈⛈⛈⛈⛈⛈⛈⛈⛈⛈⛈⛈⛈⛈⛈⛈⛈
+
 * [Link to Assignment 3](ASSIGNMENT03.md)
 
 This week we will use the data we collected about our mobility behavior in our [week 2 assignment](../week02/ASSIGNMENT02.md) to tell the story of how we traveled last week. For more, go to the assignment brief above.
+
+⛈⛈⛈⛈⛈⛈⛈⛈⛈⛈⛈⛈⛈⛈⛈⛈⛈⛈⛈⛈⛈⛈⛈⛈⛈⛈
+
+PLEASE IGNORE EVERYTHING BETWEEN THE ⛈ - we will come back to this later on.
 
 ## AGENDA
 
