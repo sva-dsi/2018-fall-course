@@ -52,7 +52,7 @@ NOTE: We might decide together to move some things around this semester. I may a
 | [Week 1](week01)  | 09/06 | Visual Encoding          | N/A                                                 | Joey in 🇩🇪         |
 | [Week 2](week02)  | 09/13 | Sketching with Data      | [A1 - Viz critique & setup](week01/ASSIGNMENT01.md) | Joey in 🇦🇹         |
 | [Week 3](week03)  | 09/20 | Data Compositions        | [A2 - Dear Data](week02/ASSIGNMENT02.md)            | Joey back in 🗽    |
-| [Week 4](week04)  | 09/27 | Data-ing + relationships | [A3 - TBA]()                                        |                    |
+| [Week 4](week04)  | 09/27 | Introduction to Computation | [A3 - Intro to P5.js](week02/ASSIGNMENT03-UPDATED.md)                                        |                    |
 | [Week 5](week05)  | 10/04 | Data is Plural           | [A4 - TBA]()                                        |                    |
 | [Week 6](week06)  | 10/11 | Synthesis I              | [A5 - TBA]()                                        |                    |
 | [Week 7](week07)  | 10/18 | The Web as your Canvas   | [A6 - TBA]()                                        |                    |
@@ -207,7 +207,7 @@ GRADE CALCULATION: Here is a basic breakdown of graded tasks along that trajecto
 * 30% Final Project, completed on conclusion of the course
 * TOTAL: 100%
 
-Late assignments will be docked 1 letter grade per day until it reaches a "C". If the assignment is not submitted it will be given a "0". 
+Late assignments will be docked 1 letter grade per day until it reaches a "C". If the assignment is not submitted it will be given a "0".
 
 ## Readings
 
