@@ -43,4 +43,5 @@ If you find yourself needing some more inspiration, here's a few talks and examp
 
 ## Submission
 
-* Submit your work here: 
+* #1 Submit your work here: https://github.com/sva-dsi/2018-fall-course/issues/12
+* #2 Submit any questions about p5.js you have here: https://github.com/sva-dsi/2018-fall-course/issues
