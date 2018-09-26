@@ -47,12 +47,59 @@ Here you will find the links to the week-by-week materials and an overview of th
 NOTE: We might decide together to move some things around this semester. I may also consider to do a few workshops outside the dedicated class time for those who want a little bit more on one topic or another.
 
 
+| Materials         | Date  | Topic                           | Assignment (DUE)                                      | Note               |
+| ----------------- | ----- | ------------------------------- | ----------------------------------------------------- | ------------------ |
+| [Week 1](week01)  | 09/06 | Visual Encoding                 | N/A                                                   | Joey in 🇩🇪         |
+| [Week 2](week02)  | 09/13 | Sketching with Data             | [A1 - Viz critique & setup](week01/ASSIGNMENT01.md)   | Joey in 🇦🇹         |
+| [Week 3](week03)  | 09/20 | Data Compositions               | [A2 - Dear Data](week02/ASSIGNMENT02.md)              | Joey back in 🗽    |
+| [Week 4](week04)  | 09/27 | Introduction to Computation     | [A3 - Intro to P5.js](week03/ASSIGNMENT03-UPDATED.md) | Switching gears    |
+| [Week 5](week05)  | 10/04 | Data I, Form, & Structure       | [A4 - Composition I](week04/ASSIGNMENT04.md)          |                    |
+| [Week 6](week06)  | 10/11 | Data II, Network, & Interface   | [A5 - Hockey Stick Chart](week05/ASSIGNMENT05.md)     |                    |
+| [Week 7](week07)  | 10/18 | Everything Around the chart     | [A6 - Life Expectancy Viz]()                          |                    |
+| [Week 8](week08)  | 10/25 | (Counter)Maps and Cartographics | [A7 - Life Expectancy Viz+]()                         |                    |
+| [Week 9](week09)  | 11/01 | Timeseries                      | [A8 - TBA]()                                          | 🎃                 |
+| [Week 10](week10) | 11/08 | Synthesis                       | [A9 - Open Weather Viz]()                             |                    |
+| [Week 11](week11) | 11/15 | Publishing                      | [**Proposal** for Final Project]()                    |                    |
+| [Week 12](week12) | 11/22 | Holiday Observed                | Final Proj. Dev.                                      | NO CLASS           |
+| [Week 13](week13) | 11/29 | Special Topics                  | Final Proj. Dev.                                      | Special guest: TBD |
+| [Week 14](week14) | 12/06 | Final Presentations             | Final Presentations                                   | 🎉                 |
+| [Week 15](week15) | 12/13 | Final Project 1-on-1s           | Final Projects Due                                    |                    |
+
+NOTE: Some of you may be interested in the [daily charting challenge](daily-sketch-challenge.md)
+
+
+
+
+
+
+<!-- Final Project Development -->
+<!-- ************ -->
+
+<!--
+
+
+## Things I didn't get to:
+
+* statistics & modeling
+* data mining & aggregation
+* data wrangling
+
+http://www2.cs.uregina.ca/~rbm/cs100/notes/spreadsheets/tufte_paper.html
+
+
+form
+color
+image
+type
+interactivity
+layout
+
 | Materials         | Date  | Topic                    | Assignment (DUE)                                    | Note               |
 | ----------------- | ----- | ------------------------ | --------------------------------------------------- | ------------------ |
 | [Week 1](week01)  | 09/06 | Visual Encoding          | N/A                                                 | Joey in 🇩🇪         |
 | [Week 2](week02)  | 09/13 | Sketching with Data      | [A1 - Viz critique & setup](week01/ASSIGNMENT01.md) | Joey in 🇦🇹         |
 | [Week 3](week03)  | 09/20 | Data Compositions        | [A2 - Dear Data](week02/ASSIGNMENT02.md)            | Joey back in 🗽    |
-| [Week 4](week04)  | 09/27 | Introduction to Computation | [A3 - Intro to P5.js](week02/ASSIGNMENT03-UPDATED.md)                                        |                    |
+| [Week 4](week04)  | 09/27 | Introduction to Computation | [A3 - Intro to P5.js](week02/ASSIGNMENT03-UPDATED.md) |                    |
 | [Week 5](week05)  | 10/04 | Data is Plural           | [A4 - TBA]()                                        |                    |
 | [Week 6](week06)  | 10/11 | Synthesis I              | [A5 - TBA]()                                        |                    |
 | [Week 7](week07)  | 10/18 | The Web as your Canvas   | [A6 - TBA]()                                        |                    |
@@ -65,12 +112,7 @@ NOTE: We might decide together to move some things around this semester. I may a
 | [Week 14](week14) | 12/06 | Final Presentations      | Final Presentations                                 | 🎉                 |
 | [Week 15](week15) | 12/13 | Final Project 1-on-1s    | Final Projects Due                                  |                    |
 
-NOTE: Some of you may be interested in the [daily charting challenge](daily-sketch-challenge.md)
 
-<!-- Final Project Development -->
-<!-- ************ -->
-
-<!--
 
 Reproducible
 Transparent
@@ -247,6 +289,7 @@ Coding is an art; you will have a series of art supplies for this course that wi
 
 * Required:
 	- Hosting Service - [Github](https://github.com/) Account, [signup here](https://help.github.com/articles/signing-up-for-a-new-github-account/)
+  - [P5 Web Editor Account](https://editor.p5js.org/)
 * Not required, but worth considering:
 	- General Purpose Web Hosting / Platforms as a service:
 		- [Heroku](https://www.heroku.com/home)
