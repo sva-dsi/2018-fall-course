@@ -17,14 +17,14 @@
 **DISCUSSION:**
 
 * Quick motivational speech: [The gap by Ira Glass](https://vimeo.com/85040589)
-* Re-Roadmapping for the course:
-  * Weeks 4 - :
-  * Weeks
+* Re-Roadmapping for the course
+* Throwbacks
 * Insight from assignments: people really grasped the data viz process - cool to see people framing their blog posts around that.
 * We live in a computational and data driven world
   * [James Bridle, ]()
 * Data visualizations provide opportunites to see, for example:
   * Trevor Paglen, [Surveying Surveillance](https://www.independent.co.uk/news/world/americas/secret-state-trevor-paglen-documents-the-hidden-world-of-governmental-surveillance-from-drone-bases-9536376.html) | Photography
+  * [Anna Wiederkehr — Fine. Designing and visualising emotions](https://vimeo.com/244517309)
   * Josh Begley, [Prison Map](http://prisonmap.com/) | Photography, Mapping
   * Gelare Koshgozaran, [Why | 2010](https://gelarekhoshgozaran.com/VISUAL/WHY-2010) | Video, screen recording
   * Periscopic, [US Gun Deaths](https://guns.periscopic.com/?year=2013) | Animation, interactive web
@@ -32,18 +32,17 @@
   * Pudding.cool, [The road to gender parity in the House of Representatives](https://pudding.cool/2018/07/women-in-congress/)
   * Amy Cesal, Day Doh Viz [Daily visualizations with play doh](https://www.amycesal.com/day-doh-viz-all/)
   * Nicholas Felton, [2014 Annual Feltron Report](http://feltron.com/FAR14.html)
-  * Hint.fm, [Wind Map](http://hint.fm/wind/)
+  * Viegas & Wattenberg, [Wind Map](http://hint.fm/wind/)
   * Jenny O'Dell, [All the People on Google Earth](http://www.jennyodell.com/allthepeople.html)
-  *
 * Why computation and why P5.js?
-  *
-  * It's a great learning tool. Sure some of the more complex visualizations are trickier and it isn't as great for some things as others, but
-  * Great community and lots of examples
-  * Opens up
+  * It's a great learning tool
+  * Great community with lots of examples - #CodingTrain #Shiffman
+  * Opens up new possibilities for interacting on the web, across devices, and even hardware.
+  * Establishes a strong foundation for building more complex applications, visuals, and interactions across use cases and domains.
+  * I ❤️ p5.js and I think you will too!
 
 **Project Highlight - Critique & Feedback**
-* []
-*
+* Trevor Paglen, [Surveying Surveillance](https://www.independent.co.uk/news/world/americas/secret-state-trevor-paglen-documents-the-hidden-world-of-governmental-surveillance-from-drone-bases-9536376.html) | Photography
 
 **STUDIO:**
 
@@ -105,5 +104,5 @@ Today we will reinforce what we've learned so far and extend our skills by codin
 * James Bridle [The nightmare videos of childrens' YouTube — and what's wrong with the internet today | James Bridle](https://www.youtube.com/watch?v=v9EKV2nSU8w) | The ways that data and automation produce other kinds of visualizations - children's content - in ways that are disturbing and harmful, and reinforce problematic histories and social systems.
   * [Somethig is wrong with the internet, Medium](https://medium.com/@jamesbridle/something-is-wrong-on-the-internet-c39c471271d2)
 
-* This is a workshop I made for the Processing environment. Almost everything should work EXCEPT the sections on "Data" will be different and instead of `void setup() and void draw()` we have `function setup() and function draw()` among other differences: https://github.com/joeyklee/aloha-processing
-*
+* This is a workshop I made for the Processing environment. Almost everything should work EXCEPT the sections on "Data" will be different and instead of `void setup() and void draw()` we have `function setup() and function draw()` among other differences: https://github.com/joeyklee/aloha-processing ==> I've ported some of hte examples over to my p5 web editor account, see sketches with `aloha` in the name:
+  - https://editor.p5js.org/joeyklee/sketches
