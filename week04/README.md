@@ -3,7 +3,7 @@
 
 
 **Please make sure to log in your Attendance - thank you!**:
-👉 []()
+👉 [Link to google form](https://goo.gl/forms/QM1ptZoG7LDvLnq33)
 
 
 ## ASSIGNMENT
@@ -19,14 +19,21 @@
 * Quick motivational speech: [The gap by Ira Glass](https://vimeo.com/85040589)
 * Re-Roadmapping for the course
 * Throwbacks
-* Insight from assignments: people really grasped the data viz process - cool to see people framing their blog posts around that.
+  * ![mind melting](assets/images/mind-explosion.PNG)
+  * I remember my first class programming in grad school. It felt like this.
+* Insight from assignments:
+  * people really grasped the data viz process - cool to see people framing their blog posts around that.
+  * ...
+  * ...
+- how are data and computation related? & why should we care about computation?
 * We live in a computational and data driven world
   * [James Bridle, ]()
-* Data visualizations provide opportunites to see, for example:
+* Data visualizations provide opportunites to see systems, others, and ourselves. For example:
   * Trevor Paglen, [Surveying Surveillance](https://www.independent.co.uk/news/world/americas/secret-state-trevor-paglen-documents-the-hidden-world-of-governmental-surveillance-from-drone-bases-9536376.html) | Photography
   * [Anna Wiederkehr — Fine. Designing and visualising emotions](https://vimeo.com/244517309)
   * Josh Begley, [Prison Map](http://prisonmap.com/) | Photography, Mapping
   * Gelare Koshgozaran, [Why | 2010](https://gelarekhoshgozaran.com/VISUAL/WHY-2010) | Video, screen recording
+  * [Clio Andris, David Lee, Marcus J. Hamilton, Mauro Martino, Christian E. Gunning, John Armistead Selden, in PLOS ONE](https://www.washingtonpost.com/news/wonk/wp/2015/04/23/a-stunning-visualization-of-our-divided-congress/?noredirect=on&utm_term=.4b1958f6d111)
   * Periscopic, [US Gun Deaths](https://guns.periscopic.com/?year=2013) | Animation, interactive web
   * Propublica, [Losing Ground](https://projects.propublica.org/louisiana/) | Interactive web
   * Pudding.cool, [The road to gender parity in the House of Representatives](https://pudding.cool/2018/07/women-in-congress/)
@@ -39,6 +46,7 @@
   * Great community with lots of examples - #CodingTrain #Shiffman
   * Opens up new possibilities for interacting on the web, across devices, and even hardware.
   * Establishes a strong foundation for building more complex applications, visuals, and interactions across use cases and domains.
+  * Gives us a language to speak to others & collaborate across domains
   * I ❤️ p5.js and I think you will too!
 
 **Project Highlight - Critique & Feedback**
@@ -60,6 +68,34 @@ Let's review what we've learned through the assigned videos:
 * This means we should at this point we can effectively:
   * use code to draw shapes to the screen, change the colors of those shapes, and begin to **parameterize** our sketches using variables.
 
+####  Here's a list of our current p5.js vocabulary:
+
+* we will add a few new shape functions to our repertoire:
+  * point();
+  * line();
+  * ellipse();
+  * rect();
+  * quad();
+  * triangle();
+  * arc();
+  * bezier();
+  * image();
+  * for examples see, under `###_shapes`: https://editor.p5js.org/joeyklee/sketches
+* We have some functions that allow us to affect our geometries:
+  * fill(), noFill();
+  * stroke(), noStroke();
+  * strokeWeight();
+* We will use variables built in to P5.js like:
+  * mouseX, mouseY
+  * width, height
+  * mouseIsPressed
+* And we will create our own variables to store values
+  * and we should begin to think about variable scope - where variables need to be defined so they can be made available across your program == global scope vs. local scope variables.
+* And we have some structural features of p5:
+  * setup();
+  * draw();
+  * `preload(){}`
+  * `mousePressed()`
 
 <!--
 
