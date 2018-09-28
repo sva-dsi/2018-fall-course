@@ -55,7 +55,7 @@ NOTE: We might decide together to move some things around this semester. I may a
 | [Week 4](week04)  | 09/27 | Introduction to Computation     | [A3 - Intro to P5.js](week03/ASSIGNMENT03-UPDATED.md) | Switching gears    |
 | [Week 5](week05)  | 10/04 | Data I, Form, & Structure       | [A4 - Composition I](week04/ASSIGNMENT04.md)          |                    |
 | [Week 6](week06)  | 10/11 | Data II, Network, & Interface   | [A5 - Hockey Stick Chart](week05/ASSIGNMENT05.md)     |                    |
-| [Week 7](week07)  | 10/18 | Everything Around the chart     | [A6 - Life Expectancy Viz]()                          |                    |
+| [Week 7](week07)  | 10/18 | Everything Around the chart     | [A6 - Life Expectancy Viz]()                          |         Guest Speaker: [Jeremy Singer-Vine](https://www.jsvine.com/)           |
 | [Week 8](week08)  | 10/25 | (Counter)Maps and Cartographics | [A7 - Life Expectancy Viz+]()                         |                    |
 | [Week 9](week09)  | 11/01 | Timeseries                      | [A8 - TBA]()                                          | 🎃                 |
 | [Week 10](week10) | 11/08 | Synthesis                       | [A9 - Open Weather Viz]()                             |                    |
