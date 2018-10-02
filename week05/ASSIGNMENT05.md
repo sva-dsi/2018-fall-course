@@ -23,6 +23,15 @@ In this assignment, our goal is to use our skills to show the data changing dyna
 
 Some inspiration: https://scripps.ucsd.edu/programs/keelingcurve/
 
+### Option 1: Animated Area
+![animated circle showing CO2 PPM from 1954 to 2018](assets/images/animated-circle.png)
+
+### Option 2: Animated Keeling Curve
+
+![animated Keeling curve showing CO2 PPM from 1954 to 2018](assets/images/animated-keeling-curve.png)
+
+NOTE: this option is a bit more challenging, but you got this!
+
 
 
 ## Data
@@ -30,33 +39,34 @@ Some inspiration: https://scripps.ucsd.edu/programs/keelingcurve/
 See: [../data/SCRIPPS-CO2-1958-present/monthly_in_situ_co2_mlo-derived.csv](../data/SCRIPPS-CO2-1958-present/monthly_in_situ_co2_mlo-derived.csv)
 
 
-- **Assignment**:
-  - TBD...
-  - Watch Videos:
-    - preload function
-    - These should be review, but if you need a refresher:
-      - [Introduction to Data and APIs in JavaScript - p5.js Tutorial](https://www.youtube.com/watch?v=rJaXOFfwGVw&list=PLRqwX-V7Uu6a-SQiI4RtIwuOrLJGnel0r)
-      - [What is JSON? Part I - p5.js Tutorial](https://www.youtube.com/watch?v=_NFkzw6oFtQ&index=2&list=PLRqwX-V7Uu6a-SQiI4RtIwuOrLJGnel0r)
-      - [What is JSON? Part II - p5.js Tutorial](https://www.youtube.com/watch?v=_NFkzw6oFtQ&index=2&list=PLRqwX-V7Uu6a-SQiI4RtIwuOrLJGnel0r)
-    - This is new & exciting:
-      - Getting Data from APIs:
-        - [What is HTML? - p5.js Tutorial](https://www.youtube.com/watch?v=URSH0QpxKo8&list=PLRqwX-V7Uu6bI1SlcCRfLH79HZrFAtBvX&index=1)
-        - [Creating HTML Elements with JavaScript - p5.js Tutorial](https://www.youtube.com/watch?v=lAtoaRz78I4&list=PLRqwX-V7Uu6bI1SlcCRfLH79HZrFAtBvX&index=2)
-        - [Manipulating DOM Elements with html() and position() - p5.js Tutorial](https://www.youtube.com/watch?v=YfaJ20vXcK8&list=PLRqwX-V7Uu6bI1SlcCRfLH79HZrFAtBvX&index=3)
-        - [Handling DOM Events with Callbacks - p5.js Tutorial](https://www.youtube.com/watch?v=NcCEzzd9BGE&list=PLRqwX-V7Uu6bI1SlcCRfLH79HZrFAtBvX&index=4)
-        - [Interacting with the DOM using Sliders, Buttons and Text Inputs - p5.js Tutorial](https://www.youtube.com/watch?v=587qclhguQg&list=PLRqwX-V7Uu6bI1SlcCRfLH79HZrFAtBvX&index=5)
-        - [Other Events and Inputs - p5.js Tutorial](https://www.youtube.com/watch?v=HsDVz2_Qgow&list=PLRqwX-V7Uu6bI1SlcCRfLH79HZrFAtBvX&index=6)
-        - [Events "changed" and "input" - p5.js Tutorial](https://www.youtube.com/watch?v=ZEy0_NLhdSE&list=PLRqwX-V7Uu6bI1SlcCRfLH79HZrFAtBvX&index=8)
-      - Getting Data from APIs:
-        - [Loading JSON data from a URL (Asynchronous Callbacks!) - p5.js Tutorial](https://www.youtube.com/watch?v=6mT3r8Qn1VY&index=4&list=PLRqwX-V7Uu6a-SQiI4RtIwuOrLJGnel0r)
-        - [Working with APIs in Javascript - p5.js Tutorial](https://www.youtube.com/watch?v=ecT42O6I_WI&index=5&list=PLRqwX-V7Uu6a-SQiI4RtIwuOrLJGnel0r)
-        - [API Query with User Input - p5.js Tutorial](https://www.youtube.com/watch?v=4UoUqnjUC2c&index=6&list=PLRqwX-V7Uu6a-SQiI4RtIwuOrLJGnel0r)
+## Watch videos for next week:
+In addition to making one of the 2 charts above, you should watch these videos before class next week.
+
+- preload function
+- These should be review, but if you need a refresher:
+  - [Introduction to Data and APIs in JavaScript - p5.js Tutorial](https://www.youtube.com/watch?v=rJaXOFfwGVw&list=PLRqwX-V7Uu6a-SQiI4RtIwuOrLJGnel0r)
+  - [What is JSON? Part I - p5.js Tutorial](https://www.youtube.com/watch?v=_NFkzw6oFtQ&index=2&list=PLRqwX-V7Uu6a-SQiI4RtIwuOrLJGnel0r)
+  - [What is JSON? Part II - p5.js Tutorial](https://www.youtube.com/watch?v=_NFkzw6oFtQ&index=2&list=PLRqwX-V7Uu6a-SQiI4RtIwuOrLJGnel0r)
+- This is new & exciting:
+  - Getting Data from APIs:
+    - [What is HTML? - p5.js Tutorial](https://www.youtube.com/watch?v=URSH0QpxKo8&list=PLRqwX-V7Uu6bI1SlcCRfLH79HZrFAtBvX&index=1)
+    - [Creating HTML Elements with JavaScript - p5.js Tutorial](https://www.youtube.com/watch?v=lAtoaRz78I4&list=PLRqwX-V7Uu6bI1SlcCRfLH79HZrFAtBvX&index=2)
+    - [Manipulating DOM Elements with html() and position() - p5.js Tutorial](https://www.youtube.com/watch?v=YfaJ20vXcK8&list=PLRqwX-V7Uu6bI1SlcCRfLH79HZrFAtBvX&index=3)
+    - [Handling DOM Events with Callbacks - p5.js Tutorial](https://www.youtube.com/watch?v=NcCEzzd9BGE&list=PLRqwX-V7Uu6bI1SlcCRfLH79HZrFAtBvX&index=4)
+    - [Interacting with the DOM using Sliders, Buttons and Text Inputs - p5.js Tutorial](https://www.youtube.com/watch?v=587qclhguQg&list=PLRqwX-V7Uu6bI1SlcCRfLH79HZrFAtBvX&index=5)
+    - [Other Events and Inputs - p5.js Tutorial](https://www.youtube.com/watch?v=HsDVz2_Qgow&list=PLRqwX-V7Uu6bI1SlcCRfLH79HZrFAtBvX&index=6)
+    - [Events "changed" and "input" - p5.js Tutorial](https://www.youtube.com/watch?v=ZEy0_NLhdSE&list=PLRqwX-V7Uu6bI1SlcCRfLH79HZrFAtBvX&index=8)
+  - Getting Data from APIs:
+    - [Loading JSON data from a URL (Asynchronous Callbacks!) - p5.js Tutorial](https://www.youtube.com/watch?v=6mT3r8Qn1VY&index=4&list=PLRqwX-V7Uu6a-SQiI4RtIwuOrLJGnel0r)
+    - [Working with APIs in Javascript - p5.js Tutorial](https://www.youtube.com/watch?v=ecT42O6I_WI&index=5&list=PLRqwX-V7Uu6a-SQiI4RtIwuOrLJGnel0r)
+    - [API Query with User Input - p5.js Tutorial](https://www.youtube.com/watch?v=4UoUqnjUC2c&index=6&list=PLRqwX-V7Uu6a-SQiI4RtIwuOrLJGnel0r)
 
 
 
 
 ## Deliverables
 
+- an animated/static chart that visualizes the provided CO2 data and it's changes over time.
 
 
 ## Submission
