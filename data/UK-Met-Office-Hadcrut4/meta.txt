@@ -1,0 +1,38 @@
+HadCRUT4
+----------------------------
+Data are stored in ASCII
+
+All values are stored as temperature anomalies in degrees celsius
+Missing data are set to the value given in the header. (normally -1.0e-30)
+
+Grids are 5x5deg monthly
+
+Month and year are stored at the start of each month.
+
+Field status flags indicate whether the field is finalised ("f") or preliminary ("p").
+- Finalised fields are fixed and will not be updated under the current version number.
+- Preliminary fields may be updated in future monthly updates if additional data
+  becomes available.
+
+Data Array (72x36)
+Item (1,1) stores the value for the 5-deg-area centred at 177.5W and 87.5N
+Item (72,36) stores the value for the 5-deg-area centred at 177.5E and 87.5S
+
+          ------- ------- ------ ------- --------------------- ------------ -------------- ----------------------------
+         |       |       |      |       |                     |            |              |                            |
+         | MONTH |  YEAR | ROWS | COLS  | MISSING_DATA_VALUE  |   VERSION  | FIELD_STATUS | FIELD_TYPE/ENSEMBLE_MEMBER |
+         |_______|_______|______|_______|_____________________|____________|______________|____________________________|__________
+     90N |(1,1)                                                                                                                   |
+         |                                                                                                                        |
+         |                                                                                                                        |
+         |                                                                                                                        |
+         |                                                                                                                        |
+         |(1,18)                                                                                                                  |
+     Equ |                                                                                                                        |
+         |(1,19)                                                                                                                  |
+         |                                                                                                                        |
+         |                                                                                                                        |
+         |                                                                                                                        |
+         |                                                                                                                        |
+     90S |(1,36)___________________________________________________________________________________________________________(72,36)|
+          180W                                                        0                                                       180E
