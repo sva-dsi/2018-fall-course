@@ -205,11 +205,12 @@ Thursdays from 6:00 - 9:00 pm.
 ## Office Hours
 
 ```
-Friday 5PM- 6PM by appointment
+Thursday 5PM- 6PM or by appointment
 NOTE: Make sure to make an appointment otherwise I won't be around!
 ```
 
 🗓 If you'd like to meet, please sign up for an appointment via this [Link to Google Calendar Appointments Page](https://calendar.google.com/calendar/selfsched?sstoken=UUxEcXhnTHpVYXl1fGRlZmF1bHR8ZDc5ZTU3ZTA3YzM4YWE4OWUxOTZiZWJhNGIzNzhjNDU)
+
 
 📮 If none of those times fit, feel free to send me an email with your availability: [Joey's SVA email](@mailto:jlee358@sva.edu)
 
