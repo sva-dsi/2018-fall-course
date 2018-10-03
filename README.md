@@ -205,7 +205,7 @@ Thursdays from 6:00 - 9:00 pm.
 ## Office Hours
 
 ```
-Thursday 5PM- 6PM or by appointment
+Thursday 5PM- 6PM or by appointment via email
 NOTE: Make sure to make an appointment otherwise I won't be around!
 ```
 

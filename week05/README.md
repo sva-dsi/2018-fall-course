@@ -1,9 +1,9 @@
 # WEEK `05`
-## Data I, Form, & Structure
+## Data II, Network, & Interface
 
 
 **Please make sure to log in your Attendance - thank you!**:
-👉 [Link to google form]()
+👉 [Link to google form](https://goo.gl/forms/HW50eXU8jo3P3MGu2)
 
 
 ## ASSIGNMENT
@@ -18,6 +18,7 @@
   - How does the internet work?
     - client, server
     - html, css, javascript
+    - [Slides by Aurelia Moser](aureliamoser.com/web-concepts/#/)
   - **Studio**:
     - Review of Loops and Conditionals
       - Ex.1: 100 horizontal lines w/ each line getting bigger
@@ -38,6 +39,11 @@
         - JSON: loadJSON("my_json_file.json");
         - the preload() function
         - Cat APis: https://aws.random.cat/meow
+      - Working on a p5.js project on your computer
+        - download your project from editor.p5js.org > unzip the file that was downloaded to your downloads folder > open the folder using your text editor > make some changes to the `sketch.js` file > open the `index.html` file in your browser
+        - every time you make a change in `sketch.js` you will need to refresh your browser
+        - running a webserver:
+          - 
       - Refs:
         - [What is an array? - p5.js Tutorial](https://www.youtube.com/watch?v=VIQoUghHSxU&list=PLRqwX-V7Uu6Zy51Q-x9tMWIv9cueOFTFA&index=24)
         - [Arrays and Loops - p5.js Tutorial](https://www.youtube.com/watch?v=RXWO3mFuW-I&index=25&list=PLRqwX-V7Uu6Zy51Q-x9tMWIv9cueOFTFA)
