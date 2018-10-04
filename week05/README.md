@@ -18,8 +18,7 @@
   - How does the internet work?
     - client, server
     - html, css, javascript
-    - [Slides by Aurelia Moser](aureliamoser.com/web-concepts/#/)
-    -
+    - [Slides by Aurelia Moser](http://aureliamoser.com/web-concepts/#/)
   - **Studio**:
     - Review of Loops and Conditionals
       - Ex.1: 100 horizontal lines w/ each line getting bigger:
