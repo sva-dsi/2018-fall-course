@@ -67,8 +67,9 @@ In addition to making one of the 2 charts above, you should watch these videos b
 ## Deliverables
 
 - an animated/static chart that visualizes the provided CO2 data and it's changes over time.
+- document your learnings from your exercise in a short blog post.
 
 
 ## Submission
 
-* Submit your work here: LINK/TO/GITHUB/ISSUES
+* Submit your work here: https://github.com/sva-dsi/2018-fall-course/issues/16
