@@ -27,7 +27,9 @@
 
 ## How do we install a local web server?
 
+
 - there are heaps of ways to do this, but the method we are going to use involves a few steps. Ready?
+- we are going to use this tool for our local web serving needs: https://www.npmjs.com/package/http-server
 
 ### on mac:
 
