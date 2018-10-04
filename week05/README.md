@@ -36,6 +36,8 @@
     - Arrays & JSON Objects:
       - Review of objects
         - accessing properties of objects
+          - https://editor.p5js.org/joeyklee/sketches/Hyg7FyVqQ
+          - https://editor.p5js.org/joeyklee/sketches/SkW1syN9m
       - What are arrays?
         - Accessing elements in arrays
           - https://editor.p5js.org/joeyklee/sketches/SJqRv2W9Q
@@ -79,7 +81,11 @@
 
 **Project Highlight - Critique & Feedback**
 
+![Projects by If, Data Ethics Toolkits](https://s3-eu-west-1.amazonaws.com/projectsbyif.com/projects/_1800xAUTO_crop_top-left_75/Service-map_v3.jpg)
 
+* [Projects by If](https://projectsbyif.com/work)
+* [Sarah Gold](https://www.youtube.com/watch?v=t0Fpeur78Fg)
+* [Data Ethics Toolkit, Projects by If](https://projectsbyif.com/blog/if-can-help-you-understand-whats-happening-with-your-data)
 
 
 
