@@ -1,0 +1,16 @@
+{
+  "name": "process",
+  "projects": [
+    "000-setup",
+    "001-ui-inputs",
+    "002-submit-button",
+    "003-dropdown-menu",
+    "004-html-p",
+    "005-dob-input",
+    "006-submit-get",
+    "007-submit-get-variables",
+    "008-get-data",
+    "009-refine-vis",
+    "010-lifetime-vis"
+  ]
+}
