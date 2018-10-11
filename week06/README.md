@@ -68,8 +68,7 @@
 
 ![Penny - Stamen: https://stamen.com/work/penny/](assets/images/stamen-penny.jpg)
 
-- [Penny - Stamen: https://stamen.com/work/penny/]
-https://hi.stamen.com/announcing-penny-a-playful-ai-that-explores-wealth-and-poverty-in-american-cities-b0d725017249
+- [Penny - Stamen: https://stamen.com/work/penny/](https://hi.stamen.com/announcing-penny-a-playful-ai-that-explores-wealth-and-poverty-in-american-cities-b0d725017249)
 - Penny is a simple tool to help us understand what wealth and poverty look like to an artificial intelligence built on machine learning using neural networks. The tool lets you play around with the landscape of a city, by adding and removing urban features like buildings, parks, and freeways in high-resolution satellite imagery.
 
 
