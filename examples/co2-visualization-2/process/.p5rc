@@ -1,0 +1,14 @@
+{
+  "name": "process",
+  "projects": [
+    "000-setup",
+    "001-load-data",
+    "002-filter-data",
+    "003-line-data",
+    "004-line-data-animated",
+    "005-co2-line",
+    "006-chart-axes",
+    "007-chart-refine",
+    "008-chart-animate"
+  ]
+}
