@@ -1,0 +1,15 @@
+{
+  "name": "process",
+  "projects": [
+    "000-setup",
+    "001-load-data",
+    "002-filter-data",
+    "003-animated-circle",
+    "004-animated-circle-size",
+    "005-animate-data",
+    "006-animate-data-repeat",
+    "007-animate-data-refine",
+    "008-animate-view-refine",
+    "009-animate-view-refine-bg"
+  ]
+}

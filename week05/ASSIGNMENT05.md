@@ -48,7 +48,7 @@ In addition to making one of the 2 charts above, you should watch these videos b
   - [What is JSON? Part I - p5.js Tutorial](https://www.youtube.com/watch?v=_NFkzw6oFtQ&index=2&list=PLRqwX-V7Uu6a-SQiI4RtIwuOrLJGnel0r)
   - [What is JSON? Part II - p5.js Tutorial](https://www.youtube.com/watch?v=_NFkzw6oFtQ&index=2&list=PLRqwX-V7Uu6a-SQiI4RtIwuOrLJGnel0r)
 - This is new & exciting:
-  - Getting Data from APIs:
+  - HTML and DOM elements:
     - [What is HTML? - p5.js Tutorial](https://www.youtube.com/watch?v=URSH0QpxKo8&list=PLRqwX-V7Uu6bI1SlcCRfLH79HZrFAtBvX&index=1)
     - [Creating HTML Elements with JavaScript - p5.js Tutorial](https://www.youtube.com/watch?v=lAtoaRz78I4&list=PLRqwX-V7Uu6bI1SlcCRfLH79HZrFAtBvX&index=2)
     - [Manipulating DOM Elements with html() and position() - p5.js Tutorial](https://www.youtube.com/watch?v=YfaJ20vXcK8&list=PLRqwX-V7Uu6bI1SlcCRfLH79HZrFAtBvX&index=3)
