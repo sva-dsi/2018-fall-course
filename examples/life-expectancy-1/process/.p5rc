@@ -11,6 +11,7 @@
     "007-submit-get-variables",
     "008-get-data",
     "009-refine-vis",
-    "010-lifetime-vis"
+    "010-lifetime-vis",
+    "011-refine-ui"
   ]
 }
