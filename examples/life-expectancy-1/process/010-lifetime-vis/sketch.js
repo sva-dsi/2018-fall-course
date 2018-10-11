@@ -58,6 +58,9 @@ function setup() {
 // 2.3 callback function for submitButton
 // For now, we get the .value() from the input boxes
 function getData(){
+	// 10.4 refresh the background
+	background(200);
+
 	print("the value of country A Input: ", countryAInput.value())
 	print("the value of country A Input: ", countryBInput.value())
 
@@ -107,6 +110,8 @@ function makeVisualizationA(response){
 	textAlign(CENTER, CENTER);
 
 	// 9.1 adjust where the text is located
+	textSize(20);
+	fill(0);
 	text(int(response.total_life_expectancy), width*0.25, height/2 );
 
 	// 10.2 use the number of total life expectancy to do something interesting:
@@ -114,6 +119,10 @@ function makeVisualizationA(response){
 	for(var i = 0; i < int(response.total_life_expectancy); i++){
 		ellipse(width*0.25, height/2, i*4, i*4);
 	}
+
+
+
+
 }
 
 // 6.5 print the response from the API!
@@ -124,6 +133,8 @@ function makeVisualizationB(response){
 	textAlign(CENTER, CENTER);
 
 	// 9.2 adjust where the text is located
+	textSize(20);
+	fill(0);
 	text(int(response.total_life_expectancy), width*0.75, height/2 );
 
  	// 10.2 use the number of total life expectancy to do something interesting:
@@ -131,6 +142,9 @@ function makeVisualizationB(response){
 	for(var i = 0; i < int(response.total_life_expectancy); i++){
 		ellipse(width*0.75, height/2, i*4, i*4);
 	}
+
+
+
 }
 
 

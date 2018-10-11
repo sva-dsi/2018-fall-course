@@ -10,10 +10,11 @@
     - you can choose to display the text as a visual or something more expressive
     - you will need to use several interface elements to achieve this:
       1. 2 input boxes to select a country
-      2. a dropdown meny to select by sex
-      3. a slider to change the date of birth
+      2. a dropdown meny to select by sex (male or female)
       4. a button to submit your GET requests
     - http://api.population.io/#!/life-expectancy
+
+    <!-- 3. a slider to change the date of birth -->
 
 
   - Watch Videos:
