@@ -15,3 +15,4 @@ https://github.com/sva-dsi/2018-fall-course/tree/master/examples/life-expectancy
 - [008-get-data](https://github.com/sva-dsi/2018-fall-course/tree/master/examples/life-expectancy-1/process/008-get-data)
 - [009-refine-vis](https://github.com/sva-dsi/2018-fall-course/tree/master/examples/life-expectancy-1/process/009-refine-vis)
 - [010-lifetime-vis](https://github.com/sva-dsi/2018-fall-course/tree/master/examples/life-expectancy-1/process/010-lifetime-vis)
+- [011-refine-ui](https://github.com/sva-dsi/2018-fall-course/tree/master/examples/life-expectancy-1/process/010-refine-ui)
