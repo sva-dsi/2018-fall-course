@@ -110,9 +110,9 @@ The process for creating this visualization is as follows:
 
 * a link to your visualization
 * a link to a blog post describing your process and learnings and any difficulties you may have encountered.
-* help your classmates! 
+* help your classmates!
 
 
 ## Submission
 
-* Submit your work here: Link to Github Issues
+* Submit your work here: https://github.com/sva-dsi/2018-fall-course/issues/17
