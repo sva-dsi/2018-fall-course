@@ -7,6 +7,19 @@
 
 ## Brief
 
+### Update Oct 12 2018:
+
+NOTE:
+
+As discussed in class, we will try a different methodology for this assignment. Using the existing code base layed out here - [https://github.com/sva-dsi/2018-fall-course/tree/master/examples/life-expectancy-1/process/](https://github.com/sva-dsi/2018-fall-course/tree/master/examples/life-expectancy-1/process/) you will find new ways to show the data that is retrieved from the population.io API.
+
+You may consider to update the styling of the user interface elements as well as try new visual forms to map out the data that is being retrieved.
+
+You will use your growing knowledge of the coding to navigate through the program (link above) as well as your creativity to develop a more intriguing and impactful visualization.
+
+What kinds of metaphors can you map to these comparisons of life expectancy? You may even consider using images (e.g. .svgs) made outside of P5 and bring them in to your project to enhance the visual potential.
+
+
 ### What you're going to do:
 
 Use the population.io life expectancy data to make a visualization that allows people to compare 2 countries and their life expectancy. This means that you will need to use interface elements like buttons and input boxes to allow for user interactions.
@@ -96,7 +109,8 @@ The process for creating this visualization is as follows:
 ## Deliverables
 
 * a link to your visualization
-* a link to a blog post describing your process and learnings
+* a link to a blog post describing your process and learnings and any difficulties you may have encountered.
+* help your classmates! 
 
 
 ## Submission
