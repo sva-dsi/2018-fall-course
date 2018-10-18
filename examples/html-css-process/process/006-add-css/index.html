@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- NOTE: WE INCLUDE OUR SPECTRE CSS  -->
+	<link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre.min.css">
+	<link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-exp.min.css">
+	<link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-icons.min.css">
+
+
+	<title>003-fill-main</title>
+
+	<script src="../libraries/p5.js"></script>
+	<script src="../libraries/p5.dom.js"></script>
+	<script src="../libraries/p5.sound.js"></script>
+	<script src="sketch.js"></script>
+
+	<style>
+		/* NOTE: get rid of those default p5 styles */
+		body {
+      		width:100%;
+			height:100%;
+		}
+		canvas {
+			margin:auto;
+		}
+
+		/* styles */
+		img{
+			width:600px;
+		}
+
+		
+	</style>
+</head>
+<body class="container">
+	<!-- header -->
+	<header class="columns col-8 col-mx-auto">
+		<!-- fill in things here -->
+		<h1>Life Expectancy Explorer</h1>
+		<h2>Find out how your life in your country can shape your longevity</h2>
+		<section>
+			<p>By: Joey Lee</p>
+			<p>Data source: api.population.io</p>
+			<p>Built with: P5.js, Spectre.css</p>
+		</section>
+	</header>
+	<!-- main -->
+	<main class="columns col-8 col-mx-auto">
+		<!-- fill in things here -->
+		<!-- image jumbotron -->
+		<section class="column col-12">
+			<img src="https://i2.wp.com/geoawesomeness.com/wp-content/uploads/2017/04/Goode_homolosine_projection_SW-2.jpg" alt="">
+		</section>
+
+		<section class="column col-12">
+			<h3>How is life expectancy calculated?</h3>
+			<!-- the sections of columns -->
+			<section class="columns col-12 one-line">
+				<!-- column 1 -->
+				<section class="column col-4">
+					<h4>Column 1</h4>
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, nulla. Et, maiores? Cumque sed ut nobis consectetur doloremque architecto molestias corrupti corporis id explicabo. A aut fuga cumque modi pariatur!</p>
+				</section>
+				<!-- column 2 -->
+				<section class="column col-4">
+					<h4>Column 2</h4>
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, nulla. Et, maiores? Cumque sed ut nobis consectetur doloremque architecto molestias corrupti corporis id explicabo. A aut fuga cumque modi pariatur!</p>
+				</section>
+				<!-- column 3 -->
+				<section class="column col-4">
+					<h4>Column 3</h4>
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, nulla. Et, maiores? Cumque sed ut nobis consectetur doloremque architecto molestias corrupti corporis id explicabo. A aut fuga cumque modi pariatur!</p>
+				</section>
+			</section>
+
+			<!-- section for our p5 sketch -->
+			<section class="column col-12">
+				<h3>Compare life expectancies between countries</h3>
+				<section class="columns col-12 one-line">
+					<!-- all of your inputs and dropdowns -->
+					<section class="column col-4">
+						<input type="text" name="countryAInput" placeholder="e.g. France">
+						<input type="text" name="countryBInput" placeholder="e.g. Zimbabwe">
+						<select name="" id="sexSelect">
+							<option value="female">female</option>
+							<option value="male">male</option>
+						</select>
+						<input type="text" name="countryBInput" placeholder="e.g. Zimbabwe">
+						<button id="submitButton">Submit!</button>
+					</section>
+					<!-- p5 sketch will go in here -->
+					<section id="mySketch" class="column col-8">
+
+					</section>
+				</section>
+			</section>
+		</section>
+	</main>
+	<!-- footer -->
+	<footer class="column col-8 col-mx-auto">
+		<!-- fill in things here -->
+		<section class="column col-8">
+				<h4>About</h4>
+				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum dolorem, libero possimus nobis eius enim quibusdam itaque quam mollitia cumque. Quia, ipsum eum mollitia doloribus perferendis praesentium harum modi eligendi?</p>
+			</section>
+	</footer>
+</body>
+</html>

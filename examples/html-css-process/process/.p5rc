@@ -1,0 +1,11 @@
+{
+  "name": "process",
+  "projects": [
+    "001-setup",
+    "002-fill-header",
+    "003-fill-main",
+    "004-fill-footer",
+    "005-add-ids-and-classes",
+    "006-add-css"
+  ]
+}
