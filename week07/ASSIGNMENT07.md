@@ -19,6 +19,10 @@ You may consider:
 
 You might also think about using other data from the population.io API that could support your argumentation. 
 
+You can use this as a template:
+
+https://github.com/sva-dsi/2018-fall-course/tree/master/examples/html-css-process/process
+
 <!-- - Create a copy of your Life Expectancy Visualization and develop a styled web page around the interactive visualization.
     - use a combination of layout, typography, and color to communicate the data being presented and any insights you've found while working with the data
     - Can you think of creative ways to reinterpret the data? -->
