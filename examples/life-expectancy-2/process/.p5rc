@@ -1,0 +1,9 @@
+{
+  "name": "process",
+  "projects": [
+    "001-setup",
+    "000-demo",
+    "003-layout-with-css",
+    "002-structure-html"
+  ]
+}
