@@ -56,4 +56,4 @@ NOTE: Next week we're going to do some mapping!
 
 ## Submission
 
-* Submit your work here: LINK/TO/GITHUB/ISSUES
+* Submit your work here: https://github.com/sva-dsi/2018-fall-course/issues/19
