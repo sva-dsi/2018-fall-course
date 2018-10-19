@@ -23,6 +23,10 @@ You can use this as a template:
 
 https://github.com/sva-dsi/2018-fall-course/tree/master/examples/html-css-process/process
 
+Here's our demo from class:
+
+https://editor.p5js.org/joeyklee/sketches/Hk2KHaUo7
+
 <!-- - Create a copy of your Life Expectancy Visualization and develop a styled web page around the interactive visualization.
     - use a combination of layout, typography, and color to communicate the data being presented and any insights you've found while working with the data
     - Can you think of creative ways to reinterpret the data? -->

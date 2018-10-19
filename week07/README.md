@@ -35,6 +35,16 @@
     * A really cool set of open source tools: https://github.com/jsvine
     * Creating a database of nuclear waste sites in the US: https://www.youtube.com/watch?v=mbCjrtu6k6U
     * [Gender Gap in Bicycle Riding](https://www.buzzfeed.com/jsvine/these-maps-show-a-massive-gender-gap-in-bicycle-riding)
+  * Links from Jeremy's Talk:
+    * https://www.buzzfeednews.com/article/heidiblake/the-tennis-racket
+    * https://www.buzzfeednews.com/article/johntemplon/black-voters-underrepresented-in-biggest-midterms
+    * https://www.buzzfeednews.com/article/lamvo/gentrification-complaints-311-new-york
+    * https://www.buzzfeednews.com/article/peteraldhous/hidden-spy-planes
+    * http://drafts.jsvine.com/the-magic-criteria/ 
+    * https://www.ipsos.com/en/about-us
+    * https://www.buzzfeednews.com/article/lesterfeder/this-is-how-23-countries-feel-about-transgender-rights
+    * https://www.buzzfeednews.com/article/buzzfeednews/about-buzzfeed-news
+    * https://journalism.columbia.edu/workbench-data-platform-all-reporters
 
 
 **STUDIO:**
