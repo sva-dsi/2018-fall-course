@@ -7,6 +7,7 @@ Hello and welcome to the School for Visual Arts  Metrics + Data Visualization I.
 - [Overview](#overview)
   - [Instructor](#instructor)
   - [Calendar](#calendar)
+  - [Things I didn't get to:](#things-i-didnt-get-to)
   - [Course Description](#course-description)
   - [Learning Objectives & Outcomes](#learning-objectives--outcomes)
 - [Course Information](#course-information)
@@ -56,7 +57,7 @@ NOTE: We might decide together to move some things around this semester. I may a
 | [Week 5](week05)  | 10/04 | Data I, Form, & Structure       | [A4 - Composition I](week04/ASSIGNMENT04.md)          |                                                              |
 | [Week 6](week06)  | 10/11 | Data II, Network, & Interface   | [A5 - Global CO2 Rise](week05/ASSIGNMENT05.md)        |                                                              |
 | [Week 7](week07)  | 10/18 | Everything Around the chart     | [A6 - Life Expectancy Viz](week06/ASSIGNMENT06.md)    | Guest Speaker: [Jeremy Singer-Vine](https://www.jsvine.com/) |
-| [Week 8](week08)  | 10/25 | (Counter)Maps and Cartographics | [A7 - Life Expectancy Viz+](week06/ASSIGNMENT07.md)                         |                                                              |
+| [Week 8](week08)  | 10/25 | (Counter)Maps and Cartographics | [A7 - Life Expectancy Viz+](week06/ASSIGNMENT07.md)                         |       Guest Speaker: [Bradyn Friedly](https://twitter.com/brandynfriedly)                                                       |
 | [Week 9](week09)  | 11/01 | Timeseries                      | [A8 - TBA]()                                          | 🎃                                                           |
 | [Week 10](week10) | 11/08 | Synthesis                       | [A9 - Open Weather Viz]()                             |                                                              |
 | [Week 11](week11) | 11/15 | Publishing                      | [**Proposal** for Final Project]()                    |                                                              |
