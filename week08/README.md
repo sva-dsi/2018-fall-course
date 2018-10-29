@@ -222,6 +222,8 @@
 
 - Coding Train, [Mapping Earthquakes, Coding Challenge](http://thecodingtrain.com/CodingChallenges/057-mapping-earthquake-data.html) || [Code](https://github.com/CodingTrain/website/blob/master/CodingChallenges/CC_057_Earthquake_Viz/sketch.js)
 - Mapmaker cheatsheet: https://github.com/tmcw/mapmakers-cheatsheet
+- [Community based mapping, Corbett & Lydon](web.uvic.ca/~cburnett/wp-content/uploads/2016/09/lydon_corbett_ecfcde64.pdf
+)
 
 ## Interesting projects & people:
 
