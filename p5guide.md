@@ -4,7 +4,7 @@ Here's a reference to all the computational components we've covered using P5.js
 
 This short guide will use Ben Fry's model of the data visualization pipeline to categorize the various methods for working with and thinking about data. The principles are applied in this case using p5.js, but I hope the knowledge transfer can also be made to other software.
 
-NOTE: We've seen almost everything here, but I've tried to include some new things just for completeness. They will be marked with a 🆕✨ emoji. 
+> NOTE: We've seen almost everything here, but I've tried to include some new things just for completeness. They will be marked with a 🆕✨ emoji. 
 
 **Table of contents**
 - [P5 Guide for this course](#p5-guide-for-this-course)
@@ -82,7 +82,7 @@ NOTE: We've seen almost everything here, but I've tried to include some new thin
 ***
 
 
-NOTE: I have a preference for open source software. This is reflected here as much as possible. 
+> NOTE: I have a preference for open source software. This is reflected here as much as possible. 
 
 
 ## General Purpose
@@ -123,16 +123,33 @@ Mapping is most certainly an endeavor of data visualization, but geospatial cons
 # Visualization frameworks for friends of code
 ***
 
-NOTE: most if not all of these are based on javascript or are meant for a web environment
+This guide is about [P5.js](). I choose to introduce all these visualization concepts with P5 for many reasons including:
+
+1. great community (e.g. Dan Shiffman)
+2. lots of documentation
+3. lots of resources and examples
+4. easy to "lego-brick" complexity
+5. opens up possibilities to interfce and interact with other things (e.g. mobile devices, etc)
+6. built for the web
+7. lower entry barriers to making and sharing code
+8. forces you to think more explicitly about visual encoding, scale, and the components that make up a chart.
+9. general purpose - if/when you're not using it for visualization, you can use it for other projects and needs.
+
+SO with all that being said, we're going to focus on P5.js, but if you do get curious, as I hope you all do, here's some additional references that you definitely should know about for your own sake and your future team.
+
+> NOTE: most if not all of these are based on javascript or are meant for a web environment
 
 * Some go-to's:
     * [Plotly.js](https://plot.ly/javascript/)
     * [Chart.js](https://www.chartjs.org/)
+    * [Vega.js](https://vega.github.io/vega/)
 * Caveats:
-    * D3.js 
+    * [D3.js](): D3.js is the standard visualizaition framework out there, but it is not a beginner friendly library. Luckily basically all the other visualizaition libraries wrap up some of the D3 complexity for us. Also, if you're not going to become a visualization coder, then D3 feels like overkill to me. 
 
 
-NOTE: we aren't really going to go into R or Python for data analysis and visualization. Those coding environments and their visualization and statistical libraries may be wonderful, but that opens up a whole different can of worms which we haven't gone over in this class - statistics! 
+> NOTE: we aren't really going to go into R or Python for data analysis and visualization. Those coding environments and their visualization and statistical libraries may be wonderful, but that opens up a whole different can of worms which we haven't gone over in this class - statistics! 
+
+
 
 ***
 # Setup
