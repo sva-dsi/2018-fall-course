@@ -33,7 +33,11 @@ This short guide will use Ben Fry's model of the data visualization pipeline to 
     - [loadTable()](#loadtable)
     - [preload()](#preload)
 - [Filter](#filter)
-    - [Loops and Conditional Statements: `If/else` and `for`](#loops-and-conditional-statements-ifelse-and-for)
+    - [P5.Table & P5.TableRow: .findRows()](#p5table--p5tablerow-findrows)
+    - [P5.Table: for Loops and Conditional Statements: `If/else` and `for` using .getRow();](#p5table-for-loops-and-conditional-statements-ifelse-and-for-using-getrow)
+    - [P5.Table: .getColumn() → for Loops and Conditional Statements: `If/else` and `for`](#p5table-getcolumn-%E2%86%92-for-loops-and-conditional-statements-ifelse-and-for)
+    - [Advanced methods](#advanced-methods)
+        - [Array.filter()](#arrayfilter)
 - [Mine](#mine)
     - [Mathmagical Operations ✨](#mathmagical-operations-%E2%9C%A8)
 - [Represent / Visual Encoding](#represent--visual-encoding)
@@ -608,13 +612,17 @@ function preload(){
 
 //
 function setup(){
-    // we log the result of that data and convert it to an object (we'll learn about objects next)
+    // we log the result of that data and convert it to an array of objects
     console.log(myData.getObject());
-    noLoop();
+}
+
+function draw(){
+    background(220);
+
 }
 
 ```
-See it in practice here: https://editor.p5js.org/joeyklee/sketches/SyvgItU3Q
+You can 🔗 [see it running here](https://editor.p5js.org/joeyklee/sketches/SyvgItU3Q)
 
 
 
@@ -623,9 +631,163 @@ See it in practice here: https://editor.p5js.org/joeyklee/sketches/SyvgItU3Q
 >  ↱ aquire → parse → **filter** → mine → represent → interact → refine ↲
 ***
 
-Almost always you will need to filter data. Whether it is because you want to focus on a **subset** of the data or you know that there are data points that have unrealistic values 
+Almost always you will need to filter data. Whether it is because you want to focus on a **subset** of the data or you know that there are data points that have unrealistic values, you're going to need a way to just get the data that you want. There are a lot of ways to do this so there's no right or wrong answers, but here I'm aiming for clarity rather than efficiency.
 
-## Loops and Conditional Statements: `If/else` and `for`
+
+## P5.Table & P5.TableRow: .findRows()
+
+When working with tabular data, we are afforded some handy functions that are made available when we use the `loadTable()` function and assign that loaded data to a variable. The loaded data which is our tabular dataset is converted into a **[P5.Table](https://p5js.org/reference/#/p5.Table)** object that comes with a bunch of helpful functions that we can use when working with our data. Let's say we load our stop and frisk data to a variable called `myData`, we can then do things like:
+
+* `myData.findRows( <the value you want to find> , <the name of the column> )`:
+    * results in an array [] of P5.TableRow objects - the [P5.TableRow](https://p5js.org/reference/#/p5.TableRow) objects contain references to our original dataset so in order to get the data we're looking for, we need to use functions that are part of the [P5.TableRow](https://p5js.org/reference/#/p5.TableRow) object.
+        * Let's say we have an array of [P5.TableRow](https://p5js.org/reference/#/p5.TableRow) objects called `mySubset`, we get values from each object in that array by doing: `mySubset[0].get(<name of column>)`.
+* `myData.getColumn(<the name of the column>)`:
+    *  results in an array [] of the values specified in that column
+
+
+There are more functions that allow you to get and set data of P5.Table object that you can see here: https://p5js.org/reference/#/p5.Table
+
+<!-- STOP_WAS_INITIATED: "Based on Self Initiated" -->
+
+```js
+
+// declare a variable called myData
+var myData;
+var selfInitiatedStops;
+function preload(){
+    // use the loadTable() function to load our csv file of NYC's stop and frisk data for january of 2017
+    myData = loadTable('https://gist.githack.com/joeyklee/9ef7248c74038ef9df82152772398d1f/raw/39f1bb753d46bf554e35c86055410a910dd846e2/stop-and-frisk-nyc-2017.csv', 'header', 'csv');
+}
+
+
+function setup(){
+    createCanvas(400, 400);
+    // we convert myData from it's table form to an object
+    console.log(myData.getObject());
+
+    // we create a subset of our data by using the findRows()
+    selfInitiatedStops = myData.findRows("Based on Self Initiated", "STOP_WAS_INITIATED");
+    console.log(selfInitiatedStops[0].get("SUSPECTED_CRIME_DESCRIPTION"));
+    console.log(selfInitiatedStops[1].get("SUSPECTED_CRIME_DESCRIPTION"));
+    console.log(selfInitiatedStops[2].get("SUSPECTED_CRIME_DESCRIPTION"));
+    console.log(selfInitiatedStops[3].get("SUSPECTED_CRIME_DESCRIPTION"));
+    console.log(selfInitiatedStops[4].get("SUSPECTED_CRIME_DESCRIPTION"));
+    console.log(selfInitiatedStops[5].get("SUSPECTED_CRIME_DESCRIPTION"));
+    
+}
+
+function draw(){
+    background(220);
+
+}
+
+
+```
+
+You can 🔗 [see it running here](https://editor.p5js.org/joeyklee/sketches/BJ2kMAwnX)
+
+* Here, we use the `.findRows()` function on the `myData` P5.Table object to get an array of P5.TableRow objects which get assigned to the `selfInitiatedStops` variable containing references to the rows of data in our original dataset where the specified value matches the specified column. Here we're looking for the stop and frisks that were "self-initiated". We then print to the console the first 6 values in the `selfInitiatedSteps` array with the property `SUSPECTED_CRIME_DESCRIPTION` and see that we get these results:
+
+```
+TERRORISM 
+TERRORISM 
+GRAND LARCENY AUTO 
+CRIMINAL MISCHIEF 
+CRIMINAL MISCHIEF 
+TERRORISM 
+```
+
+We've hardly dug into the data, but alarms might be ringing in our brains: "Here's the NYC stop and frisk data, a notoriously fraught method of policing, and we have a category of data that tells us a short justification why an officer might have spent 30, 60, 90 minutes or more confronting people in the streets. Without any other reason than the officer's own impetus, we see that the justification for their confrontation is ambiguously categorized as 'Terrorism'. Other properties of the data such as how much time passed before intervening, the rank of the officer, and so on. What is the data telling us? What is the data hiding? Can we trust what is reported?"
+
+<!-- 
+## P5.Table: for Loops and Conditional Statements: `If/else` and `for` using .getRow();
+
+```js
+
+// declare a variable called myData
+var myData;
+var selfInitiatedStops = [];
+function preload(){
+    // use the loadTable() function to load our csv file of NYC's stop and frisk data for january of 2017
+    myData = loadTable('https://gist.githack.com/joeyklee/9ef7248c74038ef9df82152772398d1f/raw/39f1bb753d46bf554e35c86055410a910dd846e2/stop-and-frisk-nyc-2017.csv', 'header', 'csv');
+}
+
+
+function setup(){
+    createCanvas(400, 400);
+
+    // for all of the data objects in the myData object,
+    // if the STOP_WAS_INITIATED property is equal to 'Based on Self Initiated'
+    // then push that object into the selfInitiatedStops array;
+    for(var i = 0; i < myData.length; i++){
+        var myRow = myData.getRow(i);
+        if( myRow.get('STOP_WAS_INITIATED') == 'Based on Self Initiated' ){
+            selfInitiatedStops.push(myData[i]);
+        }
+    }
+    
+}
+
+function draw(){
+    background(220);
+
+}
+
+
+``` -->
+
+
+
+
+## P5.Table: .getColumn() → for Loops and Conditional Statements: `If/else` and `for`
+
+
+```js
+
+// declare a variable called myData
+var myData;
+var selfInitiatedStops = [];
+function preload(){
+    // use the loadTable() function to load our csv file of NYC's stop and frisk data for january of 2017
+    myData = loadTable('https://gist.githack.com/joeyklee/9ef7248c74038ef9df82152772398d1f/raw/39f1bb753d46bf554e35c86055410a910dd846e2/stop-and-frisk-nyc-2017.csv', 'header', 'csv');
+}
+
+
+function setup(){
+    createCanvas(400, 400);
+    // we convert myData from it's table form to an object
+    myData = myData.getObject();
+
+    // for all of the data objects in the myData object,
+    // if the STOP_WAS_INITIATED property is equal to 'Based on Self Initiated'
+    // then push that object into the selfInitiatedStops array;
+    for(var i = 0; i < Object.keys(myData).length; i++){
+        if( myData[i].STOP_WAS_INITIATED == 'Based on Self Initiated' ){
+            selfInitiatedStops.push(myData[i]);
+        }
+    }
+
+    console.log(selfInitiatedStops[0].SUSPECTED_CRIME_DESCRIPTION)
+    
+}
+
+function draw(){
+    background(220);
+
+}
+
+
+```
+
+* The advantage here is that we get an entire json object of all the properties for each object of data that fulfills the conditional. In this case, we loop through `myData` to check how the stop and frisk was justified. Here we're looking for the stop and frisks that were "self-initiated". 
+
+
+## Advanced methods
+
+
+### Array.filter()
+
+TBD
 
 
 
