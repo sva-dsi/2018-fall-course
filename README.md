@@ -59,7 +59,7 @@ NOTE: We might decide together to move some things around this semester. I may a
 | [Week 7](week07)  | 10/18 | Everything Around the chart        | [A6 - Life Expectancy Viz](week06/ASSIGNMENT06.md)    | Guest Speaker: [Jeremy Singer-Vine](https://www.jsvine.com/)         |
 | [Week 8](week08)  | 10/25 | (Counter)Maps and Cartographics    | [A7 - Life Expectancy Viz+](week06/ASSIGNMENT07.md)   | Guest Speaker: [Brandyn Friedly](https://twitter.com/brandynfriedly) |
 | [Week 9](week09)  | 11/01 | Mapping Review / Synthesis I       | 🎃 No Assignment Due  this week                       | 🎃 Happy Halloween!                                                  |
-| [Week 10](week10) | 11/08 | Publishing / Project workshop      | [TBA]()                                               |                                                                      |
+| [Week 10](week10) | 11/08 | Publishing / Project workshop      | [A8 - TBA ]()                                               |                                                                      |
 | [Week 11](week11) | 11/15 | Proposals review / Data Considered | [**Proposal** for Final Project]()                    |                                                                      |
 | [Week 12](week12) | 11/22 | Holiday Observed                   | Final Proj. Dev.                                      | NO CLASS                                                             |
 | [Week 13](week13) | 11/29 | Special Topics                     | Final Proj. Dev.                                      | Special guest: TBD                                                   |
