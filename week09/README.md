@@ -22,7 +22,7 @@ Joey:
 * US launch of Generative Design: www.generative-gestaltung.de
 * Georgia Lupi Talk! https://github.com/sva-dsi/2018-fall-course/issues/3
 * GSAPP events: https://www.arch.columbia.edu/events
-* How to be a good creature: https://www.eventbrite.com/e/sy-montgomery-on-how-to-be-a-good-creature-tickets-50979352616
+* Whitney museum programmed exhibit: https://whitney.org/exhibitions/programmed
 
 ### Status of the P5 Guide 
 
