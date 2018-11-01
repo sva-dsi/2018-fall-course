@@ -74,6 +74,7 @@ This short guide will use Ben Fry's model of the data visualization pipeline to 
   - [line()](#line)
   - [arc()](#arc)
   - [bezier()](#bezier)
+  - [text()](#text)
   - [Custom Shapes: beginShape() / endShape()](#custom-shapes-beginshape--endshape)
   - [loadImage() / image()](#loadimage--image)
   - [push() / pop()](#push--pop)
@@ -98,7 +99,7 @@ This short guide will use Ben Fry's model of the data visualization pipeline to 
   - [developing a story](#developing-a-story)
   - [CSS](#css)
   - [CSS frameworks](#css-frameworks)
-  - [text()](#text)
+  - [text()](#text-1)
   - [colorMode()](#colormode)
   - [fill colors: fill()](#fill-colors-fill)
   - [stroke color: stroke()](#stroke-color-stroke)
@@ -1376,25 +1377,109 @@ TBD
 
 https://www.targetprocess.com/articles/visual-encoding/
 
+In this chapter will look at the different visual components that we have at our fingertips to map data to visuals. The features discussed here will be directly relevant to the [Chapter 10 on chart types]() in which these shapes find a context to live in.
+
+
+
 ## ellipse()
+
+```
+
+
+```
+
+Additional examples:
+* https://editor.p5js.org/joeyklee/sketches/HJn0zTFY7
+* https://editor.p5js.org/joeyklee/sketches/HyMG76tF7
+* https://editor.p5js.org/joeyklee/sketches/SkpLQpYYQ 
+* https://editor.p5js.org/joeyklee/sketches/Syxp7aKFm
+* https://editor.p5js.org/joeyklee/sketches/ryrw46KYX
+* https://editor.p5js.org/joeyklee/sketches/BJsjNpKFX
 
 ## rect()
 
+
+
+Additional examples:
+* https://editor.p5js.org/joeyklee/sketches/B1YKBattQ
+* https://editor.p5js.org/joeyklee/sketches/H1AiratK7
+* https://editor.p5js.org/joeyklee/sketches/BJN1YptYQ
+* https://editor.p5js.org/joeyklee/sketches/H1jmtptK7
+* https://editor.p5js.org/joeyklee/sketches/SJtSKaFtQ
+* https://editor.p5js.org/joeyklee/sketches/BkOiFTFtm
+
 ## line()
+
+Useful for:
+* conveying change over time
+* conveying flow
+* conveying directionality
+
+Additional examples:
+* https://editor.p5js.org/joeyklee/sketches/B1xIW3YYQ
+* https://editor.p5js.org/joeyklee/sketches/ryLnZhtYm
+* https://editor.p5js.org/joeyklee/sketches/BJiQMnKKX
+* https://editor.p5js.org/joeyklee/sketches/S1soG3KFm
+* https://editor.p5js.org/joeyklee/sketches/BJcemnKtQ
+* https://editor.p5js.org/joeyklee/sketches/HkPm72Kt7
+* https://editor.p5js.org/joeyklee/sketches/SJ5VVhttm
+
+
+
 
 ## arc()
 
+Additional examples:
+* https://editor.p5js.org/joeyklee/sketches/ByUVnpKt7
+* https://editor.p5js.org/joeyklee/sketches/HktLnTKtQ
+* https://editor.p5js.org/joeyklee/sketches/r1LAnatKm
+  
+
 ## bezier()
+
+Additional examples:
+* https://editor.p5js.org/joeyklee/sketches/SJaSDRFKQ
+* https://editor.p5js.org/joeyklee/sketches/S14n_CYFX
+* https://editor.p5js.org/joeyklee/sketches/SkaIh0Yt7
+* https://editor.p5js.org/joeyklee/sketches/HkGY2RtYQ
+
+
+
+
+## text()
+
+Additional examples:
+* TBD
 
 ## Custom Shapes: beginShape() / endShape()
 
+Additional examples:
+* TBD
+
 ## loadImage() / image()
+
+Additional examples:
+* https://editor.p5js.org/joeyklee/sketches/HJ357RKFX
+* https://editor.p5js.org/joeyklee/sketches/SJDrS0Yt7
+* https://editor.p5js.org/joeyklee/sketches/B1o18AtFQ
+* https://editor.p5js.org/joeyklee/sketches/SkjS8AFYX
+
+
 
 ## push() / pop()
 
+Additional examples:
+* TBD
+
 ## translate()
 
+Additional examples:
+* https://editor.p5js.org/joeyklee/sketches/Bka8rYA5m
+
 ## rotate()
+
+Additional examples:
+* https://editor.p5js.org/joeyklee/sketches/Bka8rYA5m
 
 ## Chapter 5: Summary
 
@@ -1490,6 +1575,10 @@ https://p5js.org/reference/#/p5/createCheckbox
 # Chapter 10: Chart Types
 
 ---
+
+https://datavizcatalogue.com/
+
+https://datavizproject.com/
 
 ## Scatterplots
 
