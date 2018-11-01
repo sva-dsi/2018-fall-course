@@ -8,19 +8,21 @@ This short guide will use Ben Fry's model of the data visualization pipeline to 
 
 **Table of contents**
 - [P5 Guide for this course](#p5-guide-for-this-course)
-- [Visualization Platforms for the code-averse](#visualization-platforms-for-the-code-averse)
+- [Preamble: Visualization Platforms for the code-averse](#preamble-visualization-platforms-for-the-code-averse)
     - [General Purpose](#general-purpose)
     - [Mapping](#mapping)
 - [Visualization frameworks for friends of code](#visualization-frameworks-for-friends-of-code)
-- [Setup](#setup)
+- [Chapter 1: Setup](#chapter-1-setup)
     - [Research](#research)
         - [Literature Reviews](#literature-reviews)
+        - [Reach out to an expert](#reach-out-to-an-expert)
         - [Moodboarding](#moodboarding)
     - [Sketching, wireframing, storyboarding](#sketching-wireframing-storyboarding)
     - [Proof of concept / Prototyping](#proof-of-concept--prototyping)
-    - [setup()](#setup)
-    - [draw()](#draw)
-- [Aquire / Parse](#aquire--parse)
+    - [Getting started: structure, setup() & draw()](#getting-started-structure-setup--draw)
+    - [Chapter 1 Summary](#chapter-1-summary)
+    - [Chapter 1 References](#chapter-1-references)
+- [Chapter 2: Aquire / Parse](#chapter-2-aquire--parse)
     - [Data Sources](#data-sources)
     - [APIs](#apis)
     - [Data Formats](#data-formats)
@@ -78,7 +80,7 @@ This short guide will use Ben Fry's model of the data visualization pipeline to 
     - [Bar charts](#bar-charts)
 
 ***
-# Visualization Platforms for the code-averse 
+# Preamble: Visualization Platforms for the code-averse 
 ***
 
 
@@ -89,13 +91,13 @@ This short guide will use Ben Fry's model of the data visualization pipeline to 
 
 Here's a list of general purpose visualizaiton tools that you might spend some time to learn and add to your toolbelt. 
 
-* Spreadsheet based software:
+
+* Data Visualization Platforms:
+    * [Raw Graphs](https://rawgraphs.io/)
     * Microsoft Excel
     * Apple's Numbers 
     * Google Sheets
-    * Stencila
-* Others:
-    * [Raw Graphs](https://rawgraphs.io/)
+    * [Stencila](https://stenci.la/)
     * [Lyra](http://idl.cs.washington.edu/projects/lyra/)
     * [Datawrapper](https://datawrapper.de/)
     * Tableau & [Tableau Public](https://public.tableau.com/s/)
@@ -145,6 +147,8 @@ SO with all that being said, we're going to focus on P5.js, but if you do get cu
     * [Vega.js](https://vega.github.io/vega/)
 * Caveats:
     * [D3.js](): D3.js is the standard visualizaition framework out there, but it is not a beginner friendly library. Luckily basically all the other visualizaition libraries wrap up some of the D3 complexity for us. Also, if you're not going to become a visualization coder, then D3 feels like overkill to me. 
+    * [R]() + [ggplot2]()
+
 
 
 > NOTE: we aren't really going to go into R or Python for data analysis and visualization. Those coding environments and their visualization and statistical libraries may be wonderful, but that opens up a whole different can of worms which we haven't gone over in this class - statistics! 
@@ -152,7 +156,7 @@ SO with all that being said, we're going to focus on P5.js, but if you do get cu
 
 
 ***
-# Setup
+# Chapter 1: Setup
 ***
 
 Data visualization is a process of mapping data - numbers and text - to visual forms. It is also very much about doing research so you have something real to communicate about, coordinating and working on and with teams of people to make the visualizations, and figuring out strategies for publication and outreach. Regardless if you can focus in on specific pieces of this process - the aesthetics, the project management, the media publication strategy, the engineering, and so on - you should always strive to be critical and unfold as much of the politics of your data such that you do no harm. The [Journalist Code of Ethics has it right](https://www.spj.org/ethicscode.asp).
@@ -185,6 +189,10 @@ Often times I start with various publishers and then open up the leads from ther
 
 You might read about literature reviews [here](https://guides.library.harvard.edu/literaturereview).
 
+### Reach out to an expert
+
+TBD
+
 ### Moodboarding
 
 Moodboards! So underrated and underutilized. I find them extremely helpful to set a common ground as you communicated across and within your team or within your own brain. Moodboards can be super helpful to identify inspiration, the tone that you're looking for, or help you pin point specific visual or conceptial elements that you also want to use or expand on. 
@@ -208,15 +216,142 @@ Prototyping can take all shapes, forms, and methods and occur at all stages of t
 Early proofs of concept and prototypes may be technology agnostic in that you use the tools that are comfortable with and can quickly materialize your idea. You can use those proof/prototypes as a means of communicating with others e.g. a developer or data scientist about what you're going for.
 
 
-## setup()
+## Getting started: structure, setup() & draw()
+
+> "..We shape our tools and then our tools shape us” 
+
+When we decide to write code, we are making the decision to build our own software and as a result accepting that with more flexibility comes increased complexity. For visualization, this means that instead of using a an existing software with their own rules and advantages and disadvantages to turn data into something visual or tangible, we are choosing to create our own environment for doing so based on our own needs, wants, and desires. 
+
+Every programming language is different and provides different advantages and limitations. Javascript for example allows us to build things in a language that is native to your web browser. This is great because it allows us to share our visualizations across the web and make them interactive, dynamic, and networked which is what Javascript was built for. However, a disadvantage is that you can't load large data (> a couple megabytes) into your web browser without it starting to slow down or even crash. Other languages like Python might be great with working with larger datasets and for doing data analysis, but can't, for example, run in the web browser (for now). We naturally try to choose the right tool for the thing you want to accomplish - e.g. you'd never use a hammer to tighten a screw - and software is no different.
+
+Alas! We've decided that for our purposes, P5.js will be our tool of choice. How does P5.js work? Let's start with the components of a P5.js project.
+
+P5.js is what we call a [javascript library](https://www.techopedia.com/definition/3828/software-library). A **javascript library** is just a bunch of javascript code - a set of instructions - that lives inside a file usually ending in `.js` that it takes functionality of the javascript programming language and the browser environment (e.g it's ability to render in [canvas](), [HTML](), [SVG](), and [WebGL]()) and makes it easier to use or extends its functionality in a way that is waaaaay nicer than trying to achieve the same thing in an unabstracted way (abstracted in this sense means that we usually take complexity and hide that complexity). If you look at some p5.js examples, you might notice, for example, that it is really easy to make things like circles, lines, and curves or to create animations or make things happen when you press your mouse. Things that usually would take 10-20 lines of code become abstracted away so you can simply write `ellipse()` and have an ellipse appear or `mousePressed()` and track if /when your mouse is pressed. This is the magic of using code libraries - they allow you to do more while write less!
+
+Let's take a jump now and look at how the developers of P5.js are asking us to structure our thinking and as a result allows us to use all the handy javascript functionality that they've so very nicely abstracted for us. 
+
+
+In a p5.js project, our folder structure will look something like this:
+
+```
+project_folder/
+    |
+    - index.html
+    - sketch.js
+    - style.css
+    - libraries/
+        - p5.js
+        - p5.dom.js
+        - p5.sound.js
+
+```
+You can [download an example boilerplate here](https://www.dropbox.com/s/6jmzif1olurnhtz/p5js-boilerplate.zip?dl=0). 
+
+In our `project_folder` we have 3 files: `index.html`, `sketch.js`, and `style.css` and a folder called `libraries` which contains the javascript libraries for p5.js. Here's some more info about each file:
+
+* **index.html**: 
+    * This is our HTML file. Our HTML file references the rest of our files such as the javascript libraries in our `libraries/` folder and the `sketch.js` and `style.css` file.
+    * You can also add any HTML elements you want such as `<h1></h1>` for headers or `<button></button>` buttons and later use them in your sketch (see the section on [HTML DOM selections using CSS classes]())
+* **sketch.js**:
+    * This is where all of our p5.js javascript will be written. For the rest of this document, pretty much everything you will do will be living in the sketch.js file. Here you write javascript to create the visualizations and interactivity you want to see.
+* **style.css**
+    * This is where your CSS styles are defined. Here you can add CSS that will style the page that you're working on.
+* **libraries/p5.js**, * **libraries/p5.dom.js**, * **libraries/p5.sound.js**:
+    * These are the p5.js javascript libraries files that contain all of the javascript code that allow you to do all the p5 things!
+
+NOTE: if you've been using the [P5.js web editor](https://editor.p5js.org) then you will see more or less this same structure. 
+
+So now that we have an overview of what components are necessary to make a P5.js project, let's take a look what goes into the **sketch.js** file. Remember, we are writing javascript in p5.js to create our visualizations, so let's turn our full attention there.
+
+Pretty much every P5.js *sketch* has 2 main structure components: `setup()` and `draw()`. You will start every project like this:
+
+```js
+
+function setup(){
+    createCanvas(400, 400);
+
+}
+
+function draw(){
+    background(200, 200, 200);
+
+}
+
+```
+
+The way P5.js is structured goes like this: 
+
+* First, set up all of the things that our program needs to run like creating the drawing canvas, creating HTML elements, manipulating the state of a static dataset, and so on. This is what is encapsulated in the `setup()` function which runs only 1 time. 
+* Second, once you have your drawing canvas set up and whatever data or features of your page are ready to go, then move on to your `draw()` function which will run everything over and over again, **looping** 30 times per second (yes computers are fast!), in the order that you specified from top to bottom. Typically this means anything that you are visualizing (e.g. shapes) will go in here. We will also see that this **looping** is what allows us to create animations and to create interactivity.
+
+In this example above, we are saying this:
+
+* First, create a canvas that is 400 by 400 pixels wide. 
+* Next, create a background with the a grey color - RGB(200, 200, 200) - and draw that background color 30 times per second over and over and over.
+
+You can 🔗 [see it running here](https://editor.p5js.org/joeyklee/sketches/ByiFL2P27)
+
+
+**Why does this structure and environment matter?**
+
+* With this setup and draw loop we essentially are commited to separating out our logical steps - our algorithm - from going from essentially nothing all the way to having a visualization that can be interacted with, that can animate and so on. This frames our thinking so that every time we or anyone runs our program, we know that every step of our process that we defined in our code will be executed exactly as we've written it, all the time, every time. It's about **transparency, readability, and reproducibility**. 
+* We've read a couple times now that everything in the `draw()` loop runs 30 times per second. This is one thing that is impressive about javascript - it is pretty fast - but more so about the [HTML Canvas]() element on which we are drawing on. Canvas in general is a relatively high performance renderer that supports all those shapes we know and love (e.g. ellipses and rectangles). While rendering 1000 SVGs might really bog down your web browser, Canvas can handle a couple thousand elements without much of a fuss. So next time you've got that dataset with 1000s of rows of data, you can be pretty sure that you should be able to work with it in P5.js
+
+Before we move on let's look at one more example of the this `setup()` and `draw()` to demonstrate this idea again about how everything in setup is executed only once, whereas in draw, the actions are occuring over and over again.
+
+```js
+
+function setup(){
+    createCanvas(400, 400);
+    // change the color mode from RGB to HSB
+    colorMode(HSB);
+  
+  	// change the default frameRate from 30 fps to 5 fps
+  	frameRate(5);
+}
+
+function draw(){
+    // each time through draw, give me a hue of 317, a saturation of 100, and brightness of a random number between 50 and 100
+    background(317, 100, random(50, 100));
+
+}
+
+```
+
+If you ignore the fact that you've never seen these functions like `colorMode()` or `frameRate()`, we can read what we're seeing like this:
+
+* `setup()`: 
+    * 1. create a canvas that is 400 px by 400 px wide
+    * 2. change the `colorMode()` to HSB. Since the default is RGB, we need to specify if we want to change the ways that color values are interpreted.
+    * 3. change the `frameRate()` - the frequency that the `draw()` function is called per second - from the default which is 30 to a selected number like 5 frames per second.
+* `draw()`:
+    * over and over again each time through draw, give me a hue of 317, a saturation of 100, and brightness of a random number between 50 and 100. 
+
+
+You can 🔗 [see it running here](https://editor.p5js.org/joeyklee/sketches/H1z-yawnm)
 
 
 
-## draw()
+
+<!-- 
+
+In any visualization context, you need a place to make your visualization. Whether your visualization is living on a screen like your web browser or a tablet at a gallery or it's being projected onto the side of a building or printed as a poster, you will have some kind of environment in which your visualization will be living. P5.js is our working environment that gives us the flexibility to create visualizations so that they can live on the web, or on that tablet at a gallery, or on that building's wall space, or provide that .PNG for that poster you're making. It affords us a lot of flexibility, but that means we n -->
+
+
+## Chapter 1 Summary
+
+In this chapter we've introduced a number of visualization platforms and some visualization coding frameworks. We taken some time to think about what it means to start a visualization project, what directions you might take to begin your research with literature reviews and expert interviews, and what types of questions or tools you might use to approach turning your research and visualization ideas into something more concrete using moodboards, sketches, wireframes, and proofs of concept and prototypes.
+
+We dove into why we would choose to code and why what P5.js affords us, its advantages and disadvantages. We learned about how structure can help us to make more readable, accessible, and reproducible visualizations and got into how the `setup()` and `draw()` functions work; their structure providing a way for us to logically step through our code that are about setting up our environment - `setup()` - and the other which is about drawing and interactivity - `draw()`.
+
+## Chapter 1 References
+* TBD 
+
+
 
 
 ***
-# Aquire / Parse
+# Chapter 2: Aquire / Parse
 >  ↱ **aquire** → **parse** → filter → mine → represent → interact → refine ↲
 ***
 
@@ -377,7 +512,7 @@ In our lives, when we think about variables, what comes to mind? You might think
 
 In data analysis and visualization, variables are similar to the examples given above. The variables we narrow in and focus on are interesting because they have the potential to *explain or characterize* a certain phenomenon, its dynamics, and/or how and why that phenomenon might be occuring. On a simple level, you might attribute your post-lunch lethargy to that pasta bolognese you just ate. Given your gluten intolerance and the heavy beefy sauce you just consumed, it is no wonder why you are feeling tired (and maybe even ill!). On a more complex level, the variables behind a city's air pollution standard index might include a slew of data such as weather (e.g. temperature, pressure, wind speed and direction, solar radiation), traffic counts, and building energy use. So when we talk about the variables we're analyzing and visualizing, we're almost always talking about the properties or data which speak to our phenomenon of interest.
 
-In programming, such as in p5.js (and javascript more generally), we can abstract and apply this idea variables to the way our software program handles data. Let's look at a an example in javascript:
+In programming, such as in p5.js (and javascript more generally), we can abstract and apply this idea variables to the way our software program handles data. Let's look at an example in javascript:
 
 ```js
 
@@ -386,10 +521,11 @@ var flower_petal_count = 6;
 var flowerSpecies = "petunia";
 
 ```
+
 where, for example: 
 
 * **var**: this tells our javascript that we're making a new *variable*. Everything after the `var` keyword is the variable definition.
-* **flowerColor**: this is the name of our variable. Here we are saying that the word *flowerColor* is storing the **value** `"red"`. 
+* **flowerColor**: this is the name of our variable. Here we are saying that the word *flowerColor* is storing the **value** `"red"`. The variable name can be anything, but it is more helpful if it indicates something about the data it is assigned. 
 
 There are a number of ways you'll see variables being defined in javascript. We'll see more examples throughout this guide. The important thing to know is that variables are **declared** and **assigned** values or functionality which can be later **updated** and **used** across a program. 
 
@@ -486,6 +622,8 @@ See it in practice here: https://editor.p5js.org/joeyklee/sketches/SyvgItU3Q
 # Filter
 >  ↱ aquire → parse → **filter** → mine → represent → interact → refine ↲
 ***
+
+Almost always you will need to filter data. Whether it is because you want to focus on a **subset** of the data or you know that there are data points that have unrealistic values 
 
 ## Loops and Conditional Statements: `If/else` and `for`
 
