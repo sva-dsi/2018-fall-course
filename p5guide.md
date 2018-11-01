@@ -36,14 +36,25 @@ This short guide will use Ben Fry's model of the data visualization pipeline to 
         - [Method 2: assigning your function to it's scope](#method-2-assigning-your-function-to-its-scope)
         - [Functions that return data](#functions-that-return-data)
     - [loadJSON()](#loadjson)
+        - [Method 1 - callbacks: *I ain't no hollaback girl*](#method-1---callbacks-i-aint-no-hollaback-girl)
+        - [Method 2 - async/await: ES6 syntax for dealing with asychronicity](#method-2---asyncawait-es6-syntax-for-dealing-with-asychronicity)
+        - [Method 3 - preload: loading data at the beginning](#method-3---preload-loading-data-at-the-beginning)
     - [loadTable()](#loadtable)
+        - [Method 1 - callbacks:](#method-1---callbacks)
+        - [Method 2 - async/await:](#method-2---asyncawait)
+        - [Method 3 - preload():](#method-3---preload)
     - [preload()](#preload)
-- [Filter](#filter)
+        - [preloading images](#preloading-images)
+        - [preloading video](#preloading-video)
+    - [Chapter 2: recap](#chapter-2-recap)
+    - [Chapter 2 References](#chapter-2-references)
+- [Chapter 3: Filter](#chapter-3-filter)
     - [P5.Table & P5.TableRow: .findRows()](#p5table--p5tablerow-findrows)
     - [P5.Table: for Loops and Conditional Statements: `If/else` and `for` using .getRow();](#p5table-for-loops-and-conditional-statements-ifelse-and-for-using-getrow)
     - [P5.Table: .getColumn() → for Loops and Conditional Statements: `If/else` and `for`](#p5table-getcolumn-%E2%86%92-for-loops-and-conditional-statements-ifelse-and-for)
     - [Advanced methods](#advanced-methods)
         - [Array.filter()](#arrayfilter)
+    - [](#)
 - [Mine](#mine)
     - [Mathmagical Operations ✨](#mathmagical-operations-%E2%9C%A8)
 - [Represent / Visual Encoding](#represent--visual-encoding)
@@ -906,9 +917,94 @@ In this example, we define a custom function to make a custom collection of shap
 
 ## loadJSON()
 
+We've seen how we can create our own JSON objects, and fill them with properties and values using key:value pairs. However, in the context of data visualization, we're quite likely going to be using JSON structured data that was created by some other system or service. For example, most APIs out there will return data in the form of JSON. Similarly, lots of sensors might also store data in a JSON format. Let's see how loading and parsing of JSON data works in the context of P5.js. 
+
+P5.js comes with a suite of data loading and handling functions - of which they label under the [IO category](https://p5js.org/reference/#group-IO) - one these loading and handling functions is the `loadJSON()` function. 
+
+The `loadJSON( <path to file or url>)` function is awesome in that it knows whether the file you are requesting is coming locally from your project or from a URL on the web. Therefore if we know that our data is in the JSON format, we can use the `loadJSON()` function to retrieve the JSON data wherever it is living. 
+
+What `loadJSON()` will do is:
+
+* make a GET request to your own server where your data is living or the API url that you've given it 
+* read that retrieved data and try to parse it as a JSON object
+* if the data is a valid JSON format, then it will pass the retrieved data on to be used.
+
+There are 3 methods of using `loadJSON()` which I will outline here.
+
+### Method 1 - callbacks: *I ain't no hollaback girl*
+
+```JS
+
+loadJSON("your URL here", function(myData, error){
+    console.log(myData);
+});
+
+```
+
+
+
+
+### Method 2 - async/await: ES6 syntax for dealing with asychronicity
+
+```JS
+
+async function retrieveJSON(URL){
+    var myData = await loadJSON(URL);
+
+    // do actions on that data
+    console.log(myData);
+}
+
+
+function setup(){
+    createCanvas(400, 400);
+
+    // call your retrieve data function here - all of the logic and instructions for working with your
+    // data must go inside that function you created
+    retrieveJSON("your url here")
+}
+
+function draw(){
+    background(220);
+
+}
+
+```
+
+### Method 3 - preload: loading data at the beginning
+
+
+```JS
+// declare a variable called myData
+var myData;
+
+// preload() allows us to make sure to load images and data before the rest of our program runs
+function preload() {
+  // use the loadTable() function to load our csv file of NYC's stop and frisk data
+  myData = loadJSON("your data url");
+}
+
+//
+function setup() {
+  // we log the result of that data and convert it to an array of objects
+  console.log(myData.getObject());
+}
+
+function draw() {
+  background(220);
+}
+
+```
+
+
 ## loadTable()
 
-## preload()
+### Method 1 - callbacks:
+
+### Method 2 - async/await:
+
+### Method 3 - preload():
+
 
 Let's take a look at something a bit more substantial like when we load data in P5.js. Here we:
 
@@ -943,9 +1039,49 @@ function draw() {
 
 You can 🔗 [see it running here](https://editor.p5js.org/joeyklee/sketches/SyvgItU3Q)
 
+
+## preload()
+
+The `preload()` function is not only for data in the form of tables, but can be used for other things that need to be pulled in from the network that you want for your program to injest before moving on to the `setup()` and `draw()` functions. This means that before you go through `setup()` and `draw()` you can set in a number of functions in `preload()` to ensure that things like images, videos, and data get loaded before your program starts to do its thing.
+
+### preloading images
+
+```JS
+
+```
+
+### preloading video
+
+```JS
+
+```
+
+## Chapter 2: recap
+
+In Chapter 2 we've covered fundamental components of where data comes from, where we can get data  whether from data portals or from APIs, the formats that data come in, how to accsss the various properties of data depending on the format in which they come, and how we might use existing functions of the programs we're using, how we migth search for thsoe functions, and how we can begin to create our own custom functions to handle data I/O and custom visualizations. We looked at a couple ways of reading in data to our P5 programs and 3 iterations on how to handle data loading in the context of javascript and the web. Last, we learned that preload() is a way of loading in all of our necessary data - whether it be sounds files, video files, or data sets - before the rest of our program runs.
+
+* Data Sources
+* APIs
+* Data Formats
+* Objects {}
+* Arrays []
+* Variables
+* Functions
+* Custom functions
+* loadJSON()
+* loadTable()
+* preload()
+
+
+
+
+## Chapter 2 References
+
+* ...
+
 ---
 
-# Filter
+# Chapter 3: Filter
 
 > ↱ aquire → parse → **filter** → mine → represent → interact → refine ↲
 
@@ -1052,7 +1188,6 @@ function draw(){
 
 }
 
-
 ``` -->
 
 ## P5.Table: .getColumn() → for Loops and Conditional Statements: `If/else` and `for`
@@ -1099,6 +1234,8 @@ function draw() {
 ### Array.filter()
 
 TBD
+
+## 
 
 ---
 
