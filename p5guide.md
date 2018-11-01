@@ -10,95 +10,112 @@ This short guide will use Ben Fry's model of the data visualization pipeline to 
 
 - [P5 Guide for this course](#p5-guide-for-this-course)
 - [Preamble: Visualization Platforms for the code-averse](#preamble-visualization-platforms-for-the-code-averse)
-    - [General Purpose](#general-purpose)
-    - [Mapping](#mapping)
+  - [General Purpose](#general-purpose)
+  - [Mapping](#mapping)
 - [Visualization frameworks for friends of code](#visualization-frameworks-for-friends-of-code)
 - [Chapter 1: Setup](#chapter-1-setup)
-    - [Research](#research)
-        - [Literature Reviews](#literature-reviews)
-        - [Reach out to an expert](#reach-out-to-an-expert)
-        - [Moodboarding](#moodboarding)
-    - [Sketching, wireframing, storyboarding](#sketching-wireframing-storyboarding)
-    - [Proof of concept / Prototyping](#proof-of-concept--prototyping)
-    - [Getting started: structure, setup() & draw()](#getting-started-structure-setup--draw)
-    - [Chapter 1 Summary](#chapter-1-summary)
-    - [Chapter 1 References](#chapter-1-references)
+  - [Research](#research)
+    - [Literature Reviews](#literature-reviews)
+    - [Reach out to an expert](#reach-out-to-an-expert)
+    - [Moodboarding](#moodboarding)
+  - [Sketching, wireframing, storyboarding](#sketching-wireframing-storyboarding)
+  - [Proof of concept / Prototyping](#proof-of-concept--prototyping)
+  - [Getting started: structure, setup() & draw()](#getting-started-structure-setup--draw)
+  - [Chapter 1 Summary](#chapter-1-summary)
+  - [Chapter 1 References](#chapter-1-references)
 - [Chapter 2: Aquire / Parse](#chapter-2-aquire--parse)
-    - [Data Sources](#data-sources)
-    - [APIs](#apis)
-    - [Data Formats](#data-formats)
-    - [Objects {}](#objects)
-    - [Arrays []](#arrays)
-    - [Variables](#variables)
-    - [Functions](#functions)
-    - [Custom functions](#custom-functions)
-        - [Method 1: defining a variable and assigning it a function](#method-1-defining-a-variable-and-assigning-it-a-function)
-        - [Method 2: assigning your function to it's scope](#method-2-assigning-your-function-to-its-scope)
-        - [Functions that return data](#functions-that-return-data)
-    - [loadJSON()](#loadjson)
-        - [Method 1 - callbacks: *I ain't no hollaback girl*](#method-1---callbacks-i-aint-no-hollaback-girl)
-        - [Method 2 - async/await: ES6 syntax for dealing with asychronicity](#method-2---asyncawait-es6-syntax-for-dealing-with-asychronicity)
-        - [Method 3 - preload: loading data at the beginning](#method-3---preload-loading-data-at-the-beginning)
-    - [loadTable()](#loadtable)
-        - [Method 1 - callbacks:](#method-1---callbacks)
-        - [Method 2 - async/await:](#method-2---asyncawait)
-        - [Method 3 - preload():](#method-3---preload)
-    - [preload()](#preload)
-        - [preloading images](#preloading-images)
-        - [preloading video](#preloading-video)
-    - [Chapter 2: recap](#chapter-2-recap)
-    - [Chapter 2 References](#chapter-2-references)
+  - [Data Sources](#data-sources)
+  - [APIs](#apis)
+  - [Data Formats](#data-formats)
+  - [Objects {}](#objects)
+  - [Arrays []](#arrays)
+  - [Variables](#variables)
+  - [Functions](#functions)
+  - [Custom functions](#custom-functions)
+    - [Method 1: defining a variable and assigning it a function](#method-1-defining-a-variable-and-assigning-it-a-function)
+    - [Method 2: assigning your function to it's scope](#method-2-assigning-your-function-to-its-scope)
+    - [Functions that return data](#functions-that-return-data)
+  - [loadJSON()](#loadjson)
+    - [Method 1 - callbacks: *I ain't no hollaback girl*](#method-1---callbacks-i-aint-no-hollaback-girl)
+    - [Method 2 - async/await: ES6 syntax for dealing with asychronicity](#method-2---asyncawait-es6-syntax-for-dealing-with-asychronicity)
+    - [Method 3 - preload: loading data at the beginning](#method-3---preload-loading-data-at-the-beginning)
+  - [loadTable()](#loadtable)
+    - [Method 1 - callbacks:](#method-1---callbacks)
+    - [Method 2 - async/await:](#method-2---asyncawait)
+    - [Method 3 - preload():](#method-3---preload)
+  - [preload()](#preload)
+    - [preloading images](#preloading-images)
+    - [preloading video](#preloading-video)
+  - [Chapter 2: recap](#chapter-2-recap)
+  - [Chapter 2 References](#chapter-2-references)
 - [Chapter 3: Filter](#chapter-3-filter)
-    - [P5.Table & P5.TableRow: .findRows()](#p5table--p5tablerow-findrows)
-    - [P5.Table: for Loops and Conditional Statements: `If/else` and `for` using .getRow();](#p5table-for-loops-and-conditional-statements-ifelse-and-for-using-getrow)
-    - [P5.Table: .getColumn() → for Loops and Conditional Statements: `If/else` and `for`](#p5table-getcolumn-%E2%86%92-for-loops-and-conditional-statements-ifelse-and-for)
-    - [Advanced methods](#advanced-methods)
-        - [Array.filter()](#arrayfilter)
-    - [](#)
-- [Mine](#mine)
-    - [Mathmagical Operations ✨](#mathmagical-operations-%E2%9C%A8)
-- [Represent / Visual Encoding](#represent--visual-encoding)
-    - [ellipse()](#ellipse)
-    - [rect()](#rect)
-    - [line()](#line)
-    - [arc()](#arc)
-    - [bezier()](#bezier)
-    - [Custom Shapes: beginShape() / endShape()](#custom-shapes-beginshape--endshape)
-    - [loadImage() / image()](#loadimage--image)
-    - [push() / pop()](#push--pop)
-    - [translate()](#translate)
-    - [rotate()](#rotate)
-- [Interact](#interact)
-    - [Mouse Interactions: mousePressed()](#mouse-interactions-mousepressed)
-    - [Mouse Interactions: mouseX, mouseY](#mouse-interactions-mousex-mousey)
-    - [HTML input: createInput()](#html-input-createinput)
-    - [HTML select: createSelect()](#html-select-createselect)
-    - [HTML button: createButton()](#html-button-createbutton)
-    - [HTML radio: createRadio()](#html-radio-createradio)
-    - [HTML slider: createSlider()](#html-slider-createslider)
-    - [HTML checkboxes: createCheckbox()](#html-checkboxes-createcheckbox)
-    - [Conditional Statements: `if/else`](#conditional-statements-ifelse)
-- [Refine](#refine)
-    - [productive use of metaphors](#productive-use-of-metaphors)
-    - [developing a story](#developing-a-story)
-    - [CSS](#css)
-    - [CSS frameworks](#css-frameworks)
-    - [text()](#text)
-    - [colorMode()](#colormode)
-    - [fill colors: fill()](#fill-colors-fill)
-    - [stroke color: stroke()](#stroke-color-stroke)
-    - [stroke properties: strokeWeight()](#stroke-properties-strokeweight)
-- [Publishing](#publishing)
-    - [platforms](#platforms)
-    - [self-hosting / github pages](#self-hosting--github-pages)
-- [Collaboration](#collaboration)
-    - [Working on teams](#working-on-teams)
-    - [Github](#github)
-- [Chart Types](#chart-types)
-    - [Scatterplots](#scatterplots)
-    - [Line charts](#line-charts)
-    - [Histograms](#histograms)
-    - [Bar charts](#bar-charts)
+  - [P5.Table & P5.TableRow: .findRows()](#p5table--p5tablerow-findrows)
+  - [P5.Table: for Loops and Conditional Statements: `If/else` and `for` using .getRow();](#p5table-for-loops-and-conditional-statements-ifelse-and-for-using-getrow)
+  - [P5.Table: .getObject() → for Loops and Conditional Statements: `If/else` and `for`](#p5table-getobject-%E2%86%92-for-loops-and-conditional-statements-ifelse-and-for)
+  - [Advanced methods](#advanced-methods)
+    - [Array.filter()](#arrayfilter)
+  - [Chapter 3: Summary](#chapter-3-summary)
+  - [Chapter 3: References](#chapter-3-references)
+- [Chapter 4 : Mine](#chapter-4--mine)
+  - [Mathmagical Operations ✨](#mathmagical-operations-%E2%9C%A8)
+    - [map()](#map)
+    - [min()](#min)
+    - [max()](#max)
+    - [constrain()](#constrain)
+    - [round()](#round)
+    - [log()](#log)
+    - [sqrt() and sq()](#sqrt-and-sq)
+    - [lerp()](#lerp)
+  - [Chapter 4: Summary](#chapter-4-summary)
+  - [Chapter 4: References](#chapter-4-references)
+- [Chapter 5: Represent / Visual Encoding](#chapter-5-represent--visual-encoding)
+  - [ellipse()](#ellipse)
+  - [rect()](#rect)
+  - [line()](#line)
+  - [arc()](#arc)
+  - [bezier()](#bezier)
+  - [Custom Shapes: beginShape() / endShape()](#custom-shapes-beginshape--endshape)
+  - [loadImage() / image()](#loadimage--image)
+  - [push() / pop()](#push--pop)
+  - [translate()](#translate)
+  - [rotate()](#rotate)
+  - [Chapter 5: Summary](#chapter-5-summary)
+  - [Chapter 5: References](#chapter-5-references)
+- [Chapter 6: Interact](#chapter-6-interact)
+  - [Mouse Interactions: mousePressed()](#mouse-interactions-mousepressed)
+  - [Mouse Interactions: mouseX, mouseY](#mouse-interactions-mousex-mousey)
+  - [HTML input: createInput()](#html-input-createinput)
+  - [HTML select: createSelect()](#html-select-createselect)
+  - [HTML button: createButton()](#html-button-createbutton)
+  - [HTML radio: createRadio()](#html-radio-createradio)
+  - [HTML slider: createSlider()](#html-slider-createslider)
+  - [HTML checkboxes: createCheckbox()](#html-checkboxes-createcheckbox)
+  - [Conditional Statements: `if/else`](#conditional-statements-ifelse)
+  - [Chapter 6: Summary](#chapter-6-summary)
+  - [Chapter 6: References](#chapter-6-references)
+- [Chapter 7: Refine](#chapter-7-refine)
+  - [productive use of metaphors](#productive-use-of-metaphors)
+  - [developing a story](#developing-a-story)
+  - [CSS](#css)
+  - [CSS frameworks](#css-frameworks)
+  - [text()](#text)
+  - [colorMode()](#colormode)
+  - [fill colors: fill()](#fill-colors-fill)
+  - [stroke color: stroke()](#stroke-color-stroke)
+  - [stroke properties: strokeWeight()](#stroke-properties-strokeweight)
+  - [Chapter 7: Summary](#chapter-7-summary)
+  - [Chapter 7: References](#chapter-7-references)
+- [Chapter 8: Publishing](#chapter-8-publishing)
+  - [platforms](#platforms)
+  - [self-hosting / github pages](#self-hosting--github-pages)
+- [Chapter 9: Collaboration](#chapter-9-collaboration)
+  - [Working on teams](#working-on-teams)
+  - [Github](#github)
+- [Chapter 10: Chart Types](#chapter-10-chart-types)
+  - [Scatterplots](#scatterplots)
+  - [Line charts](#line-charts)
+  - [Histograms](#histograms)
+  - [Bar charts](#bar-charts)
 
 ---
 
@@ -1048,17 +1065,38 @@ The `preload()` function is not only for data in the form of tables, but can be 
 
 ```JS
 
+let myImage;
+function preload(){
+	myImage = loadImage("you-got-this.png")
+}
+
+function setup() {
+  createCanvas(400, 400);
+  print(myImage)
+  noLoop();
+}
+
+function draw() {
+  // background(220);
+  image(myImage, 0,0, myImage.width/2, myImage.height/2)
+}
+
 ```
+
+https://editor.p5js.org/joeyklee/sketches/SJDrS0Yt7
+
+Assuming we have an image in our projet folder called "you-got-this.png", we can load the image using the `loadImage()` function, then later reference the `myImage` variable in the `draw()` function.
 
 ### preloading video
 
+TBD
 ```JS
 
 ```
 
 ## Chapter 2: recap
 
-In Chapter 2 we've covered fundamental components of where data comes from, where we can get data  whether from data portals or from APIs, the formats that data come in, how to accsss the various properties of data depending on the format in which they come, and how we might use existing functions of the programs we're using, how we migth search for thsoe functions, and how we can begin to create our own custom functions to handle data I/O and custom visualizations. We looked at a couple ways of reading in data to our P5 programs and 3 iterations on how to handle data loading in the context of javascript and the web. Last, we learned that preload() is a way of loading in all of our necessary data - whether it be sounds files, video files, or data sets - before the rest of our program runs.
+In Chapter 2 we've covered fundamental components of where data comes from, where we can get data  whether from data portals or from APIs, the formats that data come in, how to accsss the various properties of data depending on the format in which they come, and how we might use existing functions of the programs we're using, how we migth search for thsoe functions, and how we can begin to create our own custom functions to handle data I/O and custom visualizations. We looked at a couple ways of reading in data to our P5 programs and 3 iterations on how to handle data loading in the context of javascript and the web. Last, we learned that preload() is a way of loading in all of our necessary data - whether it be sounds files, video files, or data sets - before the rest of our program runs. 
 
 * Data Sources
 * APIs
@@ -1154,6 +1192,18 @@ TERRORISM
 
 We've hardly dug into the data, but alarms might be ringing in our brains: "Here's the NYC stop and frisk data, a notoriously fraught method of policing, and we have a category of data that tells us a short justification why an officer might have spent 30, 60, 90 minutes or more confronting people in the streets. Without any other reason than the officer's own impetus, we see that the justification for their confrontation is ambiguously categorized as 'Terrorism'. Other properties of the data such as how much time passed before intervening, the rank of the officer, and so on. What is the data telling us? What is the data hiding? Can we trust what is reported?"
 
+You might be wondering...**how do you know what the column names are?** or **how do you decide which properties to examine?** These are important questions that can be answered if you look at the data's **metadata**. **Metadata** are information about the data that you're using. In the metadata you should find out information such as:
+
+* when the data was created
+* who created the data
+* who to contact if you have questions about the data
+* what are the properties of the data? e.g. what do the column names mean?
+* how the data were calculated
+
+These information are indispensible for how and what you discover about the data that you're interrogating. In the example above, the [metadata of the stop and frisk data](https://data.cityofnewyork.us/api/views/ftxv-d5ix/files/9cecce6d-baca-4a60-be9d-31501b5639f0?download=true&filename=2016-sqf-file-spec.xlsx) can be found in this Excel spreadsheet (TODO: export to pdf or more friendly accessible file format).
+
+You can see some analyses of the [NYC Stop and Frisk Data by the ACLU](https://www.nyclu.org/en/stop-and-frisk-data).
+
 <!--
 ## P5.Table: for Loops and Conditional Statements: `If/else` and `for` using .getRow();
 
@@ -1190,7 +1240,11 @@ function draw(){
 
 ``` -->
 
-## P5.Table: .getColumn() → for Loops and Conditional Statements: `If/else` and `for`
+## P5.Table: .getObject() → for Loops and Conditional Statements: `If/else` and `for`
+
+In the example above, we saw how we can get a subset of data based on a specified value and its associated key or column name using the `.findRows()` method on a `P5.Table` object. However sometimes you may need more flexibility in accessing the different properties of the data. We can use the `.getObject()` method on our `P5.Table` object to get back a JSON object of our table. Then, we can loop through our data using a `for` loop, and use a conditional statement with an `if` statement specifying what property we are looking for. If whatever condition or conditions we've specifed evaluate as `true`, then we can `.push()` those objects to our `selfInitiatedStops` array [].
+
+
 
 ```js
 // declare a variable called myData
@@ -1219,7 +1273,9 @@ function setup() {
     }
   }
 
-  console.log(selfInitiatedStops[0].SUSPECTED_CRIME_DESCRIPTION);
+    // 
+  console.log(selfInitiatedStops[0].SUSPECTED_CRIME_DESCRIPTION); // prints terrorism
+  console.log(selfInitiatedStops[1].SUSPECTED_CRIME_DESCRIPTION); // prints terrorism
 }
 
 function draw() {
@@ -1227,19 +1283,27 @@ function draw() {
 }
 ```
 
+https://editor.p5js.org/joeyklee/sketches/ryLq7pdnm
+
 - The advantage here is that we get an entire json object of all the properties for each object of data that fulfills the conditional. In this case, we loop through `myData` to check how the stop and frisk was justified. Here we're looking for the stop and frisks that were "self-initiated".
 
 ## Advanced methods
 
 ### Array.filter()
 
+```JS
 TBD
+```
 
-## 
+## Chapter 3: Summary
+
+
+
+## Chapter 3: References
 
 ---
 
-# Mine
+# Chapter 4 : Mine
 
 > ↱ aquire → parse → filter → **mine** → represent → interact → refine ↲
 
@@ -1247,9 +1311,64 @@ TBD
 
 ## Mathmagical Operations ✨
 
+Some of the math helper functions of P5.js can be found here: https://p5js.org/reference/#group-Math
+
+Computers are little mathmagical machines - they carry out mathmatical and computational operations that allow us to make calculations, over and over again. Some of these mathmatical operations are simple and others can be more complex like extracting the `mean`, `median`, or `mode` of an array [] of number or text. 
+
+|   Operator  | Description    | Example                      |
+|:-----------:|:---------------|:-----------------------------|
+|     `+`     | addition       | `1 + 2` // returns 3         |
+|     `-`     | subtraction    | `10 - 5` // returns 5        |
+|     `*`     | multiplication | `3 * 2` // returns 6         |
+|     `/`     | division       | `6 / 2` // returns 3         |
+|     `**`    | exponentiation | `3^2` or `3**2` // returns 9 |
+|     `%`     | modulus        | `5%2` // returns 1          |
+
+
+Some  handy mathematical operators and functions that we often use in data visualization are shown here:
+
+### map()
+https://p5js.org/reference/#/p5/map
+
+### min()
+https://p5js.org/reference/#/p5/min
+
+### max()
+https://p5js.org/reference/#/p5/max
+
+
+### constrain()
+https://p5js.org/reference/#/p5/constrain
+
+
+### round()
+https://p5js.org/reference/#/p5/round
+
+
+### log()
+https://p5js.org/reference/#/p5/log
+
+### sqrt() and sq()
+
+https://p5js.org/reference/#/p5/sq
+https://p5js.org/reference/#/p5/sqrt
+
+
+### lerp()
+https://p5js.org/reference/#/p5/lerp
+
+
+## Chapter 4: Summary
+
+In this chapter we encountered a variety of situations in which different mathmatical operators may help us to produce visualizations, work with scales, round data, and even interpolate.
+
+## Chapter 4: References
+TBD
+
+
 ---
 
-# Represent / Visual Encoding
+# Chapter 5: Represent / Visual Encoding
 
 > ↱ aquire → parse → filter → mine → **represent** → interact → refine ↲
 
@@ -1277,9 +1396,14 @@ https://www.targetprocess.com/articles/visual-encoding/
 
 ## rotate()
 
+## Chapter 5: Summary
+
+
+## Chapter 5: References
+
 ---
 
-# Interact
+# Chapter 6: Interact
 
 > ↱ aquire → parse → filter → mine → represent → **interact** → refine ↲
 
@@ -1307,9 +1431,12 @@ https://p5js.org/reference/#/p5/createCheckbox
 
 ## Conditional Statements: `if/else`
 
+## Chapter 6: Summary
+## Chapter 6: References
+
 ---
 
-# Refine
+# Chapter 7: Refine
 
 > ↱ aquire → parse → filter → mine → represent → interact → **refine** ↲
 
@@ -1333,9 +1460,12 @@ https://p5js.org/reference/#/p5/createCheckbox
 
 ## stroke properties: strokeWeight()
 
+## Chapter 7: Summary
+## Chapter 7: References
+
 ---
 
-# Publishing
+# Chapter 8: Publishing
 
 > ↱ aquire → parse → filter → mine → represent → interact → refine ↲ then : **publish**
 
@@ -1347,7 +1477,7 @@ https://p5js.org/reference/#/p5/createCheckbox
 
 ---
 
-# Collaboration
+# Chapter 9: Collaboration
 
 ---
 
@@ -1357,7 +1487,7 @@ https://p5js.org/reference/#/p5/createCheckbox
 
 ---
 
-# Chart Types
+# Chapter 10: Chart Types
 
 ---
 
