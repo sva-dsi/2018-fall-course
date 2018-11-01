@@ -32,6 +32,9 @@ This short guide will use Ben Fry's model of the data visualization pipeline to 
     - [Variables](#variables)
     - [Functions](#functions)
     - [Custom functions](#custom-functions)
+        - [Method 1: defining a variable and assigning it a function](#method-1-defining-a-variable-and-assigning-it-a-function)
+        - [Method 2: assigning your function to it's scope](#method-2-assigning-your-function-to-its-scope)
+        - [Functions that return data](#functions-that-return-data)
     - [loadJSON()](#loadjson)
     - [loadTable()](#loadtable)
     - [preload()](#preload)
@@ -807,31 +810,37 @@ In P5.js, you are making your own custom visualizations or programs, by adding f
 
 ## Custom functions
 
-Custom functions allow you to create your own set of instructions on how to manipulate data 
+Custom functions allow you to create your own set of instructions on how to manipulate data, make a custon visual object, and much more. Each language has their own way of defining custom functions, but in javascript they can be written in the two ways that you see below. 
 
 - In this example, we create a function that returns the sentance, "Hello, {a person's name}". Notice how person is a variable that get's combined with the "Hello, ". This is the great thing about using variables and functions because let's say we have a list of 100 names, rather than writing out "Hello, Mary Beth", "Hello, Loo", "Hello, Kubo", and so on, we can make the computer loop through all our names and use our `greeting()` function to write all that out for us.
 
+### Method 1: defining a variable and assigning it a function
+
 ```js
 var greeting = function(person) {
-  return 'Hello, ' + person;
+  return('Hello, ' + person);
 };
 
 greeting('Joey');
 // returns: "Hello Joey"
 ```
 
-short aside, we can write that same thing above, like this:
+### Method 2: assigning your function to it's scope
 
 ```js
 function greeting(person) {
-  return 'Hello, ' + person;
+  return('Hello, ' + person);
 }
 
 greeting('Joey');
 // returns: "Hello Joey"
 ```
 
-- just as variables can be assigned a function, they can also be assigned to the **result of a function**. What does that mean you ask? That means that when we run a function, it will do a bunch of operations - maybe some math, maybe some parsing, maybe some ordering and arranging of things - and then give you the result in some shape or form. Let's look at a few examples:
+- just as variables can be assigned a hard coded value and given a set of instructions in the form of a function, variables can also be assigned to the **result of a function**. What does that mean you ask? That means that when we run a function, it will do a bunch of operations - maybe some math, maybe some parsing, maybe some ordering and arranging of things - and then give you the result in some shape or form. There are some functions that do not return anything, so we'll have a look at some of those too. Let's look at a few examples:
+
+### Functions that return data
+
+**Example 1: assigning the result of our greeting function to a variable**
 
 ```js
 function greeting(person) {
@@ -845,6 +854,55 @@ console.log(greeting_to_joey);
 ```
 
 In the example above, we store the result of `greeting("Joey")` to a variable called **greeting_to_joey**. Then we can use that "Hello, Joey" later on.
+
+**Example 2: assigning the result of our greeting function to a variable with numbers**
+
+```js
+function calculate_co2_output(vehicleKilometersTraveled, emissionsFactor) {
+
+    var emissions_in_grams_co2 = vehicleKilometersTraveled * emissionsFactor;
+
+    return(emissions_in_grams_co2);
+}
+
+var joeys_car_emissions = calculate_co2_output(5000, 85);
+// console.log(name_of_variable) will print out what's assigned to that variable.
+console.log(joeys_car_emissions);
+// prints 425
+```
+
+In this example, we create our own custom function to calculate the emitted CO2 in grams of one's travel behavior based on travel distance and an "emissions factor" (aka a number of grams of co2 emitted per vehicle kilometers traveled).
+
+**Example 3: a custom function that doesn't return anything**
+
+
+```js
+function setup() {
+  createCanvas(400, 400);
+}
+
+function draw() {
+  background(220);
+  
+  customShapes();
+}
+
+function customShapes(){
+  noFill();
+  ellipse(mouseX, mouseY, 50, 50);
+  
+  rectMode(CENTER)
+  rect(mouseX, mouseY, 100, 100);
+  
+  line(mouseX - 80, mouseY - 80, mouseX +100, mouseY + 50);
+}
+
+```
+
+https://editor.p5js.org/joeyklee/sketches/rJeiwKd2Q
+
+In this example, we define a custom function to make a custom collection of shapes. If you think about some of [Georgia Lupi's ]() and [Stephanie Posavek's]() work on the [Dear Data]() project, you can see how they have each defined their own custom visualizations for each day of each week of their hand drawn data visualizations. With computation, you could define your own custom functions that, given some input data, would start to generate these forms. This is what we might call "generative design" in which we parameterize forms and feed in inputs that result in a visual which reflect the rules of the system we've designed.
+
 
 ## loadJSON()
 
