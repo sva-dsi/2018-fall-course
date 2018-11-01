@@ -1310,7 +1310,7 @@ TBD
 
 ---
 
-The term "mine" here is about "mining for information". Data does not equal information. Data is valueless until it becomes something that carries meaning, enacts change in the world, deepens our understanding of the people, places, and things around us, and reveals the previously unseen. In this sense, data doesn't mean anything until we've applied our understandings of the processes of that the data are attempting to describe onto the data itself. This process of deriving information from data is what has become known as "mining". On 
+The term "mine" here is about "mining for information". Data does not equal information. Data is valueless until it becomes something that carries meaning, enacts change in the world, deepens our understanding of the people, places, and things around us, and reveals the previously unseen. In this sense, data doesn't mean anything until we've applied our understandings of the processes of that the data are attempting to describe onto the data itself. This process of deriving information from data is what has become known as "mining". It has very much been born out of this idea of resource extraction because that is what is happening 
 
 
 ## Mathmagical Operations ✨
