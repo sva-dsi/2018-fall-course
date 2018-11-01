@@ -87,6 +87,9 @@ This short guide will use Ben Fry's model of the data visualization pipeline to 
 # Preamble: Visualization Platforms for the code-averse 
 ***
 
+Before we start, I want to point out that quite often, you'll just want to quickly look into a dataset, make some rudimentary charts, and perhaps even perform a few operations on the data to see if you can immediately notice any interesting trends or outliers in your data. **Graphical User Interface (GUI)** based environments are great for this and even more. Starting with code doesn't always make sense or may not even be necessary for what you're trying to achieve. That being said, where code excels is in it's ability to be more easily reproduced (the code is essentially a step-by-step of how you manipulated the data) and quite offen is open source or free to use whereas many GUI based visualization platforms are not or have subscriptions fees at the very least. 
+
+Every tool has its advantages and disadvantages, so the best thing is to have as many in your toolbox to work with **winky face** ;) 
 
 > NOTE: I have a preference for open source software. This is reflected here as much as possible. 
 
@@ -129,7 +132,7 @@ Mapping is most certainly an endeavor of data visualization, but geospatial cons
 # Visualization frameworks for friends of code
 ***
 
-This guide is about [P5.js](). I choose to introduce all these visualization concepts with P5 for many reasons including:
+This guide is about [P5.js](https://p5js.org). I choose to introduce all these visualization concepts with P5 for many reasons including:
 
 1. great community (e.g. Dan Shiffman)
 2. lots of documentation
@@ -151,8 +154,10 @@ SO with all that being said, we're going to focus on P5.js, but if you do get cu
     * [Vega.js](https://vega.github.io/vega/)
 * Caveats:
     * [D3.js](): D3.js is the standard visualizaition framework out there, but it is not a beginner friendly library. Luckily basically all the other visualizaition libraries wrap up some of the D3 complexity for us. Also, if you're not going to become a visualization coder, then D3 feels like overkill to me. 
-    * [R]() + [ggplot2]()
+    * [R](https://www.r-project.org/) + [ggplot2](https://ggplot2.tidyverse.org/)
+        * R is the swiss army knife of data visualization. It would maybe even be my 
 
+Scott Murray gives a great overview of the visualization charting and code library landscape out there in his book [Interactive Data Visualization for the Web](http://alignedleft.com/work/d3-book-2e).
 
 
 > NOTE: we aren't really going to go into R or Python for data analysis and visualization. Those coding environments and their visualization and statistical libraries may be wonderful, but that opens up a whole different can of worms which we haven't gone over in this class - statistics! 
@@ -180,7 +185,7 @@ During...
 * **Visualization**: Which charts can effectively allow me to explore the data I'm working with? Which charts can effectively communicate to others the data I'm working with? What are analogies and metaphors that may help with the communication? How can typography, color, and layout speak to the story?
 * **Publication**: Where will your visualization be used? Brochures or posters or on the web? What are strategies for publication? Is your visual worth reaching out to media outlets and journalists? How do you make your visualization accessible? Is it important to make your data and accompanying analyses accessible or could that implicate the people in your data?
 
-What are others that you might encounter? I'd love to hear! 
+What are others that you might encounter? I'd love to hear! [Drop your comments here](https://github.com/joeyklee/datavis-with-p5/issues)
 
 The research phase can be really messy, but having some go-to activites to get your process started is not a bad idea. Here's a few ideas:
 
@@ -195,7 +200,7 @@ You might read about literature reviews [here](https://guides.library.harvard.ed
 
 ### Reach out to an expert
 
-TBD
+Literature reviews will lead you to domain experts - scientists, journalists, practioners, educators, researchers, and many more - who have worked in the space that you're interested to discover more about or visualize data about. Sure many people are busy, but it never hurts to send an email with a gentle *ping* to say hello, express admiration for their work, and also inquire if they might have some time to illuminate some things for you. The worse thing that can happen is that people won't get back to you. The best case is that you know have a knowledgeable and powerful ally on your side interested to at the very least support your efforts with their experience and feedback. 
 
 ### Moodboarding
 
