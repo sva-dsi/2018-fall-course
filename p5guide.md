@@ -1310,6 +1310,9 @@ TBD
 
 ---
 
+The term "mine" here is about "mining for information". Data does not equal information. Data is valueless until it becomes something that carries meaning, enacts change in the world, deepens our understanding of the people, places, and things around us, and reveals the previously unseen. In this sense, data doesn't mean anything until we've applied our understandings of the processes of that the data are attempting to describe onto the data itself. This process of deriving information from data is what has become known as "mining". On 
+
+
 ## Mathmagical Operations ✨
 
 Some of the math helper functions of P5.js can be found here: https://p5js.org/reference/#group-Math
@@ -1480,6 +1483,7 @@ Additional examples:
 
 Additional examples:
 * https://editor.p5js.org/joeyklee/sketches/Bka8rYA5m
+
 
 ## Chapter 5: Summary
 

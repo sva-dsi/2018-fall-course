@@ -287,3 +287,29 @@
   - vancouver 311 calls: https://github.com/joeyklee/cartodb-van311-example
 - [Introduction to the commandline for geospatial](https://medium.com/devseed/introduction-to-the-geo-command-line-3cc7a66a926e)
   
+
+  <!-- - Week 9: (Counter)Maps and Cartographics
+  - Everything is spatial
+    - all the geographies
+    - projections! Oh goodness
+    - geographic data / geographic data formats
+    - problematics of mapping
+    - counter-mapping
+    - history of web mapping
+  - Mapping Visualizations:
+    - points, lines, polygons
+    - choropleths, dot density, dot-area plots, flow maps
+  - Mapping tools overview
+    - web mapping applications: carto
+    - mapbox studio
+    - QGIS
+    - Handy tools:
+      - geojson.io
+    - Javascript libraries:
+      - leaflet.js, mapboxgl.js
+      - mappa.js
+  - Assignment:
+    - TBD
+    - Watch these videos:
+      - ...
+      - ... -->
