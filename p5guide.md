@@ -39,7 +39,7 @@ This short guide will use Ben Fry's model of the data visualization pipeline to 
     - [Method 1 - callbacks: *I ain't no hollaback girl*](#method-1---callbacks-i-aint-no-hollaback-girl)
     - [Method 2 - async/await: ES6 syntax for dealing with asychronicity](#method-2---asyncawait-es6-syntax-for-dealing-with-asychronicity)
     - [Method 3 - preload: loading data at the beginning](#method-3---preload-loading-data-at-the-beginning)
-  - [loadTable()](#loadtable)
+  - [loadTable(): loading a CSV file](#loadtable-loading-a-csv-file)
     - [Method 1 - callbacks:](#method-1---callbacks)
     - [Method 2 - async/await:](#method-2---asyncawait)
     - [Method 3 - preload():](#method-3---preload)
@@ -117,6 +117,10 @@ This short guide will use Ben Fry's model of the data visualization pipeline to 
   - [Line charts](#line-charts)
   - [Histograms](#histograms)
   - [Bar charts](#bar-charts)
+  - [Network Diagrams](#network-diagrams)
+  - [Geographic Maps](#geographic-maps)
+  - [Chapter 10 Summary](#chapter-10-summary)
+  - [Chapter 10 References](#chapter-10-references)
 
 ---
 
@@ -124,7 +128,7 @@ This short guide will use Ben Fry's model of the data visualization pipeline to 
 
 ---
 
-Before we start, I want to point out that quite often, you'll just want to quickly look into a dataset, make some rudimentary charts, and perhaps even perform a few operations on the data to see if you can immediately notice any interesting trends or outliers in your data. **Graphical User Interface (GUI)** based environments are great for this and even more. Starting with code doesn't always make sense or may not even be necessary for what you're trying to achieve. That being said, where code excels is in it's ability to be more easily reproduced (the code is essentially a step-by-step of how you manipulated the data) and quite offen is open source or free to use whereas many GUI based visualization platforms are not or have subscriptions fees at the very least.
+Before we start, I want to point out that quite often, you'll just want to quickly look into a dataset, make some rudimentary charts, and perhaps even perform a few operations on the data to see if you can immediately notice any interesting trends or outliers in your data. **Graphical User Interface (GUI)** based environments are great for this and even more. Starting with code doesn't always make sense or may not even be necessary for what you're trying to achieve. That being said, where code excels is in it's ability to be more easily reproduced (the code is essentially a step-by-step of how you manipulated the data) and quite often is open source or free to use whereas many GUI based visualization platforms are not or have subscriptions fees at the very least.
 
 Every tool has its advantages and disadvantages, so the best thing is to have as many in your toolbox to work with **winky face** ;)
 
@@ -444,7 +448,7 @@ When you've nailed down your research questions and are ready to start looking f
 
 ## APIs
 
-API - Application Programming Interface. This is one of those acronyms that gets tossed around in conversation like, "hey why don't you just query the _insert tech company name_ API" or "I did my analysis by getting data from the Twitter API" and so on.
+API - Application Programming Interface. This is one of those acronyms that gets tossed around in conversation like, "hey why don't you just query the _insert tech company name_ API" or "I did my analysis by getting data from the _insert tech company/governmetn organization name_ API" and so on.
 
 An API is essentially a way for you - a third party entity - to get access to certain data and functionality from some web based service. API's are what allow Apple's iPhone to get the weather data for all the cities across the world (the [Weather Channel API](https://weather.com/datafeeds)) or you to make a [Twitter Bot](https://shiffman.net/a2z/twitter-bots/) or to use [random cat images](https://cataas.com/#/) from across the web. Many companies create entry points into their data (or the data you're producing while using their service) to enable their products to be used in applications outside of their own. Probably the best example of this is the [If This Then That](https://ifttt.com/) service that allows you to string together different APIs (e.g. "Tell Spotify to play song X every time the temperature of NYC measured by the Weather Channel is over Y degrees").
 
@@ -951,6 +955,8 @@ There are 3 methods of using `loadJSON()` which I will outline here.
 
 ### Method 1 - callbacks: *I ain't no hollaback girl*
 
+
+
 ```JS
 
 loadJSON("your URL here", function(myData, error){
@@ -1015,11 +1021,46 @@ function draw() {
 ```
 
 
-## loadTable()
+## loadTable(): loading a CSV file
 
 ### Method 1 - callbacks:
 
+
+```JS
+
+loadTable("your URL here", 'csv', 'header', function(myData, error){
+    console.log(myData);
+});
+
+```
+
+
 ### Method 2 - async/await:
+
+```JS
+
+async function retrieveTable(URL){
+    var myData = await loadTable(URL, "csv", "header");
+
+    // do actions on that data
+    console.log(myData);
+}
+
+
+function setup(){
+    createCanvas(400, 400);
+
+    // call your retrieve data function here - all of the logic and instructions for working with your
+    // data must go inside that function you created
+    retrieveTable("your url here")
+}
+
+function draw(){
+    background(220);
+
+}
+
+```
 
 ### Method 3 - preload():
 
@@ -1314,7 +1355,7 @@ The term "mine" here is about "mining for information". Data does not equal info
 
 How do we pull out information from data? We do this through statistics and, of course, visualization. Statistics can be as simple or complex as your research requires, but a general rule of thumb is that simpler statistics are better than more complex ones; you can read more about [how to lie with statistics](https://www.amazon.com/How-Lie-Statistics-Darrell-Huff/dp/0393310728).
 
-This term "simple" though is tricky because while computationally things may be simple - e.g. the median or average or mode - whether the application of that statistic is appropriate is not so simple. For example averages, medians, and modes are measures of central tendency, but each tells a different story. An average is the sum of all the values of interest divided by the total number of values being considered. Sounds straightforward - it gives us what the average performance is, or does it? Imagine that we're looking at income in the US and we wanted to say, the "income of an average american is: `<insert value here>`". But we know that the income distribution in the US is terribly skewed with a small number of people earning a whole lot more than the rest of the population. In this case, calculating a median value might make more sense. If we were to unfold this example, we would discover that there are productive and appropriate moments when averages can and should still be used in this context, but it requires additional data mining methods such stratifying by income class, geography, level of education, and so on. You can see some of these reflectded [here](https://en.wikipedia.org/wiki/Household_income_in_the_United_States#Aggregate_income_distribution).
+This term "simple" though is tricky because while computationally things may be simple - e.g. the median or average or mode - whether the application of that statistic is appropriate is not so simple. For example averages, medians, and modes are measures of central tendency, but each tells a different story. An average is the sum of all the values of interest divided by the total number of values being considered. Sounds straightforward - it gives us what the average performance is, or does it? Imagine that we're looking at income in the US and we wanted to say, the "income of an average american is: `<insert value here>`". But we know that the income distribution in the US is terribly skewed with a small number of people earning a whole lot more than the rest of the population. In this case, calculating a median value might make more sense. If we were to unfold this example, we would discover that there are productive and appropriate moments when averages can and should still be used in this context, but it requires additional data mining methods such stratifying by income class, geography, level of education, and so on. You can see some of these reflected [here](https://en.wikipedia.org/wiki/Household_income_in_the_United_States#Aggregate_income_distribution).
 
 
 ## Mathmagical Operations ✨
@@ -1333,20 +1374,145 @@ Computers are little mathmagical machines - they carry out mathmatical and compu
 |     `%`     | modulus        | `5%2` // returns 1          |
 
 
-Some  handy mathematical operators and functions that we often use in data visualization are shown here:
-
-### map()
-https://p5js.org/reference/#/p5/map
+Some handy mathematical operators and functions that we often use in data visualization are shown here:
 
 ### min()
-https://p5js.org/reference/#/p5/min
+> https://p5js.org/reference/#/p5/min
+
+When we talk about data, we're often looking for ways to summarize the data using of statistics. As mentioned earlier, statistics can simpler or more complex, but no statistics are "simple" when we start to unpack the nuances that our data requires of us. 
+
+In any case, we have to start somewhere and a good place to start is to examine the **range** of our data or the extent of the data's minimum and maximum. The **range** can help us to identify if the data that we're exploring falls within realistic values - e.g. based on our understanding of the phenomenon that the data are meant to reflect, do these values make sense? If these minimum and maximum values are not realistic, having these values calculated can help us then to identify outliers. 
+
+In P5.js, there is an in-built function for calculating the minimum value of an array []. It is important to note that the data must be supplied as an array otherwise the `min()` function won't work.
+
+In this example, we get the minimum value from this list of the monthly temperatures in NYC in 2017.
+
+```
+var temperatures = [69,68,61,50,42,32,27,28,35,45,54,64];
+var minTemperature;
+
+function setup(){
+  createCanvas(400, 400);
+  textAlign(CENTER);
+
+  minTemperature = min(temperatures);
+
+  noLoop();
+}
+
+function draw(){
+  background(220);
+  textSize(14);
+  text(`The lowest temperature in NYC - 2017`, width/2, height/2 - 30);
+  textSize(40);
+  text(`${minTemperature}℉`, width/2, height/2 + 20);
+
+}
+
+```
 
 ### max()
-https://p5js.org/reference/#/p5/max
+> https://p5js.org/reference/#/p5/max
+
+Similar to the `min()` function we can use the `max()` function to calculate the maximum value of our data. 
 
 
-### constrain()
-https://p5js.org/reference/#/p5/constrain
+
+```
+var temperatures = [85,84,76,65,54,44,39,42,50,62,72,80];
+var maxTemperature;
+
+function setup(){
+  createCanvas(400, 400);
+  textAlign(CENTER);
+
+  maxTemperature = max(temperatures);
+
+  noLoop();
+}
+
+function draw(){
+  background(220);
+  textSize(14);
+  text(`The highest temperature in NYC - 2017`, width/2, height/2 - 30);
+  textSize(40);
+  text(`${maxTemperature}℉`, width/2, height/2 + 20);
+
+}
+
+```
+
+
+NOTE: Using `min()` and `max()` become especially important when we start to develop our methods of creating axes for our data or when we need to scale our visual components from it's domain to a our screen. Some examples can be seen in the next section on `map()`.
+
+### map()
+> https://p5js.org/reference/#/p5/map
+
+Data visualization is about mapping visuals to data. In this mapping, we need to consider the **domain** of the data that we are using. The **domain** of a dataset can be might be considered to be the minimum and the maximum values of whatever dataset we are exploring. The domain of the data we're working with is important because we need to know the **extent** of the data in order to scale those values to the context in which our visualization will be drawn. For screen based media, we are essentially mapping data to the 2D and/or 3D pixel coordinate system of our screen.
+
+If, for example, we have data about all of the magnitudes of earthquakes from 1970 to 2018, you might think that on our **x-axis** we would have our years and on the **y-axis** we would have the magnitude of the earthquakes. In order to show this data on our screen, we would need a way to: 
+
+1. map the domain of the extent of the years - 1970 to 2018 - to the **width** of our screen and
+2. map the domain of the extent of the earthquake magnitudes to the **height** of our screen.
+
+In data visualization and charting software, the mapping of the scale of the data to the scale of our screens is done right out of the box, but when you are writing your own data visualizaiton in code, this often has to be done explicitly. 
+
+In P5.js the `map()` function gives us the ability to take an input value and map it to a specified extent (e.g. the size of our canvas) based on the minimum and maxium of the domain of the data we are working with. 
+
+> map(inputValue, dataMin, dataMax, )
+
+Take this example: We are taking the input value of our mouseX and our mouseY which are tracked as we move it on our canvas and we define an output range between 50 pixels and 200 pixels. If our mouse is in the bottom-right corner of the canvas, we'll have a ellipse that is 200px x 200px. If we go to the top-right of the canvas, we'll have a ellipse that is 50px x 50px. We have effectively mapped our input data (the mouse location value) to a specific output range that suits our purposes.
+
+**Example 1: Mapping mouse coordinates to new scale**
+
+```JS
+
+function setup(){
+  createCanvas(400, 400);
+}
+
+function draw(){
+  background(220);
+  var circleWidth = map(mouseX, 0, width, 50, 200 );
+  var circleHeight = map(mouseY, 0, height, 50, 200);
+
+  ellipse(width/2, height/2, circleWidth, circleHeight);
+
+  text(`x: The mouseX value ${mouseX} is mapped to ${circleWidth}`, 10, 20 );
+  text(`y: The mouseY value ${mouseY} is mapped to ${circleHeight}`, 10, 40 );
+}
+
+```
+
+See: https://editor.p5js.org/joeyklee/sketches/H1OXd-T37
+
+
+**Example 2: mapping HSB colors to mouse coordinates**
+Take this other example where we map the domain of a HSB color space and change the color 
+
+```
+function setup(){
+  createCanvas(400,400);
+  colorMode(HSB);
+}
+
+function draw(){
+  clear();
+
+  var h = map(mouseX, 0, width, 0, 360);
+  var s = 100;
+  var b = map(mouseY, 0, height, 0, 100);
+  fill(h, s, b);
+  rect(0, 0, width, height);
+}
+
+```
+
+See: https://editor.p5js.org/joeyklee/sketches/r114nQT3Q
+
+For other examples exemplifying the `map()` function see [Chapter 10: Charts]()
+
+
 
 
 ### round()
@@ -1365,6 +1531,9 @@ https://p5js.org/reference/#/p5/sqrt
 ### lerp()
 https://p5js.org/reference/#/p5/lerp
 
+### constrain()
+https://p5js.org/reference/#/p5/constrain
+
 
 ## Chapter 4: Summary
 
@@ -1372,6 +1541,7 @@ In this chapter we encountered a variety of situations in which different mathma
 
 ## Chapter 4: References
 TBD
+
 
 
 ---
@@ -1502,6 +1672,8 @@ Additional examples:
 
 ---
 
+Central to a visualization is how it has been designed to be interacted with. You might have a static visualization that has been printed as an information graphic or an dynamic visualization that requires 
+
 ## Mouse Interactions: mousePressed()
 
 ## Mouse Interactions: mouseX, mouseY
@@ -1584,9 +1756,7 @@ https://p5js.org/reference/#/p5/createCheckbox
 
 ---
 
-https://datavizcatalogue.com/
 
-https://datavizproject.com/
 
 ## Scatterplots
 
@@ -1595,3 +1765,90 @@ https://datavizproject.com/
 ## Histograms
 
 ## Bar charts
+
+**Example 3: bar chart of NYC temperatures**
+
+```JS
+var myData;
+var maxTemperature;
+var minTemperature;
+var padding;
+
+
+
+function preload(){
+  var url = "https://gist.githack.com/joeyklee/a0add6ded63888b6dcb44bcf351867f0/raw/39d03fce2c4213fe864c92634bd1c0c563d48986/NOAA-NYC-Weather.csv"
+  myData = loadTable(url, "csv", "header");
+}
+
+function setup(){
+  createCanvas(400,400);
+  colorMode(HSB);
+  textAlign(CENTER);
+  
+  padding = 20;
+
+  maxTemperature = 110;
+  minTemperature = 0;
+  
+  myData = myData.getObject();
+  
+  noLoop();
+}
+
+function draw(){
+  background(0, 0, 96);
+
+  var barWidth = round( (width) / Object.keys(myData).length );
+  
+  
+  for(var i = 0; i < Object.keys(myData).length; i++){
+    
+    var barHeight = round(map(myData[i]["High"], minTemperature, maxTemperature, height, 100));
+    var lightness = round( map(myData[i]["High"], minTemperature, maxTemperature, 100,0 ));
+    
+    // the bars
+    fill( 233, 100, lightness);
+    stroke(0, 0, 90);
+    rect(i*barWidth, height  - padding*2.5, barWidth, barHeight - height);
+    
+    // the text
+    textAlign(CENTER);
+    textSize(10);
+    fill(0, 0, 0);
+    noStroke();
+    text(myData[i]["High"], i*barWidth + barWidth/2, barHeight  - padding*2.5 - 4 );
+    
+    push();
+    translate(i*barWidth + barWidth/2, height - padding*2);
+    textAlign(RIGHT);
+    rotate(radians(-45));
+    fill(0, 0, 10);
+    text(myData[i]["Month"], 0,0);
+    pop();
+  }
+  
+  textAlign(CENTER);
+  textSize(14);
+  text("NEW YORK CITY 2017", width/2, padding*2);
+  text("TEMPERATURE HIGHS BY MONTH", width/2, padding*2 + 16);
+  textSize(8);
+  text("SOURCE: NOAA", width/2, padding*2 + 28);
+
+}
+
+```
+
+https://editor.p5js.org/joeyklee/sketches/B1HSrQp2Q
+
+## Network Diagrams
+
+## Geographic Maps
+
+
+## Chapter 10 Summary
+
+## Chapter 10 References
+
+* https://datavizcatalogue.com/
+* https://datavizproject.com/
