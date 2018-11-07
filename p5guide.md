@@ -1444,6 +1444,19 @@ function draw(){
 
 NOTE: Using `min()` and `max()` become especially important when we start to develop our methods of creating axes for our data or when we need to scale our visual components from it's domain to a our screen. Some examples can be seen in the next section on `map()`.
 
+
+
+## Calculating mean
+TBD
+
+
+## Calculating mode
+TBD
+
+## Calculating sum
+TBD
+
+
 ### map()
 > https://p5js.org/reference/#/p5/map
 
@@ -1512,6 +1525,52 @@ See: https://editor.p5js.org/joeyklee/sketches/r114nQT3Q
 For other examples exemplifying the `map()` function see [Chapter 10: Charts]()
 
 
+## norm()
+> https://p5js.org/reference/#/p5/norm
+
+Normalization is an interesting statistical tool. It's an important tool to have in your toolbelt but also important to consider its meaning carefully and critically. Taken in a negative light, when we think of normalization, what things might come to mind? Certainly you might think of the normalization of bad behavior - meaning that certain behaviors that once were considered *faux pas* are becoming "normal" or commonplace. Maybe I'm old fashioned but blatant smart phone use at the dinner table might be something that becomes more normalized these days. Taken in a more positive light, normalization might also occur with positive changes such as gender neutral restrooms. 
+
+Where and why might we employ the use of normalization in statistics and data visualization? For example, we might consider to *normalize* data comparing car accidents across the US by dividing by population per state (the more people, presumably the more cars, and presumably the more accidents). Similarly, we might considering using country size in square kilometers as a way to *normalize* data comparing areas of arable land by country (compare percentages of arable land by the size of the country sounds reasonable right?).  
+
+In the context of data, normalization means mapping data to a common scale such that we can compare things. Of course it goes without saying that normalization isn't without it's nasty historical roots of erasure and defining of "common or normal or average", but alas, we must know how the tools work so we can spot them, right? 
+
+In the context of p5.js, things are more straightforward - it just means we map data to a common scale from 0 to 1. As noted in the docs, the `norm()` function is `identical to map(value, low, high, 0, 1).`, but P5.js gives us this function just to make our lives easier since it can become a common tool. 
+
+
+**Example: Use normalization to change rectangle colors dividing the screen**
+```JS
+function setup(){
+  createCanvas(400, 400);
+
+}
+function draw(){
+  background(220);
+
+  var x =  norm(mouseX, 0, width);
+  var xSide = round(x);
+  noStroke();
+  if(xSide == 1){
+    fill(241,163,64)
+    rect(0, 0, width/2, height);
+
+    fill(255)
+    rect(width/2, 0, width, height);  
+  } else {
+    fill(255)
+    rect(0, 0, width/2, height);
+
+    fill(153,142,195)
+    rect(width/2, 0, width, height);  
+  }
+  
+  stroke(0);
+  strokeWeight(4);
+  line(width/2, 0, width/2, height);
+
+}
+
+```
+See: https://editor.p5js.org/joeyklee/sketches/Sk2VwTJ67
 
 
 ### round()
@@ -1551,6 +1610,12 @@ function draw(){
 see: https://editor.p5js.org/joeyklee/sketches/r1h164T37
 
 
+## exp()
+> https://p5js.org/reference/#/p5/exp
+
+TBD
+
+
 ### log()
 > https://p5js.org/reference/#/p5/log
 
@@ -1584,7 +1649,44 @@ function draw() {
 
 https://editor.p5js.org/joeyklee/sketches/rkz5s90nX
 
-TODO: add example of earthquakes
+<!-- **Example: NYC Climate 2017, central park**
+data: https://www.weather.gov/media/okx/Climate/CentralPark/monthlyannualtemp.pdf, https://www.weather.gov/media/okx/Climate/CentralPark/monthlyannualprecip.pdf
+
+Here we compare temperatures to precipitation. In this example we take the `log()` of the precipitation when we compare it to the temperatures because precipitation tends to ... (TBD)
+
+```
+
+var nycClimate = [{month:1, temp_c:3, precip_mm:123},{month:2, temp_c:5, precip_mm:63},{month:3, temp_c:4, precip_mm:133},{month:4, temp_c:14, precip_mm:98},{month:5, temp_c:16, precip_mm:162},{month:6, temp_c:22, precip_mm:121},{month:7, temp_c:25, precip_mm:106},{month:8, temp_c:23, precip_mm:85},{month:9, temp_c:21, precip_mm:51},{month:10, temp_c:18, precip_mm:106},{month:11, temp_c:8, precip_mm:40},{month:12, temp_c:1, precip_mm:56}]
+
+var stats = {};
+var padding = 20;
+
+function setup(){
+  createCanvas(400, 400);
+
+  stats.maxTemp = max(nycClimate.map( obj => obj.temp_c ))
+  stats.minTemp = min(nycClimate.map( obj => obj.temp_c ))
+  stats.maxPrecip = max(nycClimate.map( obj => obj.precip_mm ))
+  stats.minPrecip = min(nycClimate.map( obj => obj.precip_mm ))
+
+  console.log(stats);
+  noLoop();
+}
+
+function draw(){
+  background(220);
+
+  for(var i = 0; i < nycClimate.length; i++){
+    var x = round(map(nycClimate[i].temp_c, stats.minTemp,stats.maxTemp, padding, width - padding));
+    var y = round(map(log(nycClimate[i].precip_mm), log(stats.minPrecip),log(stats.maxPrecip), height-padding, padding));
+    console.log(x, y);
+    ellipse(x, y, 10, 10);
+    text(nycClimate[i].month,x+5, y+5);
+  }
+
+}
+
+``` -->
 
 
 ### sqrt() and sq()
@@ -1699,16 +1801,30 @@ function draw(){
 
 ### lerp()
 https://p5js.org/reference/#/p5/lerp
+NOTE: lerpColor() is also v. cool
 
+TBD
 
 
 ### constrain()
 https://p5js.org/reference/#/p5/constrain
 
+TBD
 
 ## Chapter 4: Summary
 
-In this chapter we encountered a variety of situations in which different mathmatical operators may help us to produce visualizations, work with scales, round data, and even interpolate.
+In this chapter we encountered a variety of situations in which different mathmatical operators may help us to produce visualizations, work with scales, round data, and even interpolate. We looked at why ranges (minimums and maximums) of our data are important and interest and how we can calculate those statistics from 
+
+- [Chapter 4 : Mine](#chapter-4--mine)
+  - [Mathmagical Operations ✨](#mathmagical-operations-%E2%9C%A8)
+    - [min()](#min)
+    - [max()](#max)
+    - [map()](#map)
+    - [round()](#round)
+    - [log()](#log)
+    - [sqrt() and sq()](#sqrt-and-sq)
+    - [lerp()](#lerp)
+    - [constrain()](#constrain)
 
 ## Chapter 4: References
 TBD
@@ -1725,7 +1841,7 @@ TBD
 
 https://www.targetprocess.com/articles/visual-encoding/
 
-In this chapter will look at the different visual components that we have at our fingertips to map data to visuals. The features discussed here will be directly relevant to the [Chapter 10 on chart types]() in which these shapes find a context to live in.
+In this chapter will look at the different visual components that we have at our fingertips to map data to visuals. The features discussed here will be directly relevant to the [Chapter 10 on chart types]() in which these individual or groups of shapes find a context to live in.
 
 
 
@@ -1733,8 +1849,21 @@ In this chapter will look at the different visual components that we have at our
 
 ```
 
+function setup(){
+  createCanvas(400, 400);
+}
+
+function draw(){
+  background(220);
+
+  ellipse(mouseX, mouseY, 50, 50);
+}
 
 ```
+
+The `ellipse()` is one of data visualization's most common visual elements. Used to show anything from quantities to locations, to proportions, the ellipse is a versatile visual element that finds itself on charts of all types. 
+
+As discussed above in the section on [squares and square roots](), using area as a way of scaling your ellipse size is important for telling the true story of your data if the circle size represents some encoding of your data.
 
 Additional examples:
 * https://editor.p5js.org/joeyklee/sketches/HJn0zTFY7
@@ -1746,7 +1875,57 @@ Additional examples:
 
 ## rect()
 
+```
+var gunDeaths2017 = 15549
 
+function setup() {
+  createCanvas(400, 400);
+  rectMode(CENTER);
+
+  noLoop();
+}
+
+function draw() {
+  background(255);
+  noStroke();
+  var y = 10;
+  var x = 10;
+  for (var i = 0; i < gunDeaths2017; i++) {
+    if (x >= width - 10) {
+      x = 10;
+      y += 3;
+    }
+    x += 3;
+    fill(255, 0, 0);
+    rect(x, y, 2, 2);
+  }
+  // add in text overlays
+  annotateChart();
+}
+
+function annotateChart() {
+  textAlign(LEFT);
+  stroke(255, 0, 0);
+  strokeWeight(1);
+  textStyle(NORMAL);
+  fill(255);
+  textSize(60);
+  text(`${gunDeaths2017}`, width * 0.10, height / 2);
+  textStyle(BOLD);
+  textSize(40);
+  text(`GUN DEATHS`, width * 0.10, height / 2 + 40);
+  textSize(28);
+  text(`IN AMERICA`, width * 0.10, height / 2 + 70);
+
+  textSize(24);
+  textAlign(RIGHT);
+  text(`2017`, width - 20, 40);
+}
+
+```
+
+see: https://editor.p5js.org/joeyklee/sketches/SkS7YRJ67
+TODO: make chart so that it scales to changes in canvas size.
 
 Additional examples:
 * https://editor.p5js.org/joeyklee/sketches/B1YKBattQ
@@ -1889,6 +2068,8 @@ https://p5js.org/reference/#/p5/createCheckbox
 ## text()
 
 ## colorMode()
+
+## lerpColor()
 
 ## fill colors: fill()
 
