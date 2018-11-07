@@ -7,8 +7,6 @@
 * [Link to Assignment 9](ASSIGNMENT09.md)
 
 
-
-
 ## AGENDA
 
 **DISCUSSION:**

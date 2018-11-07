@@ -1105,7 +1105,7 @@ The `preload()` function is not only for data in the form of tables, but can be 
 
 ### preloading images
 
-```JS
+```js
 
 let myImage;
 function preload(){
@@ -1132,7 +1132,7 @@ Assuming we have an image in our projet folder called "you-got-this.png", we can
 ### preloading video
 
 TBD
-```JS
+```js
 
 ```
 
@@ -1333,7 +1333,7 @@ https://editor.p5js.org/joeyklee/sketches/ryLq7pdnm
 
 ### Array.filter()
 
-```JS
+```js
 TBD
 ```
 
@@ -1417,7 +1417,7 @@ function draw(){
 Similar to the `min()` function we can use the `max()` function to calculate the maximum value of our data. 
 
 
-```
+```js
 var temperatures = [85,84,76,65,54,44,39,42,50,62,72,80];
 var maxTemperature;
 
@@ -1477,7 +1477,7 @@ Take this example: We are taking the input value of our mouseX and our mouseY wh
 
 **Example 1: Mapping mouse coordinates to new scale**
 
-```JS
+```js
 
 function setup(){
   createCanvas(400, 400);
@@ -1502,7 +1502,7 @@ See: https://editor.p5js.org/joeyklee/sketches/H1OXd-T37
 **Example 2: mapping HSB colors to mouse coordinates**
 Take this other example where we map the domain of a HSB color space and change the color 
 
-```
+```js
 function setup(){
   createCanvas(400,400);
   colorMode(HSB);
@@ -1538,7 +1538,7 @@ In the context of p5.js, things are more straightforward - it just means we map 
 
 
 **Example: Use normalization to change rectangle colors dividing the screen**
-```JS
+```js
 function setup(){
   createCanvas(400, 400);
 
@@ -1875,7 +1875,8 @@ Additional examples:
 
 ## rect()
 
-```
+```JS
+
 var gunDeaths2017 = 15549
 
 function setup() {
