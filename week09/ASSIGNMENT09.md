@@ -1,5 +1,5 @@
-# ASSIGNMENT 09: 
-**DUE:** DD MONTH YEAR, HH:MM
+# ASSIGNMENT 09: Data Search & Begin Reading P5 Guide to Data Vis
+**DUE:** 08 Nov 2018, 6:00 PM
 
 <!-- ![image description](link/to/image) -->
 

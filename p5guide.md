@@ -2022,11 +2022,14 @@ Additional examples:
 
 ---
 
-Central to a visualization is how it has been designed to be interacted with. You might have a static visualization that has been printed as an information graphic or an dynamic visualization that requires 
+Central to a visualization is how it has been designed to be interacted with. You might have a static visualization that has been printed as an information graphic or an dynamic visualization that requires zooming, panning, clicking, touching, and more.
+
 
 ## Mouse Interactions: mousePressed()
 
 ## Mouse Interactions: mouseX, mouseY
+
+## Mouse Interactions: zoom & pan
 
 ## HTML input: createInput()
 
