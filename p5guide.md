@@ -58,14 +58,14 @@ This short guide will use Ben Fry's model of the data visualization pipeline to 
   - [Chapter 3: References](#chapter-3-references)
 - [Chapter 4 : Mine](#chapter-4--mine)
   - [Mathmagical Operations ✨](#mathmagical-operations-%E2%9C%A8)
-    - [map()](#map)
     - [min()](#min)
     - [max()](#max)
-    - [constrain()](#constrain)
+    - [map()](#map)
     - [round()](#round)
     - [log()](#log)
     - [sqrt() and sq()](#sqrt-and-sq)
     - [lerp()](#lerp)
+    - [constrain()](#constrain)
   - [Chapter 4: Summary](#chapter-4-summary)
   - [Chapter 4: References](#chapter-4-references)
 - [Chapter 5: Represent / Visual Encoding](#chapter-5-represent--visual-encoding)
@@ -1417,7 +1417,6 @@ function draw(){
 Similar to the `min()` function we can use the `max()` function to calculate the maximum value of our data. 
 
 
-
 ```
 var temperatures = [85,84,76,65,54,44,39,42,50,62,72,80];
 var maxTemperature;
@@ -1518,18 +1517,190 @@ For other examples exemplifying the `map()` function see [Chapter 10: Charts]()
 ### round()
 https://p5js.org/reference/#/p5/round
 
+Rounding numbers is a handy way of handling **floating point numbers**. Floating numbers or "floats" are numbers that have a certain number of decimal places which are meant to reflect the precision of that data.
+
+When would we want to round numbers? There are a number of cases when rounding become helpful for us. Mostly, we rounding numbers gives us the ability to remove unecessary precision. Why would we remove uncessary precision? Rounding up or down to the nearest decimal or whole number can be helpful for:
+
+1. text labels for chart items, axes, etc.
+2. can help us avoid rendering glitches for shapes that can't render on subpixels
+3. can help reduce computational load - the more decimal points, the more numbers the computer must consider
+4. can be used to help conceal data that might be too precise (e.g. latitude/longitude geographic coordinates)
+
+```
+
+var notRounded = 10.123453332;
+var rounded;
+
+function setup(){
+  createCanvas(400, 400);
+  textAlign(CENTER);
+
+  rounded = round(notRounded);
+
+  noLoop();
+}
+
+function draw(){
+  background(220);
+
+  text(`${notRounded} becomes ${rounded} when it is rounded`, width/2, height/2)
+}
+
+```
+
+see: https://editor.p5js.org/joeyklee/sketches/r1h164T37
+
 
 ### log()
-https://p5js.org/reference/#/p5/log
+> https://p5js.org/reference/#/p5/log
+
+When we are exploring data, we may find ourselves working with data that may be highly skewed or when the data is nonlinear and occuring at a large range of quantities. When appropriate, it may be useful to "log transform" our data, meaning that, as long as our data is greater than 0, we scale our data based on orders of magnitude. According to Wikipedia, "...It is based on orders of magnitude, rather than a standard linear scale, so the value represented by each equidistant mark on the scale is the value at the previous mark multiplied by a constant." This logarithmic scaling can be done with a base 10 or euler's number *ℯ*
+
+P5.js has a function that uses the natural logarithm (the base-e logarithm) of a number to scale a number. This function expects the n parameter to be a value greater than 0.0.
+
+Common appropriate uses of log scaling:
+
+* Richter scale
+* pH levels
+* sound levels
+
+```
+
+function setup() {
+  createCanvas(400, 400);
+  textAlign(CENTER);
+  
+}
+
+function draw() {
+  background(220);
+  
+  var output = log(10000);
+  text(`the natural log of 10,000 is ${output}`, width/2, height/2);
+}
+
+
+```
+
+https://editor.p5js.org/joeyklee/sketches/rkz5s90nX
+
+TODO: add example of earthquakes
+
 
 ### sqrt() and sq()
 
 https://p5js.org/reference/#/p5/sq
 https://p5js.org/reference/#/p5/sqrt
 
+https://groups.google.com/forum/#!topic/d3-js/mcJ8GE6_fq4
+https://www.vox.com/2016/5/17/11686328/bad-election-map
+https://bl.ocks.org/guilhermesimoes/e6356aa90a16163a6f917f53600a2b4a
+
+Can you recall the last time you needed to square a number? How about the last time you needed to take the square root of a number? Quite likely, these are not mathematical operations that you do on the daily unless you're looking for a new apartment/home and counting calculating floor area (I know I contemplate the square meters of my tiny Brooklyn apartment). However, the square & square root of a number do come in handy, especially in the context of visualization and particularly when considering visual perception of shapes and geometries like circles and squares.  
+
+You can read more squaring a number and taking the square root of a number [here]() and [here](). In this section I'm going to focus primarily on why it is important to use area when representing the size of a visual element such as a circle on a scatterplot or a rectangle in a cartogram.
+
+In P5.js, the square root of a number is calculated like so:
+
+```JS
+function setup(){
+  createCanvas(400, 400);
+  textAlign(CENTER);
+  noLoop();
+}
+function draw(){
+  var squareRootOfNine = sqrt(9);
+  text(`The square root of 9 is ${squareRootOfNine}`, width/2, height/2);
+}
+```
+
+The inverse of a square root is to square a number. In p5.js this is done like so:
+
+```JS
+function setup(){
+  createCanvas(400, 400);
+  textAlign(CENTER);
+  noLoop();
+}
+function draw(){
+  var threeSquared = sq(3);
+  text(`The square of 3 is ${threeSquared}`, width/2, height/2);
+}
+```
+
+**Ex 1: Scaling a circle based on radius vs. area**
+
+[Read this blog post](https://www.data-to-viz.com/caveat/radius_or_area.html) ([and this one too(https://eagereyes.org/blog/2008/linear-vs-quadratic-change)) and notice the size of those circles. Seems funky eh? The sketch below illustrates the difference.
+
+Let me explain what [Scott Murray's book](http://shop.oreilly.com/product/0636920026938.do) explained to me: 
+
+If we know that visually, circles are better represented by area than by radius, we need a way to calculate the area given some input value.
+
+Ok so, let's say that we are given some value - e.g. the concentration of CO2 in this case. This value will be our area value. Now, we know that in P5.js our `ellipse()` takes an x-position, a y-position, width, and height. How do we translate that area value such that we can feed our width and height with an appropriate value? Well with math of course! More specifically, by deriving the radius value from a circle's area. 
+
+> area of a circle =  π multiplied by radius squared
+> 
+> area = π * sq(radius)
+
+Can be re-written: 
+
+> radius of a circle  = square root of the area divided by Pi.
+> 
+> r = sqrt(area /  π )
+
+So that means we can use this wonderful `sqrt()` function to derive the appropriate `radius` value to plop right into our `ellipse()` function.
+
+This principle is not a P5.js specific thing. You can use this principle anywhere you are doing dot area plots, whether that's in Illustrator, R, Excel, or D3.js!
+
+NOTE: just for the record, to have a value of 10 ppm of CO2 you'd need a special gas tank with CO2 scrubbed out of it. Our global CO2 concentrations are over 400ppm at the moment and rising steadily.
+
+```JS
+
+var co2concentrations = [10, 20, 40, 80, 100];
+
+function setup(){
+  createCanvas(400, 400);
+  
+  textAlign(CENTER);
+  noFill();
+  stroke(0);
+  
+  noLoop();
+}
+function draw(){
+  background(220);
+  
+  var spacing = width /co2concentrations.length;
+  
+  
+  for(let i = 0; i< co2concentrations.length; i++){
+    text(co2concentrations[i], i * spacing + spacing/2 ,height*0.25)
+  }
+  
+  // the temptation is to do this:
+  for(let i = 0; i< co2concentrations.length; i++){
+    var r = co2concentrations[i];
+    ellipse( i * spacing + spacing/2 ,height*0.5, r, r)
+  }
+
+  // but you ought to derive radius from the "area" - assuming your value represents an area.
+  // we multiply by a scaling factor of 10 just to make them bigger
+  
+  for(let i = 0; i < co2concentrations.length; i++){
+    var r = sqrt(co2concentrations[i] / PI);
+    ellipse( i * spacing + spacing/2, height*0.75, r*10, r*10)
+  }
+
+}
+
+```
+
+
 
 ### lerp()
 https://p5js.org/reference/#/p5/lerp
+
+
 
 ### constrain()
 https://p5js.org/reference/#/p5/constrain
