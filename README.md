@@ -69,102 +69,6 @@ NOTE: Some of you may be interested in the [daily charting challenge](daily-sket
 
 
 
-
-<!-- Final Project Development -->
-<!-- ************ -->
-
-<!--
-
-
-* statistics & modeling
-* data mining & aggregation
-* data wrangling
-
-http://www2.cs.uregina.ca/~rbm/cs100/notes/spreadsheets/tufte_paper.html
-
-
-form
-color
-image
-type
-interactivity
-layout
-
-| Materials         | Date  | Topic                    | Assignment (DUE)                                    | Note               |
-| ----------------- | ----- | ------------------------ | --------------------------------------------------- | ------------------ |
-| [Week 1](week01)  | 09/06 | Visual Encoding          | N/A                                                 | Joey in 🇩🇪         |
-| [Week 2](week02)  | 09/13 | Sketching with Data      | [A1 - Viz critique & setup](week01/ASSIGNMENT01.md) | Joey in 🇦🇹         |
-| [Week 3](week03)  | 09/20 | Data Compositions        | [A2 - Dear Data](week02/ASSIGNMENT02.md)            | Joey back in 🗽    |
-| [Week 4](week04)  | 09/27 | Introduction to Computation | [A3 - Intro to P5.js](week02/ASSIGNMENT03-UPDATED.md) |                    |
-| [Week 5](week05)  | 10/04 | Data is Plural           | [A4 - TBA]()                                        |                    |
-| [Week 6](week06)  | 10/11 | Synthesis I              | [A5 - TBA]()                                        |                    |
-| [Week 7](week07)  | 10/18 | The Web as your Canvas   | [A6 - TBA]()                                        |                    |
-| [Week 8](week08)  | 10/25 | Form + Interaction       | [A7 - TBA]()                                        |                    |
-| [Week 9](week09)  | 11/01 | Network + Interface      | [A8 - TBA]()                                        | 🎃                 |
-| [Week 10](week10) | 11/08 | Narrative & Storytelling | [A9 - TBA]()                                        |                    |
-| [Week 11](week11) | 11/15 | Synthesis II             | [**Proposal** for Final Project]()                  | ...                |
-| [Week 12](week12) | 11/22 | Holiday Observed         | Final Proj. Dev.                                    | NO CLASS           |
-| [Week 13](week13) | 11/29 | Special Topics           | Final Proj. Dev.                                    | Special guest: TBD |
-| [Week 14](week14) | 12/06 | Final Presentations      | Final Presentations                                 | 🎉                 |
-| [Week 15](week15) | 12/13 | Final Project 1-on-1s    | Final Projects Due                                  |                    |
-
-
-
-Reproducible
-Transparent
-Accessible
-Interactive
-Delightful
-
-Data Platforums
-Everything but the chart
-
-
-1 - Data in visual properties out >
-2 - sketching with data / basic exploratory data analysis >
-3 - data composition and structure >
-4 - Data dialogues, Data-ing, exploring data relationships >
-5 - Data is Plural: multiple data, multiple views, data from around the web  >
-6 -
-
-- 1: Visual Encoding
-  - Data in, visual properties out - what does this mean / what are visual properties
-- 2: Sketching with Data:
-  - basic exploratory data analysis: distributions, frequencies, etc
-- 3: Data Compositions / Data transforms and transforms
-  - have a look at different data structures
-  - restructuring data
-  - csv, json, geographic data, timeseries, time
-- 4: Data-ing / exploring data relationships
-  - diving a bit deeper into examining relationships in data
-- 5: Data is Plural / data in multiples
-  - looking into multiple Datasets from various sources & around the web
-  - generating multiple/many plots
-- 6: Synthesis I
-  - from data acquisition, to communicating your analysis with beautiful (static) charts
-- 7: The web as a canvas
-  - yeeessssss, intro the the web
-  - intro to svg and d3 for visualization
-- 8: Form + interaction
-  - diving deeper into form and interaction
-  - updating data (enter, update, exit) in the browser
-- 9: Network & interface
-  - working with UI elements to allow interaction and discovery
-- 10: Narrative & Storytelling
-  - designing simple interactions to tell your data story.
-- 11: Synthesis II
-  - 3-hr quick hack to go from data via api to an interactive
-  - final projects start
-- 12: no class / holiday
-- 13:
-  - guest speaker?
-- 14: presentations and demos
-- 15: project clinic
-
-
-
--->
-
 ## Course Description
 
 Encoding data to visuals is as much an exercise in design as it is a political one. The ways in which we filter, aggregate, scale, and process data into information are an accumulation of decisions guided consciously and unconciously by our training and our biases (and perhaps even ignorances) that ultimately affect people and places from local to global scales. Now more than ever, we carry immense power and responsibility to critically engage with the tools, the people, the institutions, and the discourses surrounding data driven and generative visualizations.
@@ -307,3 +211,106 @@ Coding is an art; you will have a series of art supplies for this course that wi
 * Simple HTTP Server, a few options:
   - [Node.js http-server](https://www.npmjs.com/package/http-server) (recommended)
   - [Python Simple Server](http://www.pythonforbeginners.com/modules-in-python/how-to-use-simplehttpserver/)
+
+
+
+
+
+***
+***
+***
+
+<!-- Final Project Development -->
+<!-- ************ -->
+
+<!--
+
+
+* statistics & modeling
+* data mining & aggregation
+* data wrangling
+
+http://www2.cs.uregina.ca/~rbm/cs100/notes/spreadsheets/tufte_paper.html
+
+
+form
+color
+image
+type
+interactivity
+layout
+
+| Materials         | Date  | Topic                    | Assignment (DUE)                                    | Note               |
+| ----------------- | ----- | ------------------------ | --------------------------------------------------- | ------------------ |
+| [Week 1](week01)  | 09/06 | Visual Encoding          | N/A                                                 | Joey in 🇩🇪         |
+| [Week 2](week02)  | 09/13 | Sketching with Data      | [A1 - Viz critique & setup](week01/ASSIGNMENT01.md) | Joey in 🇦🇹         |
+| [Week 3](week03)  | 09/20 | Data Compositions        | [A2 - Dear Data](week02/ASSIGNMENT02.md)            | Joey back in 🗽    |
+| [Week 4](week04)  | 09/27 | Introduction to Computation | [A3 - Intro to P5.js](week02/ASSIGNMENT03-UPDATED.md) |                    |
+| [Week 5](week05)  | 10/04 | Data is Plural           | [A4 - TBA]()                                        |                    |
+| [Week 6](week06)  | 10/11 | Synthesis I              | [A5 - TBA]()                                        |                    |
+| [Week 7](week07)  | 10/18 | The Web as your Canvas   | [A6 - TBA]()                                        |                    |
+| [Week 8](week08)  | 10/25 | Form + Interaction       | [A7 - TBA]()                                        |                    |
+| [Week 9](week09)  | 11/01 | Network + Interface      | [A8 - TBA]()                                        | 🎃                 |
+| [Week 10](week10) | 11/08 | Narrative & Storytelling | [A9 - TBA]()                                        |                    |
+| [Week 11](week11) | 11/15 | Synthesis II             | [**Proposal** for Final Project]()                  | ...                |
+| [Week 12](week12) | 11/22 | Holiday Observed         | Final Proj. Dev.                                    | NO CLASS           |
+| [Week 13](week13) | 11/29 | Special Topics           | Final Proj. Dev.                                    | Special guest: TBD |
+| [Week 14](week14) | 12/06 | Final Presentations      | Final Presentations                                 | 🎉                 |
+| [Week 15](week15) | 12/13 | Final Project 1-on-1s    | Final Projects Due                                  |                    |
+
+
+
+Reproducible
+Transparent
+Accessible
+Interactive
+Delightful
+
+Data Platforums
+Everything but the chart
+
+
+1 - Data in visual properties out >
+2 - sketching with data / basic exploratory data analysis >
+3 - data composition and structure >
+4 - Data dialogues, Data-ing, exploring data relationships >
+5 - Data is Plural: multiple data, multiple views, data from around the web  >
+6 -
+
+- 1: Visual Encoding
+  - Data in, visual properties out - what does this mean / what are visual properties
+- 2: Sketching with Data:
+  - basic exploratory data analysis: distributions, frequencies, etc
+- 3: Data Compositions / Data transforms and transforms
+  - have a look at different data structures
+  - restructuring data
+  - csv, json, geographic data, timeseries, time
+- 4: Data-ing / exploring data relationships
+  - diving a bit deeper into examining relationships in data
+- 5: Data is Plural / data in multiples
+  - looking into multiple Datasets from various sources & around the web
+  - generating multiple/many plots
+- 6: Synthesis I
+  - from data acquisition, to communicating your analysis with beautiful (static) charts
+- 7: The web as a canvas
+  - yeeessssss, intro the the web
+  - intro to svg and d3 for visualization
+- 8: Form + interaction
+  - diving deeper into form and interaction
+  - updating data (enter, update, exit) in the browser
+- 9: Network & interface
+  - working with UI elements to allow interaction and discovery
+- 10: Narrative & Storytelling
+  - designing simple interactions to tell your data story.
+- 11: Synthesis II
+  - 3-hr quick hack to go from data via api to an interactive
+  - final projects start
+- 12: no class / holiday
+- 13:
+  - guest speaker?
+- 14: presentations and demos
+- 15: project clinic
+
+
+
+-->
