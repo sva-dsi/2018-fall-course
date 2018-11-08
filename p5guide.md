@@ -60,8 +60,13 @@ This short guide will use Ben Fry's model of the data visualization pipeline to 
   - [Mathmagical Operations ✨](#mathmagical-operations-%E2%9C%A8)
     - [min()](#min)
     - [max()](#max)
+  - [Calculating mean](#calculating-mean)
+  - [Calculating mode](#calculating-mode)
+  - [Calculating sum](#calculating-sum)
     - [map()](#map)
+  - [norm()](#norm)
     - [round()](#round)
+  - [exp()](#exp)
     - [log()](#log)
     - [sqrt() and sq()](#sqrt-and-sq)
     - [lerp()](#lerp)
@@ -85,6 +90,7 @@ This short guide will use Ben Fry's model of the data visualization pipeline to 
 - [Chapter 6: Interact](#chapter-6-interact)
   - [Mouse Interactions: mousePressed()](#mouse-interactions-mousepressed)
   - [Mouse Interactions: mouseX, mouseY](#mouse-interactions-mousex-mousey)
+  - [Mouse Interactions: zoom & pan](#mouse-interactions-zoom--pan)
   - [HTML input: createInput()](#html-input-createinput)
   - [HTML select: createSelect()](#html-select-createselect)
   - [HTML button: createButton()](#html-button-createbutton)
@@ -95,12 +101,14 @@ This short guide will use Ben Fry's model of the data visualization pipeline to 
   - [Chapter 6: Summary](#chapter-6-summary)
   - [Chapter 6: References](#chapter-6-references)
 - [Chapter 7: Refine](#chapter-7-refine)
+  - [Color](#color)
   - [productive use of metaphors](#productive-use-of-metaphors)
   - [developing a story](#developing-a-story)
   - [CSS](#css)
   - [CSS frameworks](#css-frameworks)
   - [text()](#text-1)
   - [colorMode()](#colormode)
+  - [lerpColor()](#lerpcolor)
   - [fill colors: fill()](#fill-colors-fill)
   - [stroke color: stroke()](#stroke-color-stroke)
   - [stroke properties: strokeWeight()](#stroke-properties-strokeweight)
@@ -514,7 +522,7 @@ uid3,2018/10/20,13:00,jump rope
   - JSON objects can be stored as a list in an array [] and they can also contain a key:value pair in which the value is a another key:value pair, a plain array, or an array of objects! Oh so many combos!
   - the same csv activity data above could be re-written in JSON. I've used this online [csv to json](https://www.csvjson.com/csv2json) application for this example. Notice how we have an array of objects, one object for each row of that CSV data above. :
 
-```
+```json
 [
   {
     "uniqueId": "uid1",
@@ -545,13 +553,13 @@ Now that we've been exposed to JSON objects, let's look at why they are an inter
 
 Let's take this example describing me as a JSON object. If I had to describe myself what would be the properties of me? Let's start with my **name**.
 
-```JSON
+```json
 {"name": "joey" }
 ```
 
 Ok that's easy enough, but there's a lot more to me that I could tell you about, let's add some more properties that speak to me as a person such as where I was born, favorite food, how many coffees I drink per day usually, whether I'm multilingual or not, and where I currently live, :
 
-```JSON
+```json
 {
     "name": "Joey",
     "born_state":"California",
@@ -570,7 +578,7 @@ Here we added a comma, then introduced another set of key:value pairs. Notice th
 
 We can re-model our JSON data to be a bit more semantically structured, meaning, we can create heirarchies in the JSON object that do a better job at organizing our data. I've added a few changes to the data as you will notice, for example:
 
-```JSON
+```json
 {
     "name":"Joey",
     "origin":{
@@ -601,7 +609,7 @@ In the section on [variables](), we will see how we can access the various value
 
 Arrays are one of the most basic and universally used data types. They are just lists. These lists can be of values such as:
 
-```JSON
+```json
 ["hello", "lovely", "people"]
 
 // or
@@ -615,7 +623,7 @@ Arrays are one of the most basic and universally used data types. They are just 
 
 or they can contain JSON objects:
 
-```JSON
+```json
 [
   {
     "uniqueId": "uid1",
@@ -640,7 +648,7 @@ or they can contain JSON objects:
 
 or even other arrays:
 
-```JSON
+```json
 [
     [1,2,3],
     [4,5,6],
@@ -652,7 +660,7 @@ Hopefully by now you can see just how data might be organized. It may not be ent
 
 Using this understanding of arrays, we can add some more complexity to our Joey JSON object:
 
-```JSON
+```json
 {
     "name":"Joey",
     "origin":{
@@ -812,7 +820,7 @@ Functions each have their own set of input parameters (the data you pass in) - e
 
 Let's take a look at some p5 functions here:
 
-```JS
+```js
 
 function setup() {
   createCanvas(400, 400);
@@ -957,7 +965,7 @@ There are 3 methods of using `loadJSON()` which I will outline here.
 
 
 
-```JS
+```js
 
 loadJSON("your URL here", function(myData, error){
     console.log(myData);
@@ -970,7 +978,7 @@ loadJSON("your URL here", function(myData, error){
 
 ### Method 2 - async/await: ES6 syntax for dealing with asychronicity
 
-```JS
+```js
 
 async function retrieveJSON(URL){
     var myData = await loadJSON(URL);
@@ -998,7 +1006,7 @@ function draw(){
 ### Method 3 - preload: loading data at the beginning
 
 
-```JS
+```js
 // declare a variable called myData
 var myData;
 
@@ -1026,7 +1034,7 @@ function draw() {
 ### Method 1 - callbacks:
 
 
-```JS
+```js
 
 loadTable("your URL here", 'csv', 'header', function(myData, error){
     console.log(myData);
@@ -1037,7 +1045,7 @@ loadTable("your URL here", 'csv', 'header', function(myData, error){
 
 ### Method 2 - async/await:
 
-```JS
+```js
 
 async function retrieveTable(URL){
     var myData = await loadTable(URL, "csv", "header");
@@ -1387,7 +1395,7 @@ In P5.js, there is an in-built function for calculating the minimum value of an 
 
 In this example, we get the minimum value from this list of the monthly temperatures in NYC in 2017.
 
-```
+```js
 var temperatures = [69,68,61,50,42,32,27,28,35,45,54,64];
 var minTemperature;
 
@@ -1585,7 +1593,7 @@ When would we want to round numbers? There are a number of cases when rounding b
 3. can help reduce computational load - the more decimal points, the more numbers the computer must consider
 4. can be used to help conceal data that might be too precise (e.g. latitude/longitude geographic coordinates)
 
-```
+```js
 
 var notRounded = 10.123453332;
 var rounded;
@@ -1629,7 +1637,7 @@ Common appropriate uses of log scaling:
 * pH levels
 * sound levels
 
-```
+```js
 
 function setup() {
   createCanvas(400, 400);
@@ -1654,7 +1662,7 @@ data: https://www.weather.gov/media/okx/Climate/CentralPark/monthlyannualtemp.pd
 
 Here we compare temperatures to precipitation. In this example we take the `log()` of the precipitation when we compare it to the temperatures because precipitation tends to ... (TBD)
 
-```
+```js
 
 var nycClimate = [{month:1, temp_c:3, precip_mm:123},{month:2, temp_c:5, precip_mm:63},{month:3, temp_c:4, precip_mm:133},{month:4, temp_c:14, precip_mm:98},{month:5, temp_c:16, precip_mm:162},{month:6, temp_c:22, precip_mm:121},{month:7, temp_c:25, precip_mm:106},{month:8, temp_c:23, precip_mm:85},{month:9, temp_c:21, precip_mm:51},{month:10, temp_c:18, precip_mm:106},{month:11, temp_c:8, precip_mm:40},{month:12, temp_c:1, precip_mm:56}]
 
@@ -1704,7 +1712,7 @@ You can read more squaring a number and taking the square root of a number [here
 
 In P5.js, the square root of a number is calculated like so:
 
-```JS
+```js
 function setup(){
   createCanvas(400, 400);
   textAlign(CENTER);
@@ -1718,7 +1726,7 @@ function draw(){
 
 The inverse of a square root is to square a number. In p5.js this is done like so:
 
-```JS
+```js
 function setup(){
   createCanvas(400, 400);
   textAlign(CENTER);
@@ -1756,7 +1764,7 @@ This principle is not a P5.js specific thing. You can use this principle anywher
 
 NOTE: just for the record, to have a value of 10 ppm of CO2 you'd need a special gas tank with CO2 scrubbed out of it. Our global CO2 concentrations are over 400ppm at the moment and rising steadily.
 
-```JS
+```js
 
 var co2concentrations = [10, 20, 40, 80, 100];
 
@@ -1847,7 +1855,7 @@ In this chapter will look at the different visual components that we have at our
 
 ## ellipse()
 
-```
+```js
 
 function setup(){
   createCanvas(400, 400);
@@ -1875,7 +1883,7 @@ Additional examples:
 
 ## rect()
 
-```JS
+```js
 
 var gunDeaths2017 = 15549
 
@@ -2061,6 +2069,8 @@ https://p5js.org/reference/#/p5/createCheckbox
 
 ---
 
+## Color
+
 ## productive use of metaphors
 
 ## developing a story
@@ -2094,7 +2104,11 @@ https://p5js.org/reference/#/p5/createCheckbox
 
 ## platforms
 
+TBD
+
 ## self-hosting / github pages
+
+See: https://github.com/sva-dsi/2018-fall-course/tree/master/examples/github/howto-gh-pages
 
 ---
 
@@ -2104,7 +2118,11 @@ https://p5js.org/reference/#/p5/createCheckbox
 
 ## Working on teams
 
+TODO:
+
 ## Github
+
+TODO:
 
 ---
 
@@ -2112,19 +2130,164 @@ https://p5js.org/reference/#/p5/createCheckbox
 
 ---
 
-
-
 ## Scatterplots
+
+**Example 1: ...**
+
+**Example 2: ...**
+
+**Example 3: ...**
 
 ## Line charts
 
+**Example 1: ...**
+
+**Example 2: ...**
+
+**Example 3: Moana Loa CO2 Concentrations**
+
+```js
+let co2;
+let co2Min;
+let co2Max;
+let padding = 50;
+
+let filteredData = {
+  date: [],
+  co2: []
+}
+
+function preload(){
+  co2 = loadTable('monthly_in_situ_co2_mlo-derived.csv', 'csv', 'header');
+}
+
+function setup() {
+  createCanvas(400, 400);
+  
+  // print the column Date to make sure we're getting stuff
+  console.log(co2.getColumn('CO2_filled_ppm'));
+  console.log(co2.getRowCount());
+  
+  
+  let year = co2.getColumn("Date")
+  let co2Filled = co2.getColumn("CO2_filled_ppm")
+  // console.log(year.length)
+  // console.log(co2Filled.length)
+  
+  // filter the data by selecting data
+  // that does not include -99
+  for(let i = 0; i < co2.getRowCount(); i++){
+    if(co2Filled[i] > 200){
+      filteredData.date.push(year[i])
+      filteredData.co2.push(co2Filled[i])
+    }
+  }
+  
+    
+
+  co2Min = min(filteredData.co2);
+  co2Max = max(filteredData.co2);
+  
+  
+  noLoop();
+}
+
+function draw() {
+  background(220);
+  
+  console.log(filteredData);
+  
+  
+  
+  // add some points
+  for(let i = 0; i < filteredData.co2.length; i++){
+    let mappedYear = mapYear(filteredData.date[i])
+    let mappedCo2 = mapCo2(filteredData.co2[i])
+    
+    // stroke(i, 0,0);
+    ellipse(mappedYear, mappedCo2, 1, 1)
+  }
+  
+  // add the line
+  for(let i = 0; i < filteredData.co2.length-1; i++){
+    
+    let mappedYearA = mapYear(filteredData.date[i])
+    let mappedCo2A = mapCo2(filteredData.co2[i])
+    let mappedYearB = mapYear(filteredData.date[i+1])
+    let mappedCo2B = mapCo2(filteredData.co2[i+1])
+    
+    //stroke(i, 0,0);
+    line(mappedYearA, mappedCo2A, mappedYearB, mappedCo2B)
+  }
+  
+  
+  stroke(0);
+  //   add axis lines
+
+  line(0, mapCo2(co2Min), width, mapCo2(co2Min))
+  
+  line(0, mapCo2(co2Max), width, mapCo2(co2Max))
+  
+  line(padding, 0, padding, height)
+  
+  line(width-padding, 0, width-padding, height)
+  
+  // add labels
+  textAlign(RIGHT, BOTTOM);
+  for(let i = 315; i <= co2Max; i+=10){
+    text(round(i), padding-5, mapCo2(i))
+  }
+  
+  textAlign(LEFT, TOP);
+  for(let i = 1960; i <= 2018; i+=10){
+    text(round(i), mapYear(i), mapCo2(co2Min)+5 )
+  }
+  
+  //   add header text
+  textAlign(CENTER, CENTER);
+  text("Monthly CO2 PPM @ Mauna Loa Observatory", width/2, 20)
+  text("1958 - 2018", width/2, 20+15);
+  
+  text("Year", width/2, height - 15);
+  
+  
+  push();
+  translate(10, height/2);
+  rotate(radians(-90));
+  textAlign(CENTER, CENTER);
+  text("CO2 Concentrations (PPM)", 0,0);
+  pop();
+}
+
+
+function mapYear(date){
+  return map(date, 1958, 2018, padding, width - padding)
+}
+
+function mapCo2(ppm){
+  return map(ppm, co2Min, co2Max, height - padding, padding)
+}
+```
+see: https://editor.p5js.org/joeyklee/sketches/B1mlTgkcm
+
+
 ## Histograms
+
+**Example 1: ...**
+
+**Example 2: ...**
+
+**Example 3: ...**
 
 ## Bar charts
 
+**Example 1: ...**
+
+**Example 2: ...**
+
 **Example 3: bar chart of NYC temperatures**
 
-```JS
+```js
 var myData;
 var maxTemperature;
 var minTemperature;
@@ -2199,7 +2362,19 @@ https://editor.p5js.org/joeyklee/sketches/B1HSrQp2Q
 
 ## Network Diagrams
 
+**Example 1: ...**
+
+**Example 2: ...**
+
+**Example 3: ...**
+
 ## Geographic Maps
+
+**Example 1: ...**
+
+**Example 2: ...**
+
+**Example 3: ...**
 
 
 ## Chapter 10 Summary
