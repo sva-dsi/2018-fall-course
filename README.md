@@ -7,7 +7,6 @@ Hello and welcome to the School for Visual Arts  Metrics + Data Visualization I.
 - [Overview](#overview)
   - [Instructor](#instructor)
   - [Calendar](#calendar)
-  - [Things I didn't get to:](#things-i-didnt-get-to)
   - [Course Description](#course-description)
   - [Learning Objectives & Outcomes](#learning-objectives--outcomes)
 - [Course Information](#course-information)
@@ -57,14 +56,14 @@ NOTE: We might decide together to move some things around this semester. I may a
 | [Week 5](week05)  | 10/04 | Data I, Form, & Structure          | [A4 - Composition I](week04/ASSIGNMENT04.md)          |                                                                      |
 | [Week 6](week06)  | 10/11 | Data II, Network, & Interface      | [A5 - Global CO2 Rise](week05/ASSIGNMENT05.md)        |                                                                      |
 | [Week 7](week07)  | 10/18 | Everything Around the chart        | [A6 - Life Expectancy Viz](week06/ASSIGNMENT06.md)    | Guest Speaker: [Jeremy Singer-Vine](https://www.jsvine.com/)         |
-| [Week 8](week08)  | 10/25 | (Counter)Maps and Cartographics    | [A7 - Life Expectancy Viz+](week06/ASSIGNMENT07.md)   | Guest Speaker: [Brandyn Friedly](https://twitter.com/brandynfriedly) |
+| [Week 8](week08)  | 10/25 | (Counter)Maps and Cartographics    | [A7 - Life Expectancy Viz+](week07/ASSIGNMENT07.md)   | Guest Speaker: [Brandyn Friedly](https://twitter.com/brandynfriedly) |
 | [Week 9](week09)  | 11/01 | Mapping Review / Synthesis I       | 🎃 No Assignment Due  this week                       | 🎃 Happy Halloween!                                                  |
-| [Week 10](week10) | 11/08 | Publishing / Project workshop      | [A8 - TBA ]()                                               |                                                                      |
-| [Week 11](week11) | 11/15 | Proposals review / Data Considered | [**Proposal** for Final Project]()                    |                                                                      |
+| [Week 10](week10) | 11/08 | Publishing / Project workshop      | [A9 - Data Search & Review ](week09/ASSIGNMENT09.md)                                               |                                                                      |
+| [Week 11](week11) | 11/15 | Proposals review / Data Considered | [**Proposal** for Final Project](https://github.com/sva-dsi/2018-fall-course/blob/master/final-projects.md#part-1-proposals)                    |                                                                      |
 | [Week 12](week12) | 11/22 | Holiday Observed                   | Final Proj. Dev.                                      | NO CLASS                                                             |
 | [Week 13](week13) | 11/29 | Special Topics                     | Final Proj. Dev.                                      | Special guest: TBD                                                   |
-| [Week 14](week14) | 12/06 | Final Presentations                | Final Presentations                                   | 🎉                                                                   |
-| [Week 15](week15) | 12/13 | Final Project 1-on-1s              | Final Projects Due                                    |                                                                     |
+| [Week 14](week14) | 12/06 | Final Presentations                | [WIP Show](https://github.com/sva-dsi/2018-fall-course/blob/master/final-projects.md#part-3---week-14-work-in-progress-presentation)                                  | 🎉                                                                   |
+| [Week 15](week15) | 12/13 | Final Project 1-on-1s              | [Final Project Submission](https://github.com/sva-dsi/2018-fall-course/blob/master/final-projects.md#part-4-publishing--submission)                                   |                                                                     |
 
 NOTE: Some of you may be interested in the [daily charting challenge](daily-sketch-challenge.md)
 
@@ -76,8 +75,6 @@ NOTE: Some of you may be interested in the [daily charting challenge](daily-sket
 
 <!--
 
-
-## Things I didn't get to:
 
 * statistics & modeling
 * data mining & aggregation
