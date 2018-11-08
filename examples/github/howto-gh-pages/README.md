@@ -50,7 +50,7 @@ Quite likely you'll need to sign in first:
 
 ## Step 8: Go to Github Website to see if anything popped up!
 
-![](images/23-ghd.png)
+![](images/23-gh.png)
 
 
 ## Step 9: Create a `gh-pages` branch in the Github Desktop Tool > Publish Branch
