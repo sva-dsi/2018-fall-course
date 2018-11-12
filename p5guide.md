@@ -1951,6 +1951,32 @@ Useful for:
 * conveying flow
 * conveying directionality
 
+```js
+
+// fake data - imagine it's something interesting!
+let myData = {
+  "x":[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100,101,102,103,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127,128,129,130,131,132,133,134,135,136,137,138,139,140,141,142,143,144,145,146,147,148,149,150,151,152,153,154,155,156,157,158,159,160,161,162,163,164,165,166,167,168,169,170,171,172,173,174,175,176,177,178,179,180,181,182,183,184,185,186,187,188,189,190,191,192,193,194,195,196,197,198,199],
+"y":[204,204,202,200,198,195,191,188,184,181,177,175,173,171,170,169,168,167,166,166,166,166,167,168,169,170,172,174,176,178,181,183,186,188,191,193,195,197,199,201,202,204,205,207,208,209,210,210,211,211,210,210,209,208,206,205,203,201,199,197,195,193,191,189,187,185,183,181,178,176,174,171,169,167,166,164,163,163,164,165,167,170,173,176,179,181,184,186,187,188,188,188,187,186,185,184,182,181,180,179,179,179,178,177,175,173,171,168,165,162,158,155,151,147,144,142,140,138,137,136,136,136,135,135,134,133,132,132,131,130,130,129,129,129,129,129,130,130,131,131,131,130,130,129,128,126,125,124,123,122,122,122,122,123,125,127,130,133,135,138,141,143,144,146,146,147,147,147,147,146,146,146,146,147,148,150,151,153,154,156,157,158,159,160,160,161,161,162,162,162,163,164,165,166,167,168,168,169,170,170]} 
+
+function setup(){
+  createCanvas(400, 400);
+}
+
+function draw(){
+  background(220);
+  
+  push();
+  translate(100, 0);
+  for(let i = 0; i < myData.x.length - 1; i++){
+    line(myData.x[i], myData.y[i], myData.x[i+1], myData.y[i+1])
+  }
+  pop();
+
+}
+```
+
+TODO: add example of timeseries
+
 Additional examples:
 * https://editor.p5js.org/joeyklee/sketches/B1xIW3YYQ
 * https://editor.p5js.org/joeyklee/sketches/ryLnZhtYm
@@ -1964,6 +1990,58 @@ Additional examples:
 
 
 ## arc()
+
+Useful for:
+* conveying flow
+* conveying directionality
+* connections
+
+```
+/**
+// making the data - imagine it reflects bus trip transfers
+
+function makeData(seedVal){
+randomSeed(seedVal);
+let myData = [];
+
+for(let i = 1; i < 20; i++){
+  let dataPoint = {x: i*20, y: 0, connectedTo: round(random(0,19)) }
+  myData.push(dataPoint)
+}
+
+return myData;
+}
+
+*/
+
+let myData = [{"x":20,"y":0,"connectedTo":6},{"x":40,"y":0,"connectedTo":8},{"x":60,"y":0,"connectedTo":8},{"x":80,"y":0,"connectedTo":2},{"x":100,"y":0,"connectedTo":6},{"x":120,"y":0,"connectedTo":5},{"x":140,"y":0,"connectedTo":5},{"x":160,"y":0,"connectedTo":5},{"x":180,"y":0,"connectedTo":4},{"x":200,"y":0,"connectedTo":4},{"x":220,"y":0,"connectedTo":9},{"x":240,"y":0,"connectedTo":7},{"x":260,"y":0,"connectedTo":14},{"x":280,"y":0,"connectedTo":11},{"x":300,"y":0,"connectedTo":4},{"x":320,"y":0,"connectedTo":7},{"x":340,"y":0,"connectedTo":14},{"x":360,"y":0,"connectedTo":4},{"x":380,"y":0,"connectedTo":10}]
+
+function setup() {
+  createCanvas(400, 400);
+
+  noFill();
+  noLoop();
+}
+
+function draw() {
+  background(220);
+  
+  push();
+  translate(0,height*0.6);
+  for(let i=0; i < myData.length; i++){
+
+    let centerX = abs(myData[i].x + myData[myData[i].connectedTo ].x)/2
+    let centerY = abs(myData[i].y + myData[myData[i].connectedTo].y) / 2
+    let distance = int(dist(myData[i].x, myData[i].y,myData[myData[i].connectedTo ].x, myData[myData[i].connectedTo ].y ) )
+    
+    arc(centerX,centerY, distance, distance, PI, TWO_PI )
+  
+  }
+  pop();
+}
+
+```
+
 
 Additional examples:
 * https://editor.p5js.org/joeyklee/sketches/ByUVnpKt7
