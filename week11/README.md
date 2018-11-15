@@ -10,6 +10,8 @@
 
 ### Final Project Proposals:
 
+![Danielle's Proposal image](assets/images/dh-proposal.png)
+
 We will be reviewing your final project proposals as a group, providing feedback to your prepared presentations. 
 
 You will have a strict 6 minutes to present and 3 minutes for questions & feedback. 
@@ -22,6 +24,8 @@ You will have a strict 6 minutes to present and 3 minutes for questions & feedba
   * [] ...
 
 ### Final Project Tips: Style Guide
+
+![duo lingo style guide](assets/images/duo-sg.png)
 
 > A styleguide is a set of standards, principles and rules every developer or designer should follow in order to improve the digital presence of the product. - [Andrei Dorin](https://medium.muz.li/how-to-create-a-style-guide-from-scratch-tips-and-tricks-e00f25b423bf)
 
@@ -48,7 +52,9 @@ The following references explain what, why, and how you might start to make styl
     * [IBM Visualization guidelines](https://www.ibm.com/design/language/experience/data-visualization/visualization/)
   * [Duke's Data Viz Do's and Don'ts](https://guides.library.duke.edu/datavis/topten)
 
+Additional interesting code/design references:
 
+* [SuperHi!](https://twitter.com/superhi_): teaching designers how to code, the way designers do.
 
 
 
