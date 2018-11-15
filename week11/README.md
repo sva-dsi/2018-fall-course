@@ -24,10 +24,15 @@ You will have a strict 6 minutes to present and 3 minutes for questions & feedba
   * [ ] [YUWEN95](https://docs.google.com/presentation/d/1fhlNV2b5VNVFXx4weZe5fNXKRg1H24MZ4rXYOYzxssY/edit?usp=sharing)
   * [ ] [tsokolowski](https://gist.github.com/tsokolowski/acbbe92f19eb6c0fbdb73ba2de81362c)
   * [ ] [ytsai2](https://docs.google.com/presentation/d/1kJl1BQJf0w0CTgsKUSvIQwtkAJ8YsiP9nEfaIweMx1s/edit?usp=sharing)
-  * [ ] [dshepardL](http://dsheparddataviz.data.blog/2018/11/15/final-project-proposal/)
-  * [ ] [mblumley](https://gist.github.com/mblumley/b34cc7acf69f7ffee3ca7c4decfbd5ad)
+  * [ ] corrinne, danielle, & mary beth
+    * [ ] [dshepardL](http://dsheparddataviz.data.blog/2018/11/15/final-project-proposal/)
+    * [ ] [mblumley](https://gist.github.com/mblumley/b34cc7acf69f7ffee3ca7c4decfbd5ad)
+    * [ ] [corinnereynolds](https://gist.github.com/corinnereynolds/2cc03eeb6a7f238d9dce47ee5822607b)
   * [ ] [umila2](https://github.com/umila2/my_first_repo/blob/master/Umila%20Singh%20Data%20Viz%20Final%20Project%20Proposal.pdf)
   * [ ] [ zachnarva ](https://gist.github.com/zachnarva/1b9b6d6139e7b565b4dd863debd2fc32)
+  * [ ] [jdong5](https://drive.google.com/drive/u/0/my-drive?ths=true)
+  * [ ] [looful](https://github.com/looful/Proposal)
+  * [ ] [dskinn](https://github.com/dskinn/Proposal)
 
 ### Final Project Tips: Style Guide
 
