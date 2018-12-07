@@ -42,6 +42,7 @@ Here's the final project schedule:
 * *Week 13*: Work on Final Projects
 * *Week 14*: Show work-in-progress | 🍕🍕🍕
 * *Week 15*: Wrap up, submit, & publish | individual meetings
+* *Final Projects DUE*: December 16th, 2018 @ 11:59 PM 
 
 The plan is that each week in class during final project time, you will have most of the time to dedicate to working on your final projects. I will introduce handy tools and references for you to complete your projects and work with you and your groups individually with your specific goals. 
 
